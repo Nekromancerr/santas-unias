@@ -1,0 +1,186 @@
+/* ==========================================
+   9. MODALES (Ventanas Emergentes)
+   ========================================== */
+   .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Esta clase es la que prende y apaga el modal */
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-medio);
+}
+
+.modal__content {
+    position: relative;
+    background-color: var(--color-fondo-tarjeta); /* Color de fondo de las tarjetas emergentes */
+    width: 90%;
+    max-width: 500px;
+    padding: 40px 30px;
+    border-radius: 15px;
+    z-index: 1001;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal.active .modal__content {
+    transform: translateY(0);
+}
+
+.modal__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-secundario); /* Color de la X */
+}
+
+.modal__title {
+    color: var(--color-texto-blanco); /* Color del titulo */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal__list {
+    list-style: none;
+    padding: 0;
+}
+
+/* --- Estilos de los ítems de la lista --- */
+.modal__list li {
+    display: flex;
+    flex-direction: column; /* Cambiamos a columna para que la info extra caiga abajo */
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.modal__list li:last-child {
+    border-bottom: none;
+}
+
+/* Fila principal (Nombre, precio y botón reservar) */
+.modal__item-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Agrupa el nombre y el precio */
+.modal__item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-right: 15px; 
+}
+
+.modal__name {
+    color: var(--color-texto-principal);
+    font-size: 1rem;
+    line-height: 1.2;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* El botoncito de info (i) */
+.modal__info-btn {
+    background: none;
+    border: none;
+    color: var(--color-texto-gris);
+    cursor: pointer;
+    margin-left: 8px;
+    margin-top: 1px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    padding: 0;
+    line-height: 1.2;
+
+}
+
+.modal__info-btn:hover, .modal__info-btn.active {
+    color: var(--color-primario);
+}
+
+.modal__price {
+    font-weight: bold;
+    color: var(--color-texto-principal);
+    font-size: 1.1rem;
+}
+
+/* El mini-botón de reserva de cada ítem */
+.modal__btn-reservar {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* --- La caja escondida con la aclaración --- */
+.modal__item-desc {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    /* Aumentamos el max-height por si la lista es larga */
+    transition: max-height 0.4s ease, margin-top 0.4s ease, opacity 0.4s ease;
+    width: 100%;
+}
+
+.modal__item-desc.show {
+    max-height: 350px; 
+    margin-top: 15px;
+    opacity: 1;
+}
+
+/* El cuadro rosado de fondo */
+.modal__item-desc-content {
+    font-size: 0.9rem;
+    color: var(--color-texto-principal); /* Lista de aclaraciones */
+    background-color: var(--color-secundario); /* Fondo de la tarjeta de aclaraciones */
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 2px solid var(--color-primario); /* Color, tamaño y ubicacion de linea de diseño a la izquierda */
+}
+
+/* El título "Incluye:" en negrita */
+.modal__item-desc-content strong {
+    color: var(--color-texto-principal);
+    display: block; /* Para que la lista baje a la siguiente línea */
+    margin-bottom: 5px;
+}
+
+/* Restauramos las viñetas (los puntitos) para esta lista en particular */
+.modal__item-desc-content ul {
+    list-style-type: disc;
+    margin-left: 20px; /* Sangría para que los puntitos queden alineados */
+}
+
+/* Pisamos el estilo general para que las líneas de la lista no tengan el borde gris debajo */
+.modal__item-desc-content li {
+    padding: 2px 0;
+    border-bottom: none; 
+    display: list-item; /* Forzamos a que se comporte como ítem de lista normal */
+}

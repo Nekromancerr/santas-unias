@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nails by Santas Uñas</title>
+    <meta name="description" content="Especialistas en esculpidas, capping y esmaltado semipermanente. Dale a tus manos el cuidado y el arte que merecen en Zárate.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Santas Uñas - Salón y Academia">
+        <meta property="og:description" content="Especialistas en esculpidas, capping y esmaltado. ¡Reservá tu turno o sumate a nuestros cursos!">
+        <meta property="og:image" content="https://santas-unias.netlify.app/img/portada-whatsapp.jpg">
+        <meta property="og:url" content="https://santas-unias.netlify.app/">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="img/cap/capping-hero-1.webp">
+</head>
+<body>
+    <!-- ========
+          HEADER
+         ======== -->
+    <header class="header">
+        <div class="container header__container">
+
+            <!--Aca va el logo, el href es lo que escucha para que te lleve al inicio, la img es lo que se ve-->
+            <a href="index.html" class="header__logo">
+                <img src="img/logo-s.webp" alt="Santas Uñas" class="header__img">
+                <span class="header__title-text">antas uñas</span>
+            </a>
+
+            <!-- Botón Hamburguesa (Solo visible en móvil) -->
+            <button class="header__toggle" aria-label="Abrir menú">
+                ☰
+            </button>
+
+            <!-- Menu de Navegacion -->
+            <nav class="nav" id="nav-menu">
+
+                <!-- Lista de Items del Nav-->
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#inicio" class="nav__link active">Inicio</a></li>
+                    <li class="nav__item"><a href="#servicios" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="#nosotras" class="nav__link">Nosotras</a></li>
+                    <li class="nav__item"><a href="#courses-promo" class="nav__link">Cursos</a></li>
+
+                    <!-- Notar que "contacto" tiene una clase distinta, en href puede ir link de whatsapp -->
+                    <li class="nav__item"><a href="https://www.wonoma.com/es-AR/salon/santas-unas" class="nav__link nav__link--cta">Reserva Turno</a></li>
+
+                </ul>
+
+                <!-- Botón cerrar (dentro del nav para móvil) -->
+                <button class="nav__close" aria-label="Cerrar menú">✕</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+                            MAIN
+        ============================================ -->
+
+    <main class="main">
+
+        <!-- ============================================
+                            HERO
+        ============================================ -->
+        <section id="inicio" class="hero section">
+
+            <!-- Card contenedora con bordes redondeados -->
+            <div class="hero__card">
+
+                <!-- Slider de fondo -->
+                <div class="hero__slider" id="hero-slider">
+                    
+                    <div class="hero__overlay"></div>
+                </div>
+
+                <!-- Logo dentro de Hero -->
+                <a href="#inicio" class="hero__logo-anchor">
+                    <img src="img/logo.webp" alt="Logo Santas Uñas" class="hero__logo-img">
+                </a>
+
+                <!-- Contenido principal -->
+                <div class="container hero__container">
+
+                    <!-- Texto -->
+                    <div class="hero__content">
+                        <h1 class="hero__title">
+                            Servicio de excelencia<br>
+                            <span class="hero__highlight">en el área de manicuria</span>
+                        </h1>
+                        <p class="hero__text">
+                            Especialistas en esculpidas, capping y esmaltado semipermanente. Dale a tus manos el cuidado y el arte que merecen.
+                        </p>
+                        <!-- Boton que lleva a Servicios -->
+                        <a href="#servicios" class="button button--primary">Reservar mi turno</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ============================================
+                           Servicios
+        ============================================ -->
+
+        <section id="servicios" class="container" style="padding: 80px 20px; text-align: center;">
+            <h2 style="font-size: 2.5rem; color: var(--color-texto-principal); margin-bottom: 50px;">Agenda Tu Turno</h2>
+            
+            <!-- Grilla de Tarjetas -->
+            <div class="services__grid">
+                
+                <!-- Tarjeta 1: Retiro-->
+                <div class="category__card">
+                    <div class="category__img-placeholder js-service-slider"><!--Notar class "js-service- slider"-->
+                        <img src="img/ret/retirado-1.webp" alt="Retiro 1" class="category__img active">
+                        <img src="img/ret/retirado-2.webp" alt="Retiro 2" class="category__img">
+                        <video src="img/ret/retirado-3.mp4" class="category__img" autoplay loop muted playsinline></video>
+                        <img src="img/logo-s.webp" alt="Logo" class="category__logo">
+                    </div>
+                    <div class="category__content">
+                        <h3 class="category__title">Retiro</h3>
+                        <button class="button button--primary open-modal-btn" data-service="retiro">Ver opciones</button>
+                    </div>
+                </div>
+
+                <!-- Targeta 2: Pedicura -->
+                <div class="category__card">
+                    <div class="category__img-placeholder js-service-slider">
+                        <img src="img/pedicura-1.webp" alt="Pedicura 1" class="category__img active">
+                        <img src="img/logo-s.webp" alt="Logo" class="category__logo">
+                    </div>
+                    <div class="category__content">
+                        <h3 class="category__title">Belleza de Pies</h3>
+                        <button class="button button--primary open-modal-btn" data-service="pedicura">Ver opciones</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Capping -->
+                <div class="category__card">
+                    <div class="category__img-placeholder js-service-slider">
+                        <img src="img/cap/capping-hero-1.webp" alt="Capping 1" class="category__img active">
+                        <img src="img/cap/capping-hero-4.webp" alt="Capping 2" class="category__img">
+                        <img src="img/cap/capping-8.webp" alt="Capping 3" class="category__img">
+                        <img src="img/cap/capping-hero-6.webp" alt="Capping 4" class="category__img">
+                        <img src="img/logo-s.webp" alt="Logo" class="category__logo">
+                    </div>
+                    <div class="category__content">
+                        <h3 class="category__title">Capping</h3>
+                        <button class="button button--primary open-modal-btn" data-service="capping">Ver opciones</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4: Manicura -->
+                <div class="category__card">
+                    <div class="category__img-placeholder js-service-slider">
+                        <img src="img/man/manicura-1.webp" alt="Manicuría 1" class="category__img active">
+                        <img src="img/man/manicura-2.webp" alt="Manicuría 2" class="category__img">
+                        <img src="img/man/manicura-3.webp" alt="Manicuría 3" class="category__img">
+                        <img src="img/man/manicura-2.webp" alt="Manicuría 4" class="category__img">
+                        <img src="img/logo-s.webp" alt="Logo" class="category__logo">
+                    </div>
+                    <div class="category__content">
+                        <h3 class="category__title">Manicuría</h3>
+                        <button class="button button--primary open-modal-btn" data-service="manicuria">Ver opciones</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 5: Soft Gel -->
+                <div class="category__card">
+                    <div class="category__img-placeholder js-service-slider">
+                        <img src="img/sof/soft-gel.webp" alt="Soft Gel 1" class="category__img active">
+                        <img src="img/sof/soft-gel-1.webp" alt="Soft Gel 2" class="category__img">
+                        <img src="img/sof/soft-gel-2.webp" alt="Soft Gel 3" class="category__img">
+                        <img src="img/sof/soft-gel-1.webp" alt="Soft Gel 4" class="category__img">
+                        <img src="img/logo-s.webp" alt="Logo" class="category__logo">
+                    </div>
+                    <div class="category__content">
+                        <h3 class="category__title">Soft Gel</h3>
+                        <button class="button button--primary open-modal-btn" data-service="softgel">Ver opciones</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 6: Esculpidas -->
+                <div class="category__card">
+                    <div class="category__img-placeholder js-service-slider">
+                        <img src="img/esc/esculpidas-1.webp" alt="Esculpidas 1" class="category__img active">
+                        <img src="img/esc/esculpidas-2.webp" alt="Esculpidas 2" class="category__img">
+                        <img src="img/esc/esculpidas-3.webp" alt="Esculpidas 3" class="category__img">
+                        <img src="img/esc/esculpidas-4.webp" alt="Esculpidas 4" class="category__img">
+                        <img src="img/logo-s.webp" alt="Logo" class="category__logo">
+                    </div>
+                    <div class="category__content">
+                        <h3 class="category__title">Uñas Esculpidas</h3>
+                        <button class="button button--primary open-modal-btn" data-service="esculpidas">Ver opciones</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================
+                           Nosotras
+        ============================================ -->
+
+        <section id="nosotras" class="team section container">
+            <h2 class="section__title">Conocé a las artistas detrás de <span class="hero__highlight">Santas Uñas</span></h2>
+
+            <div class="team__grid">
+                
+                <!-- Tarjeta Nosotras 1: Isis <3 -->
+                <article class="team__card">
+                    <div class="team__header">
+                        <div class="team__photo-placeholder">
+                            <img src="img/perfil-isis.webp" alt="Isis">
+                        </div>
+                        <h3 class="team__name">Isis</h3>
+                        <span class="team__role">Especialista en Nail Art</span>
+                    </div>
+
+                    <!-- Cada uno de estos bloques contiene las reseñas individuales de cada una -->
+                    <div class="reviews__slider js-review-slider">
+                        <div class="review__item active">
+                            <p>"Excelente atención como siempre !!! Un lujaso !!."</p>
+                            <span>⭐⭐⭐⭐⭐ - PAULA</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+                        
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+                        
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+                    </div>
+                    
+                    <a href="book.html#book-isis" class="button button--small">Ver trabajos de Isis</a>
+                </article>
+
+                <!-- Tarjeta Nosotras 2: Jose -->
+                <article class="team__card team__card--center">
+                    <div class="team__header">
+                        <div class="team__photo-placeholder">
+                            
+                            <img src="img/perfil-jose.webp" alt="Jose">
+                            
+                        </div>
+                        <h3 class="team__name">Jose</h3>
+                        <span class="team__role">Fundadora & Master en Esculpidas</span>
+                    </div>
+
+                    <div class="reviews__slider js-review-slider">
+                        <div class="review__item active">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+                    </div>
+
+                    <a href="book.html#book-jose" class="button button--small">Ver trabajos de Jose</a>
+                </article>
+
+                <!-- Tarjeta Nosotras 3: Lola -->
+                <article class="team__card">
+                    <div class="team__header">
+                        <div class="team__photo-placeholder">
+                            
+                            <img src="img/perfil-lola.webp" alt="Lola">
+                            
+                        </div>
+                        <h3 class="team__name">Lola</h3>
+                        <span class="team__role">Experta en Capping y Soft Gel</span>
+                    </div>
+
+                    <div class="reviews__slider js-review-slider">
+                        <div class="review__item active">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+
+                    </div>
+
+                    <a href="book.html#book-lola" class="button button--small">Ver trabajos de Lola</a>
+                </article>
+
+            </div>
+
+            <div class="team__general-cta">
+                <a href="book.html" class="button button--primary button--large">Ver el Book Completo de Trabajos</a>
+            </div>
+        </section>
+
+        <!-- ============================================
+                           Cursos
+        ============================================ -->
+
+        <section id="courses-promo" class="courses-promo">
+            <div class="courses-promo__overlay"></div>
+            
+            <div class="container courses-promo__container">
+                <h2 class="courses-promo__title">¿Querés convertir tu pasión en tu profesión?</h2>
+                <p class="courses-promo__text">
+                    Descubrí nuestra academia. Brindamos cursos iniciales y perfeccionamientos en manicuría, esculpidas y nail art. ¡Vení a aprender las mejores técnicas con nosotras!
+                </p>
+                <a href="cursos.html" class="button button--primary button--large">Conocé nuestros cursos</a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Ventana para Servicios -->
+    <div class="modal" id="price-modal">
+        <div class="modal__overlay" id="modal-close-bg"></div>
+        
+        <div class="modal__content">
+            <button class="modal__close" id="modal-close-btn">✕</button>
+            <h3 class="modal__title" id="modal-title">Título del Servicio</h3>
+            
+            <ul class="modal__list" id="modal-list"></ul>
+        </div>
+    </div>
+
+    <!-- ============================================
+                        FOOTER
+    ============================================ -->
+
+    <footer class="footer">
+        <div class="container footer__container">
+            
+            <div class="footer__info">
+                <h3 class="footer__title">Santas Uñas</h3>
+                <p class="footer__text">Tu lugar de confianza para dejar tus manos hermosas.</p>
+                
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/santas_unias/" target="_blank" class="footer__social-link" aria-label="Ir al Instagram de Santas Uñas"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=3487728179" target="_blank" class="footer__social-link" aria-label="Enviar mensaje por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                
+                <ul class="footer__contact">
+                    <li><i class="fa-solid fa-location-dot"></i> Almte. Brown 159, Zárate</li>
+                    <li><i class="fa-solid fa-envelope"></i> contacto@santasunas.com</li>
+                </ul>
+            </div>
+
+            <div class="footer__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.9113577321164!2d-59.025101199999995!3d-34.097411199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb0b686ad8ca35%3A0xdb1b1ae55e82a9a3!2sASC%2C%20Almte.%20Brown%20159%2C%20B2800%20Z%C3%A1rate%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1771436235479!5m2!1ses!2sar" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+        
+        <div class="footer__copy">
+            <p>&copy; 2026 Santas Uñas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="js/header.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/sliders.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+/* ==========================================
+   10. SECCIÓN EQUIPO (Sobre Nosotras)
+   ========================================== */
+   .team {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.section__title {
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    margin-bottom: 60px;
+}
+
+/* --- La Grilla de 3 columnas --- */
+.team__grid {
+    display: grid;
+    /* En compu son 3 columnas. En celular se apilan solas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    align-items: center; /* Alinea verticalmente al centro */
+    margin-bottom: 60px;
+}
+
+/* --- Las Tarjetas Individuales --- */
+.team__card {
+    background-color: var(--color-secundario);
+    border-radius: 20px;
+    padding: 40px 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* La tarjeta del centro se levanta */
+@media screen and (min-width: 968px) {
+    .team__card--center {
+        margin-top: -50px; /* Sube 50px */
+        z-index: 10; /* Se pone por delante de las otras */
+        box-shadow: 0 15px 40px var(--color-sombra-fucsia); /* Sombra rosada más fuerte */
+        transform: scale(1.05); /* Un poquito más grande */
+    }
+}
+
+.team__card:hover {
+    transform: translateY(-10px);
+}
+
+/* --- Foto y Nombre --- */
+
+/* El contenedor que recorta la foto en forma de círculo */
+.team__photo-placeholder {
+    width: 140px; /* Tamaño ideal para que las caras se vean bien */
+    height: 140px;
+    border-radius: 50%; /* Esto lo hace 100% redondo */
+    margin: 0 auto 20px;
+    border: 1px solid var(--color-marco); /* Borde exterior */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.767); /* Sombra elegante */
+    overflow: hidden; /* Hace que todo lo que sobresalga del círculo se corta */
+    background-color: var(--color-secundario);
+}
+
+/* La foto real adentro del círculo */
+.team__photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la foto se deforme o aplaste */
+    display: block;
+}
+
+.team__name {
+    font-size: 1.8rem;
+    color: var(--color-texto-principal);
+    margin-bottom: 5px;
+}
+
+.team__role {
+    color: var(--color-primario);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- El Slider de Reseñas (CSS necesario para que funcione el JS) --- */
+.reviews__slider {
+    position: relative;
+    height: 140px; /* Altura fija para que no salte la tarjeta */
+    width: 100%;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.review__item {
+    position: absolute; /* Las apilamos una arriba de la otra */
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /* Empiezan invisibles */
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out;
+    font-style: italic;
+    color: var(--color-texto-principal);
+    padding: 0 10px;
+}
+
+/* La reseña que tenga esta clase es la que se ve */
+.review__item.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative; /* Vuelve a ocupar espacio real */
+}
+
+.review__item p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.review__item span {
+    display: block;
+    font-weight: bold;
+    color: var(--color-texto-principal);
+    font-style: normal;
+    font-size: 0.85rem;
+}
+
+/* --- Botones --- */
+.button--small {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    border: 2px solid var(--color-primario); /* Color que encierra al texto del boton */
+    color: var(--color-primario); /* Color del texto del boton */
+    border-radius: 20px;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+.button--small:hover {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.button--large {
+    padding: 18px 50px;
+    font-size: 1.3rem;
+}
+
+/* --- Adaptación para celulares (Orden de las chicas) --- */
+@media screen and (max-width: 968px) {
+    /* La clase de Jose (la tarjeta central) pasa al primer lugar */
+    .team__card--center {
+        order: -1; 
+    }
+}

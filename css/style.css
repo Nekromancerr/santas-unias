@@ -1,0 +1,28 @@
+/* ==========================================
+   ÍNDICE DE ESTILOS - SANTAS UÑAS
+   ========================================== */
+
+/* 1. Base y Variables */
+@import url("./base/global.css");
+
+/* 2. Layout (Estructura principal) */
+@import url("./layout/header.css");
+@import url("./layout/footer.css");
+
+/* 3. Secciones */
+@import url("./sections/hero.css");
+@import url("./sections/services.css");
+@import url("./sections/about.css");
+@import url("./sections/courses-promo.css");
+@import url("./sections/book.css");
+@import url("./sections/cursos.css");
+
+/* 4. Componentes */
+@import url("./components/modals.css");
+
+/* Acá iremos agregando el resto a medida que avance:
+@import url("./layout/footer.css");
+@import url("./sections/hero.css");
+@import url("./sections/book.css");
+*/
+

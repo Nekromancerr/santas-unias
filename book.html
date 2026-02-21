@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nails by Santas Uñas</title>
+        <meta name="description" content="Especialistas en esculpidas, capping y esmaltado semipermanente. Dale a tus manos el cuidado y el arte que merecen en Zárate.">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="Santas Uñas - Salón y Academia">
+            <meta property="og:description" content="Especialistas en esculpidas, capping y esmaltado. ¡Reservá tu turno o sumate a nuestros cursos!">
+            <meta property="og:image" content="https://santas-unias.netlify.app/img/portada-whatsapp.jpg">
+            <meta property="og:url" content="https://santas-unias.netlify.app/">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+
+            <!--Aca va el logo, el href es lo que escucha para que te lleve al inicio, la img es lo que se ve-->
+            <a href="index.html" class="header__logo">
+                <img src="img/logo-s.webp" alt="Santas Uñas" class="header__img">
+                <span class="header__title-text">antas uñas</span>
+            </a>
+
+            <!-- Botón Hamburguesa (Solo visible en móvil) -->
+            <button class="header__toggle" aria-label="Abrir menú">
+                ☰
+            </button>
+
+            <!-- Menu de Navegacion -->
+            <nav class="nav" id="nav-menu">
+
+                <!-- Lista de Items del Nav-->
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html#inicio" class="nav__link active">Inicio</a></li>
+                    <li class="nav__item"><a href="index.html#servicios" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="#book-per" class="nav__link">Books</a></li>
+                    <li class="nav__item"><a href="cursos.html" class="nav__link">Cursos</a></li>
+
+                    <!-- Notar que "contacto" tiene una clase distinta, en href puede ir link de whatsapp -->
+                    <li class="nav__item"><a href="https://www.wonoma.com/es-AR/salon/santas-unas" class="nav__link nav__link--cta">Reserva Turno</a></li>
+
+                </ul>
+
+                <!-- Botón cerrar (dentro del nav para móvil) -->
+                <button class="nav__close" aria-label="Cerrar menú">✕</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- ==============
+         Galeria de Fotos  
+        =================-->
+        <section id="book-gen" class="gallery section container">
+            <h1 class="gallery__title">Nuestro <span class="hero__highlight">Book de Trabajos</span></h1>
+            <p class="gallery__subtitle">Inspirate con los últimos diseños y técnicas de nuestro equipo.</p>
+
+            <div class="gallery-frame" id="gallery-frame">
+                <div class="gallery__grid" id="main-gallery-grid">
+                    </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <button id="btn-show-all" class="button--subtle">Ver galería completa</button>
+            </div>
+        </section>
+
+        <!--=============
+         Galeria Personal
+        ===============-->
+
+        <section id="book-per" class="personal-books section container">
+            <h2 class="gallery__title" style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">Elegí a tu <span class="hero__highlight">profesional</span></h2>
+
+            <!-- Cada bloque contiene los "book-..." de cada una -->
+
+            <div class="personal-books__tabs">
+                <button class="tab-btn" data-target="book-isis">
+                    <div class="tab-img-placeholder">
+                        <img src="img/perfil-isis.webp" alt="Isis"> 
+                    </div>
+                    <span>Isis</span>
+                </button>
+                
+                <button class="tab-btn" data-target="book-jose">
+                    <div class="tab-img-placeholder">
+                        <img src="img/perfil-jose.webp" alt="Jose"> 
+                    </div>
+                    <span>Jose</span>
+                </button>
+                
+                <button class="tab-btn" data-target="book-lola">
+                    <div class="tab-img-placeholder">
+                        <img src="img/perfil-lola.webp" alt="Lola"> 
+                    </div>
+                    <span>Lola</span>
+                </button>
+            </div>
+
+            <!-- Aca se encuentran los "book-..." -->
+
+            <div id="book-isis" class="personal-gallery">
+                <div class="personal-gallery__inner box-completa">
+                    
+                    <div class="personal-gallery__avatar">
+                        <img src="img/perfil-isis.webp" alt="Isis"> 
+                    </div>
+
+                    <div class="personal-gallery__header">
+                        <h3 class="personal-gallery__title">Book de Isis</h3>
+                        <p class="gallery__subtitle">Especialista en Nail Art</p>
+                    </div>
+
+                    <div class="gallery__grid">
+                        <div class="gallery__item"><img src="img/cap/capping-2.webp" alt="Trabajo Isis" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/cap/capping-hero-1.webp" alt="Trabajo Isis" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/cap/capping-hero-6.webp" alt="Trabajo Isis" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        
+                        <!--<div class="gallery__item"><img src="img" alt="Trabajo Isis" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>            Bloque para poner mas fotos -->
+                    </div>
+
+                    <div class="personal-gallery__footer">
+                        <a href="https://www.wonoma.com/es-AR/salon/santas-unas" target="_blank" class="button button--primary">Sacar turno con Isis</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="book-jose" class="personal-gallery">
+                <div class="personal-gallery__inner box-completa">
+                    
+                    <div class="personal-gallery__avatar">
+                        <img src="img/perfil-jose.webp" alt="Jose"> 
+                    </div>
+
+                    <div class="personal-gallery__header">
+                        <h3 class="personal-gallery__title">Book de Jose</h3>
+                        <p class="gallery__subtitle">Fundadora & Master en Esculpidas</p>
+                    </div>
+
+                    <div class="gallery__grid">
+
+                        <!-- <div class="gallery__item"><img src="img" alt="Trabajo Jose" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div> Bloque para poner mas fotos -->
+                        
+                    </div>
+
+                    <div class="personal-gallery__footer">
+                        <a href="https://www.wonoma.com/es-AR/salon/santas-unas" target="_blank" class="button button--primary">Sacar turno con Jose</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="book-lola" class="personal-gallery">
+                <div class="personal-gallery__inner box-completa">
+                    
+                    <div class="personal-gallery__avatar">
+                        <img src="img/perfil-lola.webp" alt="Lola"> 
+                    </div>
+
+                    <div class="personal-gallery__header">
+                        <h3 class="personal-gallery__title">Book de Lola</h3>
+                        <p class="gallery__subtitle">Experta en Capping y Soft Gel</p>
+                    </div>
+
+                    <div class="gallery__grid">
+                        <div class="gallery__item"><img src="img/tra-lol/lola-1.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-2.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-3.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-4.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-5.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-6.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-7.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-8.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-9.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-10.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-11.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <!-- <div class="gallery__item"><img src="img" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div> Bloque para poner mas fotos -->
+                        
+                    </div>
+
+                    <div class="personal-gallery__footer">
+                        <a href="https://www.wonoma.com/es-AR/salon/santas-unas" target="_blank" class="button button--primary">Sacar turno con Lola</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <h3 class="footer__title">Santas Uñas</h3>
+                <p class="footer__text">Tu lugar de confianza para dejar tus manos hermosas.</p>
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/santas_unias/" target="_blank" class="footer__social-link" aria-label="Ir al Instagram de Santas Uñas"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://api.whatsapp.com/send/?phone=3487728179" target="_blank" class="footer__social-link" aria-label="Enviar mensaje por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <ul class="footer__contact">
+                    <li><i class="fa-solid fa-location-dot"></i> Almte. Brown 159, Zárate</li>
+                    <li><i class="fa-solid fa-envelope"></i> contacto@santasunas.com</li>
+                </ul>
+            </div>
+            <div class="footer__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.9113577321164!2d-59.025101199999995!3d-34.097411199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb0b686ad8ca35%3A0xdb1b1ae55e82a9a3!2sASC%2C%20Almte.%20Brown%20159%2C%20B2800%20Z%C3%A1rate%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1771436235479!5m2!1ses!2sar" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <p>© 2026 Santas Uñas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="js/header.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+</html>

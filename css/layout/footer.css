@@ -1,0 +1,96 @@
+/* ==========================================
+   11. FOOTER
+   ========================================== */
+   .footer {
+    background-color: var(--color-fondo-footer);
+    color: var(--color-fondo-tarjeta);
+    padding-top: 60px;
+    margin-top: 50px; /* Lo separa de la sección anterior */
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Clave para que en celulares baje el mapa abajo del texto */
+}
+
+/* --- Info y Redes --- */
+.footer__info {
+    flex: 1;
+    min-width: 300px; /* En celular ocupa todo el ancho */
+}
+
+.footer__title {
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-bottom: 15px;
+}
+
+.footer__text {
+    color: var(--color-texto-footer);
+    margin-bottom: 25px;
+}
+
+/* Contenedor de los círculos de redes */
+.footer__social {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* El círculo del ícono */
+.footer__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-blanco-alfa); /* Blanco casi transparente */
+    color: var(--color-primario);
+    border-radius: 25%; /* Le redondea los bordes */
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.footer__social-link:hover {
+    background-color: var(--color-primario);
+    color: var(--color-secundario); /* Cambia el ícono cuando pasa el mouse */
+    transform: translateY(-5px); /* Saltito */
+}
+
+/* Lista de contacto (dirección, mail) */
+.footer__contact {
+    color: var(--color-texto-principal);
+}
+
+.footer__contact li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer__contact i {
+    color: var(--color-primario); /* Pinta los iconitos de ubicación y mail */
+    font-size: 1.2rem;
+}
+
+/* --- El Mapa --- */
+.footer__map {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 30px;
+    overflow: hidden; /* Corta las esquinas del iframe para que quede redondo */
+    border: 3px solid var(--color-blanco-alfa);
+}
+
+/* --- Copyright --- */
+.footer__copy {
+    background-color: rgba(0, 0, 0, 0.3); /* Un gris más oscuro aún */
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: var(--color-texto-blanco);
+}

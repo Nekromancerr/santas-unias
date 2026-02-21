@@ -1,0 +1,539 @@
+/* ==========================================
+   13. BOOK DE TRABAJOS (Galería Masonry)
+   ========================================== */
+   .gallery {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.gallery__title {
+    font-size: 3rem;
+    color: var(--color-texto-blanco);
+    margin-bottom: 15px;
+}
+
+.gallery__subtitle {
+    font-size: 1.2rem;
+    color: var(--color-texto-principal);
+    margin-bottom: 50px;
+}
+
+/* --- La Grilla Masonry --- */
+.gallery__grid {
+    column-count: 5;
+    column-gap: 20px; 
+    width: 100%;
+}
+
+.gallery__item {
+    break-inside: avoid; 
+    margin-bottom: 20px; 
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery__img {
+    width: 100%;
+    height: auto; 
+    display: block;
+    border-radius: 15px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery__item:hover .gallery__img {
+    transform: scale(1.05);
+    filter: brightness(0.8); 
+}
+
+@media screen and (max-width: 992px) {
+    .gallery__grid { column-count: 3; }
+}
+
+@media screen and (max-width: 576px) {
+    .gallery__grid { column-count: 3; }
+}
+
+/* ==========================================
+   14. SECCIÓN BOOK (Pestañas y Galerías)
+   ========================================== */
+.book {
+    padding: 20px 0;
+    background-color: var(--color-fondo-principal);
+}
+
+.book__title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--color-texto-oscuro);
+}
+
+.personal-books {
+    padding-bottom: 100px;
+    scroll-margin-top: 100px; /* Le dice al navegador que frene 100px antes para esquivar el menú */
+}
+
+/* ===================
+   LÓGICA DE ANIMACIÓN
+   =================== */
+
+/* 1. Preparamos el contenedor como un escenario fijo */
+.personal-books__tabs {
+    position: relative;
+    height: 190px;
+    display: block; /* Adiós Flexbox, control manual matemático */
+    margin: 0 auto 40px auto;
+    max-width: 600px;
+}
+
+/* 2. Todos los botones se independizan para moverse fluidamente */
+.tab-btn {
+    position: absolute;
+    width: 150px; /* Ajustado a tu nuevo tamaño grande */
+    top: 30px; 
+    left: 50%; 
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    opacity: 0.8;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.tab-btn:hover {
+    opacity: 1;
+    transform: translateY(-8px); 
+}
+
+.tab-btn span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+/* El círculo superior (Los botones) */
+.tab-img-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    overflow: hidden; 
+    background-color: var(--color-secundario); 
+}
+
+/* Efecto de resplandor rosa al pasar el mouse por las chicas del podio */
+.tab-btn:hover .tab-img-placeholder {
+    box-shadow: 0 8px 25px var(--color-sombra-dorada); /* Luz debajo de la foto */
+    
+    /* Le sumamos que el borde transparente se pinte de rosa para que resalte más */
+    border-color: var(--color-primario); 
+}
+
+.tab-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* 3. POSICIONES INICIALES DEL PODIO (Separación para 150px) */
+.tab-btn:nth-child(1) { margin-left: -245px; } /* Isis */
+.tab-btn:nth-child(2) { margin-left: -75px; top: 0; opacity: 1;} /* Jose (Centro elevado) */
+.tab-btn:nth-child(3) { margin-left: 95px; } /* Lola */
+
+/* 4. LA BAJADA (Y LA SUBIDA) */
+.tab-btn.active {
+    top: 140px !important; 
+    margin-left: -75px !important; /* Cae al centro exacto */
+    transform: scale(0.3) !important; 
+    opacity: 0 !important; 
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* 5. EL DESPLAZAMIENTO LATERAL (Las 2 que sobran se juntan suavemente) */
+.personal-books__tabs:has(.tab-btn:nth-child(1).active) .tab-btn:nth-child(2) { margin-left: -300px; top: 30px; }
+.personal-books__tabs:has(.tab-btn:nth-child(1).active) .tab-btn:nth-child(3) { margin-left: 150px; top: 30px; }
+
+.personal-books__tabs:has(.tab-btn:nth-child(2).active) .tab-btn:nth-child(1) { margin-left: -300px; top: 30px; }
+.personal-books__tabs:has(.tab-btn:nth-child(2).active) .tab-btn:nth-child(3) { margin-left: 150px; top: 30px; }
+
+.personal-books__tabs:has(.tab-btn:nth-child(3).active) .tab-btn:nth-child(1) { margin-left: -300px; top: 30px; }
+.personal-books__tabs:has(.tab-btn:nth-child(3).active) .tab-btn:nth-child(2) { margin-left: 150px; top: 30px; }
+
+
+/* =========================================
+   DISEÑO DE LA CAJA Y GALERÍA INFERIOR
+   ========================================= */
+   .personal-gallery {
+    display: none; 
+    /* BORRAMOS la opacity y transform de acá, y la transition */
+    scroll-margin-top: 300px;
+}
+
+.personal-gallery.active {
+    display: block;
+    /* Esta animación SÍ funciona aunque venga de display: none */
+    animation: entradaCaja 0.6s ease-out forwards; 
+}
+
+/* Clase para cuando la caja se está yendo */
+.personal-gallery.cerrando {
+    display: block; /* La mantenemos viva visualmente mientras se anima */
+    animation: salidaCaja 0.5s ease-in forwards;
+}
+
+/* El motor de la animación de entrada */
+@keyframes entradaCaja {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes salidaCaja {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-50px); }
+}
+
+.personal-gallery__inner.box-completa {
+    position: relative;
+    background-color: var(--color-secundario); 
+    border-radius: 20px;
+    border: 1px solid var(--color-primario-alfa-2); /* Borde de la targeta de book personal */
+    padding: 70px 20px 40px 20px; 
+    margin-top: 60px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.personal-gallery__avatar {
+    position: absolute;
+    top: -65px;  
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 1px solid var(--color-fondo-principal);  /* Tamaño y color del marco de la foto */
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    overflow: hidden; 
+    background-color: var(--color-primario); 
+    
+    /* PARA CERRAR: Lo convertimos visualmente en un botón */
+    cursor: pointer; 
+    transition: all 0.3s ease;
+}
+
+/* Efectito de que se agranda un poquito al pasarle el mouse */
+.personal-gallery__avatar:hover {
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 8px 25px var(--color-sombra-dorada); /* Luz debajo de la foto */
+    border-color: var(--color-primario); /* Color en que se transforma el marco de la foto de la tarjeta */
+}
+
+.personal-gallery__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.personal-gallery__header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed var(--color-blanco-alfa); 
+    padding-bottom: 20px;
+}
+
+.personal-gallery__title {
+    color: var(--color-primario); /* Book de... Dentro de las tarjetas */
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.personal-gallery__footer {
+    text-align: center;
+    margin-top: 40px; 
+    padding-top: 20px;
+}
+
+.personal-gallery__footer .button {
+    font-size: 1.1rem;
+    padding: 12px 35px;
+    background-color: transparent; 
+    border: 2px solid var(--color-primario); /* color del borde del boton */
+    box-shadow: 0 4px 15px var(--color-sombra-dorada); /* Color de sombra */
+    color: var(--color-primario); /* Color de texto del boton */
+    transition: all 0.3s ease;
+}
+
+.personal-gallery__footer .button:hover {
+    background-color: var(--color-primario); /* Color del fondo del boton en animacion */
+    color: var(--color-secundario); /* Color de texto del boton en animacion */
+    box-shadow: 0 0 20px var(--color-sombra-dorada); /* Color de sombra en animacion */
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   15. VISOR DE IMÁGENES (Lightbox)
+   ========================================== */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95); 
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px); 
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox__img {
+    max-width: 100%;
+    max-height: 85vh; 
+    border-radius: 12px;
+    object-fit: contain;
+    display: block;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.lightbox.active .lightbox__content-wrapper {
+    transform: scale(1);
+}
+
+.lightbox__close, .lightbox__btn {
+    position: absolute;
+    background: none;
+    border: none;
+    color: var(--color-primario); 
+    font-size: 3rem;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+    user-select: none;
+    z-index: 2010;
+    padding: 20px; 
+}
+
+.lightbox__close:hover { /* Esto se encarga de la X para cerrar las imagenes */
+    color: var(--color-primario);
+    transform: scale(1.5);
+}
+
+.lightbox__btn:hover { /* Esto se encarga de las flechas de los costados en las imagenes */
+    color: var(--color-primario);
+    /* Combinamos el centrado vertical con el aumento de tamaño */
+    transform: translateY(-50%) scale(1.1); 
+}
+
+.lightbox__close { /* Esto determina donde se encuentra la X para cerrar */
+    top: 15px;
+    right: 25px;
+    font-size: 3.5rem;
+}
+
+.lightbox__btn {
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.2); 
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox__btn--prev { left: 20px; }
+.lightbox__btn--next { right: 20px; }
+
+/* =========================================
+   AJUSTE PARA CELULARES (Línea de 3 escalada)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    .lightbox__btn { 
+        width: 50px; 
+        height: 50px; 
+        font-size: 1.8rem;
+        background-color: transparent; 
+    }
+    .lightbox__close { top: 10px; right: 15px; font-size: 3rem; }
+    .lightbox__btn--prev { left: 5px; }
+    .lightbox__btn--next { right: 5px; }
+
+    /* Achicamos la altura del escenario en móvil */
+    .personal-books__tabs { height: 160px; }
+    
+    /* Círculos más chicos (100px) para que entren los 3 en la pantalla */
+    .tab-btn { width: 100px; }
+    .tab-img-placeholder {
+        width: 100px; 
+        height: 100px;
+    }
+    .tab-btn span { font-size: 1rem; }
+    
+    /* Matemáticas re-calculadas para los círculos de 100px */
+    .tab-btn:nth-child(1) { margin-left: -160px; } 
+    .tab-btn:nth-child(2) { margin-left: -50px; top: 0; } 
+    .tab-btn:nth-child(3) { margin-left: 60px; }
+
+    .tab-btn.active { margin-left: -50px !important; }
+
+    /* Movimientos laterales versión celular */
+    .personal-books__tabs:has(.tab-btn:nth-child(1).active) .tab-btn:nth-child(2) { margin-left: -120px; top: 20px;}
+    .personal-books__tabs:has(.tab-btn:nth-child(1).active) .tab-btn:nth-child(3) { margin-left: 20px; top: 20px;}
+
+    .personal-books__tabs:has(.tab-btn:nth-child(2).active) .tab-btn:nth-child(1) { margin-left: -120px; top: 20px;}
+    .personal-books__tabs:has(.tab-btn:nth-child(2).active) .tab-btn:nth-child(3) { margin-left: 20px; top: 20px;}
+
+    .personal-books__tabs:has(.tab-btn:nth-child(3).active) .tab-btn:nth-child(1) { margin-left: -120px; top: 20px;}
+    .personal-books__tabs:has(.tab-btn:nth-child(3).active) .tab-btn:nth-child(2) { margin-left: 20px; top: 20px;}
+}
+
+/* =========================================
+   LOGO EN LA ESQUINA DE LAS FOTOS
+   ========================================= */
+
+/* 1. El loguito en las miniaturas de las galerías */
+.logo-esquina {
+    position: absolute;
+    bottom: 5px;  /* Pegado abajo */
+    left: 5px;    /* Pegado a la izquierda */
+    width: 40px;   /* Tamaño chiquito para la galería */
+    height: auto;
+    z-index: 5;
+    pointer-events: none; /* Para que no estorbe si el usuario hace clic ahí */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6)); /* Sombrita oscura para que se lea aunque la foto sea muy blanca */
+}
+
+/* 2. El contenedor para la foto gigante */
+.lightbox__content-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;     /* Centra el contenido verticalmente */
+    margin: 0 auto;          /* Obliga a la caja entera a ir al medio */
+    max-width: 90%;
+    max-height: 85vh;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+/* 3. El loguito convertido en MARCA DE AGUA (cuando abrís la foto) */
+.logo-esquina--lightbox {
+    /* La despegamos de la esquina y la centramos */
+    bottom: auto; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centrado matemático perfecto sobre la foto */
+    
+    /* Tamaño y efecto de marca de agua */
+    width: 100%; /* Con 100% ocupa toda la box */
+    max-width: 350px; /* Tamaño de la box del logo */
+    opacity: 0.2; /* Transparencia del logo */
+    pointer-events: none; /* Los clics la atraviesan para que no moleste */
+    z-index: 10;
+}
+
+/* Ajuste para que no quede enorme en el celular */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Ajuste para los loguitos en la galería (cuadritos chicos) */
+    .logo-esquina {
+        width: 25px;   /* Tamaño del logo */
+        bottom: 3px;   /* Distancia del piso (bottom) */
+        left: 3px;     /* Distancia de la izq (left) */
+    }
+
+    /* 2. Ajuste para la MARCA DE AGUA en celular */
+    .logo-esquina--lightbox {
+        width: 80%; 
+        bottom: auto;
+        left: 50%;
+    }
+}
+
+/* =========================================
+   GALERÍA DINÁMICA: MARCO Y ANIMACIONES
+   ========================================= */
+
+/* Marco contenedor estilo "Álbum" */
+.gallery-frame {
+    background-color: var(--color-secundario);
+    border-radius: 20px;
+    border: 2px solid var(--color-primario-alfa-1); /* Borde de galery */
+    padding: 30px 20px 10px 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    margin: 0 auto;
+    max-width: 1000px; /* Evita que se estire demasiado en pantallas gigantes */
+    transition: all 0.5s ease;
+}
+
+/* El botón sutil abrir galeria */
+.button--subtle {
+    background: transparent;
+    border: 1px solid var(--color-texto-gris);
+    color: var(--color-texto-principal);
+    padding: 10px 30px;
+    font-size: 0.95rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.button--subtle:hover {
+    color: var(--color-primario);
+    border-color: var(--color-primario);
+    background-color: var(--color-primario-alfa-1); 
+}
+
+/* ANIMACIÓN: Fundido suave */
+.gallery__item {
+    /* Le damos más tiempo al fundido (0.8s) para que sea súper relajante */
+    transition: opacity 1.5s ease, filter 0.8s ease; 
+}
+
+.gallery__item.fade-out {
+    opacity: 0; 
+    /* Le sacamos el transform: scale(0.95) que hacía que se hunda */
+}
+
+/* =========================================
+   ANIMACIÓN DE ABRIR/CERRAR GALERÍA COMPLETA
+   ========================================= */
+
+/* Le damos a la grilla la capacidad de desvanecerse */
+#main-gallery-grid {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Le ponemos el "freno" a la sección para esquivar el menú fijo al scrollear hacia arriba */
+#book-gen {
+    scroll-margin-top: 100px;
+}
