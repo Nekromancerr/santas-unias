@@ -1,27 +1,26 @@
-/* Esto hace que todos los enlaces con "#" se deslicen suavemente */
 html {
     scroll-behavior: smooth;
 }
 
 /* ==========================================
-   1. VARIABLES (Paleta de colores)
+      VARIABLES (Paleta de colores)
    ========================================== */
    :root {
 
     /* --- 1. COLORES PRINCIPALES --- */
-    --color-primario: #fded8e; /* Dorado/Amarillo */
-    --color-secundario: #2c2b29; /* Gris oscuro */
+    --color-primario: #fded8e;
+    --color-secundario: #2c2b29;
     
     /* --- 2. FONDOS --- */
     --color-fondo-principal: #000000ef; 
-    --color-fondo-tarjeta: #0f0f0f; /* Unifica el viejo "blanco" y "fondo-tarjeta" */
+    --color-fondo-tarjeta: #0f0f0f;
     --color-fondo-header: #2c2b29; 
     --color-fondo-footer: #333333;
-    --color-fondo-destacado: #ff0055; /* El rosado de los modales */
+    --color-fondo-destacado: #ff0055;
     --color-fondo-gris: #e0e0e0; 
     
     /* --- 3. TEXTOS --- */
-    --color-texto-principal: #d4d4d4ef; /* El gris claro que más usás */
+    --color-texto-principal: #d4d4d4ef;
     --color-texto-oscuro: #1A1A1A; 
     --color-texto-blanco: #ffffff; 
     --color-texto-gris: #666666; 
@@ -39,11 +38,12 @@ html {
     --overlay-suave: rgba(0, 0, 0, 0.6);
     --overlay-medio: rgba(0, 0, 0, 0.7);
     --overlay-fuerte: rgba(0, 0, 0, 0.9);
+    --overlay-hero: rgba(0, 0, 0, 0.15);
 
     /* --- 6. TRANSPARENCIAS DE LA PALETA --- */
-    --color-primario-alfa-1: rgba(253, 237, 142, 0.1); /* Dorado muy sutil para marcos */
-    --color-primario-alfa-2: rgba(253, 237, 142, 0.2); /* Dorado un poco más visible */
-    --color-blanco-alfa: rgba(255, 255, 255, 0.1); /* Blanco sutil para iconos y footer */
+    --color-primario-alfa-1: rgba(253, 237, 142, 0.1);
+    --color-primario-alfa-2: rgba(253, 237, 142, 0.2);
+    --color-blanco-alfa: rgba(255, 255, 255, 0.1);
 
     /* Tipografía */
     --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -65,7 +65,7 @@ html {
 }
 
 /* ==========================================
-   2. RESET (El lienzo en blanco)
+      RESET (El lienzo en blanco)
    ========================================== */
 * {
     margin: 0;
@@ -74,36 +74,33 @@ html {
 }
 
 /* ==========================================
-   3. ESTILOS GLOBALES (El cuerpo del sitio)
+      ESTILOS GLOBALES (El cuerpo del sitio)
    ========================================== */
 body {
     background-color: var(--color-fondo-principal);
     color: var(--color-texto-oscuro);
     font-family: var(--fuente-principal);
-    line-height: 1.6; /* Le da un poco de respiro a los textos */
+    line-height: 1.6;
 }
 
-/* Hacemos que los enlaces no sean azules y subrayados por defecto */
 a {
     text-decoration: none;
     color: var(--color-secundario);
 }
 
 ul {
-    list-style: none; /* Le saca las viñetas feas a las listas */
+    list-style: none;
 }
 
 /* ==========================================
-   4. CLASES DE UTILIDAD
+      CLASES DE UTILIDAD
    ========================================== */
-/* Este contenedor evita que la web se estire al infinito en pantallas gigantes */
 .container {
     max-width: 1200px;
-    margin: 0 auto; /* Lo centra horizontalmente */
-    padding: 0 20px; /* Le da un margen interno para que no toque los bordes */
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Esto es para que #inicio y #cursos no choquen con la barra de inicio */
 #inicio, 
 #courses-promo {
     scroll-margin-top: 100px; 

@@ -1,11 +1,9 @@
 /* ==========================================
-   8. SECCIÓN DE CATEGORÍAS DE SERVICIOS
+      SECCIÓN DE CATEGORÍAS DE SERVICIOS
    ========================================== */
 
-/* La grilla que acomoda todo inteligentemente */
 .services__grid {
     display: grid;
-    /* Crea columnas automáticas de mínimo 300px. Perfecto para compu y celular */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
 }
@@ -14,7 +12,7 @@
 .category__card {
     background-color: var(--color-secundario);
     border-radius: 15px;
-    overflow: hidden; /* Clave: hace que la foto de arriba respete los bordes redondos */
+    overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
@@ -33,7 +31,7 @@
     background-color: var(--color-fondo-gris); 
     overflow: hidden; 
     border-bottom: 3px solid var(--color-primario); 
-    position: relative; /* CLAVE: Para que las fotos se apilen acá adentro */
+    position: relative;
 }
 
 /* Esto controla el tamaño de todas las imágenes del slider */
@@ -45,19 +43,17 @@
     top: 0;
     left: 0;
     opacity: 0; 
-    z-index: 0; /* Todas arrancan en el fondo */
+    z-index: 0;
     transition: opacity 0.8s ease-in-out, transform 0.4s ease; 
 }
 
+/* Logo pequeño en las fotos */
 .category__logo{
     position: absolute;
-    bottom: 10px; /* Lo despegamos 10 píxeles del borde de abajo */
-    left: 10px;  /* Lo despegamos 10 píxeles del borde derecho */
-    width: 35px;  /* El tamaño del loguito */
+    bottom: 10px;
+    left: 10px;
+    width: 35px;
     height: auto;
-    
-    /* Le agregamos una sombra sutil. 
-       Así, si la foto del servicio es muy clara, el logo dorado no se pierde */
     filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.6));
     z-index: 10;
 }
@@ -90,13 +86,70 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1; /* Empuja el botón siempre hacia abajo si el título es largo */
+    flex-grow: 1;
 }
 
+/* --- El título de la tarjeta --- */
 .category__title {
     font-size: 1.5rem;
     color: var(--color-texto-principal);
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+}
+
+/* --- El botoncito de info (i) de la tarjeta --- */
+.category__info-btn {
+    background: none;
+    border: none;
+    color: var(--color-texto-gris);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0;
+    margin-top: 3px;
+}
+
+.category__info-btn:hover, .category__info-btn.active {
+    color: var(--color-primario);
+}
+
+/* --- La caja escondida con la aclaración general --- */
+.category__desc {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin-bottom 0.4s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.category__desc.show {
+    max-height: 200px;
+    opacity: 1;
+    margin-bottom: 25px;
+}
+
+.category__desc p {
+    font-size: 0.95rem;
+    color: var(--color-texto-blanco);
+    line-height: 1.5;
+    background-color: var(--color-blanco-alfa);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px dashed var(--color-primario-alfa-2);
+}
+
+/* --- Ajuste fino del ícono de info en celulares --- */
+@media screen and (max-width: 768px) {
+    .category__info-btn {
+        margin-top: 7px; 
+    }
+    .category__title {
+        align-items: flex-start; /* Esto obliga al icono a quedarse en el primer renglon */
+    }
 }

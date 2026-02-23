@@ -1,5 +1,5 @@
 /* ==========================================
-   16. PÁGINA DE CURSOS
+       PÁGINA DE CURSOS
    ========================================== */
 
 /* --- Hero Específico de Cursos --- */
@@ -24,7 +24,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--overlay-medio); /* Oscurece la foto para leer el texto */
+    background-color: var(--overlay-medio);
     z-index: 1;
 }
 
@@ -102,7 +102,7 @@
 
 .course-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px var(--color-sombra-dorada); /* Sombra rosita al hacer hover */
+    box-shadow: 0 15px 40px var(--color-sombra-dorada);
 }
 
 .course-card__img-container {
@@ -148,7 +148,7 @@
 .course-card__desc {
     color: var(--color-texto-blanco); /* Texto de descripcion del curso */
     margin-bottom: 25px;
-    flex-grow: 1; /* Empuja los detalles y el botón hacia abajo */
+    flex-grow: 1;
 }
 
 .course-card__details {

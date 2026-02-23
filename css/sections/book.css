@@ -1,5 +1,5 @@
 /* ==========================================
-   13. BOOK DE TRABAJOS (Galería Masonry)
+      BOOK DE TRABAJOS (Galería Masonry)
    ========================================== */
    .gallery {
     padding-top: 50px;
@@ -57,7 +57,7 @@
 }
 
 /* ==========================================
-   14. SECCIÓN BOOK (Pestañas y Galerías)
+       SECCIÓN BOOK (Pestañas y Galerías)
    ========================================== */
 .book {
     padding: 20px 0;
@@ -80,19 +80,17 @@
    LÓGICA DE ANIMACIÓN
    =================== */
 
-/* 1. Preparamos el contenedor como un escenario fijo */
 .personal-books__tabs {
     position: relative;
     height: 190px;
-    display: block; /* Adiós Flexbox, control manual matemático */
+    display: block;
     margin: 0 auto 40px auto;
     max-width: 600px;
 }
 
-/* 2. Todos los botones se independizan para moverse fluidamente */
 .tab-btn {
     position: absolute;
-    width: 150px; /* Ajustado a tu nuevo tamaño grande */
+    width: 150px;
     top: 30px; 
     left: 50%; 
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -117,7 +115,6 @@
     color: var(--color-primario);
 }
 
-/* El círculo superior (Los botones) */
 .tab-img-placeholder {
     width: 150px;
     height: 150px;
@@ -131,11 +128,8 @@
     background-color: var(--color-secundario); 
 }
 
-/* Efecto de resplandor rosa al pasar el mouse por las chicas del podio */
 .tab-btn:hover .tab-img-placeholder {
     box-shadow: 0 8px 25px var(--color-sombra-dorada); /* Luz debajo de la foto */
-    
-    /* Le sumamos que el borde transparente se pinte de rosa para que resalte más */
     border-color: var(--color-primario); 
 }
 
@@ -145,12 +139,12 @@
     object-fit: cover; 
 }
 
-/* 3. POSICIONES INICIALES DEL PODIO (Separación para 150px) */
+/* ---POSICIONES INICIALES DEL PODIO--- */
 .tab-btn:nth-child(1) { margin-left: -245px; } /* Isis */
 .tab-btn:nth-child(2) { margin-left: -75px; top: 0; opacity: 1;} /* Jose (Centro elevado) */
 .tab-btn:nth-child(3) { margin-left: 95px; } /* Lola */
 
-/* 4. LA BAJADA (Y LA SUBIDA) */
+/* ---LA BAJADA (Y LA SUBIDA)--- */
 .tab-btn.active {
     top: 140px !important; 
     margin-left: -75px !important; /* Cae al centro exacto */
@@ -160,7 +154,7 @@
     z-index: -1;
 }
 
-/* 5. EL DESPLAZAMIENTO LATERAL (Las 2 que sobran se juntan suavemente) */
+/* ---EL DESPLAZAMIENTO LATERAL (Las 2 que sobran se juntan suavemente)--- */
 .personal-books__tabs:has(.tab-btn:nth-child(1).active) .tab-btn:nth-child(2) { margin-left: -300px; top: 30px; }
 .personal-books__tabs:has(.tab-btn:nth-child(1).active) .tab-btn:nth-child(3) { margin-left: 150px; top: 30px; }
 
@@ -175,24 +169,22 @@
    DISEÑO DE LA CAJA Y GALERÍA INFERIOR
    ========================================= */
    .personal-gallery {
-    display: none; 
-    /* BORRAMOS la opacity y transform de acá, y la transition */
+    display: none;
     scroll-margin-top: 300px;
 }
 
 .personal-gallery.active {
     display: block;
-    /* Esta animación SÍ funciona aunque venga de display: none */
     animation: entradaCaja 0.6s ease-out forwards; 
 }
 
-/* Clase para cuando la caja se está yendo */
+/* ---Clase para cuando la caja se está yendo--- */
 .personal-gallery.cerrando {
-    display: block; /* La mantenemos viva visualmente mientras se anima */
+    display: block;
     animation: salidaCaja 0.5s ease-in forwards;
 }
 
-/* El motor de la animación de entrada */
+/* ---El motor de la animación de entrada--- */
 @keyframes entradaCaja {
     0% {
         opacity: 0;
@@ -232,13 +224,10 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     overflow: hidden; 
     background-color: var(--color-primario); 
-    
-    /* PARA CERRAR: Lo convertimos visualmente en un botón */
     cursor: pointer; 
     transition: all 0.3s ease;
 }
 
-/* Efectito de que se agranda un poquito al pasarle el mouse */
 .personal-gallery__avatar:hover {
     transform: translateX(-50%) scale(1.05);
     box-shadow: 0 8px 25px var(--color-sombra-dorada); /* Luz debajo de la foto */
@@ -288,7 +277,7 @@
 }
 
 /* ==========================================
-   15. VISOR DE IMÁGENES (Lightbox)
+       VISOR DE IMÁGENES (Lightbox)
    ========================================== */
 .lightbox {
     position: fixed;
@@ -347,7 +336,6 @@
 
 .lightbox__btn:hover { /* Esto se encarga de las flechas de los costados en las imagenes */
     color: var(--color-primario);
-    /* Combinamos el centrado vertical con el aumento de tamaño */
     transform: translateY(-50%) scale(1.1); 
 }
 
@@ -385,26 +373,20 @@
     .lightbox__close { top: 10px; right: 15px; font-size: 3rem; }
     .lightbox__btn--prev { left: 5px; }
     .lightbox__btn--next { right: 5px; }
-
-    /* Achicamos la altura del escenario en móvil */
     .personal-books__tabs { height: 160px; }
-    
-    /* Círculos más chicos (100px) para que entren los 3 en la pantalla */
     .tab-btn { width: 100px; }
     .tab-img-placeholder {
         width: 100px; 
         height: 100px;
     }
     .tab-btn span { font-size: 1rem; }
-    
-    /* Matemáticas re-calculadas para los círculos de 100px */
+
     .tab-btn:nth-child(1) { margin-left: -160px; } 
     .tab-btn:nth-child(2) { margin-left: -50px; top: 0; } 
     .tab-btn:nth-child(3) { margin-left: 60px; }
 
     .tab-btn.active { margin-left: -50px !important; }
 
-    /* Movimientos laterales versión celular */
     .personal-books__tabs:has(.tab-btn:nth-child(1).active) .tab-btn:nth-child(2) { margin-left: -120px; top: 20px;}
     .personal-books__tabs:has(.tab-btn:nth-child(1).active) .tab-btn:nth-child(3) { margin-left: 20px; top: 20px;}
 
@@ -416,61 +398,58 @@
 }
 
 /* =========================================
-   LOGO EN LA ESQUINA DE LAS FOTOS
+        LOGO EN LA ESQUINA DE LAS FOTOS
    ========================================= */
 
-/* 1. El loguito en las miniaturas de las galerías */
+/* ---El loguito en las miniaturas de las galerías--- */
 .logo-esquina {
     position: absolute;
-    bottom: 5px;  /* Pegado abajo */
-    left: 5px;    /* Pegado a la izquierda */
-    width: 40px;   /* Tamaño chiquito para la galería */
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
     height: auto;
     z-index: 5;
-    pointer-events: none; /* Para que no estorbe si el usuario hace clic ahí */
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6)); /* Sombrita oscura para que se lea aunque la foto sea muy blanca */
+    pointer-events: none;
+    filter: drop-shadow(0 2px 4px var(--overlay-suave));
 }
 
-/* 2. El contenedor para la foto gigante */
+/* --El contenedor para la foto gigante-- */
 .lightbox__content-wrapper {
     position: relative;
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center;     /* Centra el contenido verticalmente */
-    margin: 0 auto;          /* Obliga a la caja entera a ir al medio */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
     max-width: 90%;
     max-height: 85vh;
     transform: scale(0.95);
     transition: transform 0.3s ease;
 }
 
-/* 3. El loguito convertido en MARCA DE AGUA (cuando abrís la foto) */
+/* ---El loguito convertido en MARCA DE AGUA (cuando abrís la foto)--- */
 .logo-esquina--lightbox {
-    /* La despegamos de la esquina y la centramos */
     bottom: auto; 
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); /* Centrado matemático perfecto sobre la foto */
-    
-    /* Tamaño y efecto de marca de agua */
-    width: 100%; /* Con 100% ocupa toda la box */
-    max-width: 350px; /* Tamaño de la box del logo */
-    opacity: 0.2; /* Transparencia del logo */
-    pointer-events: none; /* Los clics la atraviesan para que no moleste */
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 350px;
+    opacity: 0.2;
+    pointer-events: none;
     z-index: 10;
 }
 
 /* Ajuste para que no quede enorme en el celular */
 @media screen and (max-width: 768px) {
     
-    /* 1. Ajuste para los loguitos en la galería (cuadritos chicos) */
+    /* Ajuste para los loguitos en la galería (cuadritos chicos) */
     .logo-esquina {
-        width: 25px;   /* Tamaño del logo */
-        bottom: 3px;   /* Distancia del piso (bottom) */
-        left: 3px;     /* Distancia de la izq (left) */
+        width: 25px;
+        bottom: 3px;
+        left: 3px;
     }
 
-    /* 2. Ajuste para la MARCA DE AGUA en celular */
+    /* Ajuste para la MARCA DE AGUA en celular */
     .logo-esquina--lightbox {
         width: 80%; 
         bottom: auto;
@@ -479,22 +458,20 @@
 }
 
 /* =========================================
-   GALERÍA DINÁMICA: MARCO Y ANIMACIONES
+     GALERÍA DINÁMICA: MARCO Y ANIMACIONES
    ========================================= */
 
-/* Marco contenedor estilo "Álbum" */
 .gallery-frame {
     background-color: var(--color-secundario);
     border-radius: 20px;
-    border: 2px solid var(--color-primario-alfa-1); /* Borde de galery */
+    border: 2px solid var(--color-primario-alfa-1);
     padding: 30px 20px 10px 20px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.4);
     margin: 0 auto;
-    max-width: 1000px; /* Evita que se estire demasiado en pantallas gigantes */
+    max-width: 1000px;
     transition: all 0.5s ease;
 }
 
-/* El botón sutil abrir galeria */
 .button--subtle {
     background: transparent;
     border: 1px solid var(--color-texto-gris);
@@ -513,15 +490,13 @@
     background-color: var(--color-primario-alfa-1); 
 }
 
-/* ANIMACIÓN: Fundido suave */
+/* ANIMACIÓN */
 .gallery__item {
-    /* Le damos más tiempo al fundido (0.8s) para que sea súper relajante */
     transition: opacity 1.5s ease, filter 0.8s ease; 
 }
 
 .gallery__item.fade-out {
-    opacity: 0; 
-    /* Le sacamos el transform: scale(0.95) que hacía que se hunda */
+    opacity: 0;
 }
 
 /* =========================================

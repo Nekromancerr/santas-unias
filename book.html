@@ -9,6 +9,13 @@
             <meta property="og:title" content="Santas Uñas - Salón y Academia">
             <meta property="og:description" content="Especialistas en esculpidas, capping y esmaltado. ¡Reservá tu turno o sumate a nuestros cursos!">
             <meta property="og:image" content="https://nekromancerr.github.io/santas-unias/img/portada-whatsapp.jpg">
+
+            <link rel="icon" type="image/png" href="img/logo-s.webp">
+            <link rel="apple-touch-icon" href="img/logo-s.webp">
+            <meta name="theme-color" content="#2c2b29">
+            <!-- Este manifiesto lo combierte en "app" -->
+            <link rel="manifest" href="manifest.json">
+            
             <meta property="og:url" content="https://santas-unias.netlify.app/">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,12 +24,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
     </head>
 <body>
+    <!--==============
+        Barra de Inicio
+        ==============-->
     <header class="header">
         <div class="container header__container">
 
-            <!--Aca va el logo, el href es lo que escucha para que te lleve al inicio, la img es lo que se ve-->
             <a href="index.html" class="header__logo">
-                <img src="img/logo-s.webp" alt="Santas Uñas" class="header__img">
+                <img src="img/logo-s.webp" alt="Santas Uñas" class="header__img"> <!--Aca va el logo, el href es lo que escucha para que te lleve al inicio, la img es lo que se ve-->
                 <span class="header__title-text">antas uñas</span>
             </a>
 
@@ -54,9 +63,9 @@
 
     <main class="main">
 
-        <!-- ==============
-         Galeria de Fotos  
-        =================-->
+        <!--================
+            Galeria de Fotos  
+            ================-->
         <section id="book-gen" class="gallery section container">
             <h1 class="gallery__title">Nuestro <span class="hero__highlight">Book de Trabajos</span></h1>
             <p class="gallery__subtitle">Inspirate con los últimos diseños y técnicas de nuestro equipo.</p>
@@ -71,14 +80,13 @@
             </div>
         </section>
 
-        <!--=============
-         Galeria Personal
-        ===============-->
-
+        <!--================
+            Galeria Personal
+            ================-->
         <section id="book-per" class="personal-books section container">
             <h2 class="gallery__title" style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">Elegí a tu <span class="hero__highlight">profesional</span></h2>
 
-            <!-- Cada bloque contiene los "book-..." de cada una -->
+            <!-- Cada bloque contiene los fotones/foto de cada una -->
 
             <div class="personal-books__tabs">
                 <button class="tab-btn" data-target="book-isis">
@@ -130,7 +138,7 @@
                         
                         <!--<div class="gallery__item"><img src="img" alt="Trabajo Isis" class="gallery__img" loading="lazy">
                             <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div>            Bloque para poner mas fotos -->
+                        </div> Bloque para poner mas fotos -->
                     </div>
 
                     <div class="personal-gallery__footer">
@@ -254,5 +262,4 @@
     <script src="js/tabs.js"></script>
     <script src="js/lightbox.js"></script>
 </body>
-
 </html>

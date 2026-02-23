@@ -1,7 +1,7 @@
 /* ==========================================
-   10. SECCIÓN EQUIPO (Sobre Nosotras)
+       SECCIÓN EQUIPO (Sobre Nosotras)
    ========================================== */
-   .team {
+.team {
     padding-top: 80px;
     padding-bottom: 100px;
     text-align: center;
@@ -16,10 +16,9 @@
 /* --- La Grilla de 3 columnas --- */
 .team__grid {
     display: grid;
-    /* En compu son 3 columnas. En celular se apilan solas */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
-    align-items: center; /* Alinea verticalmente al centro */
+    align-items: center;
     margin-bottom: 60px;
 }
 
@@ -27,7 +26,7 @@
 .team__card {
     background-color: var(--color-secundario);
     border-radius: 20px;
-    padding: 40px 25px;
+    padding: 50px 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
@@ -36,13 +35,13 @@
     transition: transform 0.3s ease;
 }
 
-/* La tarjeta del centro se levanta */
+/* --- La tarjeta del centro se levanta --- */
 @media screen and (min-width: 968px) {
     .team__card--center {
-        margin-top: -50px; /* Sube 50px */
-        z-index: 10; /* Se pone por delante de las otras */
-        box-shadow: 0 15px 40px var(--color-sombra-fucsia); /* Sombra rosada más fuerte */
-        transform: scale(1.05); /* Un poquito más grande */
+        margin-top: -50px;
+        z-index: 10;
+        box-shadow: 0 15px 40px var(--color-sombra-fucsia);
+        transform: scale(1.05);
     }
 }
 
@@ -52,15 +51,15 @@
 
 /* --- Foto y Nombre --- */
 
-/* El contenedor que recorta la foto en forma de círculo */
+/* --- El contenedor que recorta la foto en forma de círculo --- */
 .team__photo-placeholder {
-    width: 140px; /* Tamaño ideal para que las caras se vean bien */
+    width: 140px;
     height: 140px;
-    border-radius: 50%; /* Esto lo hace 100% redondo */
+    border-radius: 50%;
     margin: 0 auto 20px;
-    border: 1px solid var(--color-marco); /* Borde exterior */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.767); /* Sombra elegante */
-    overflow: hidden; /* Hace que todo lo que sobresalga del círculo se corta */
+    border: 1px solid var(--color-marco);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.767);
+    overflow: hidden;
     background-color: var(--color-secundario);
 }
 
@@ -68,7 +67,7 @@
 .team__photo-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Evita que la foto se deforme o aplaste */
+    object-fit: cover;
     display: block;
 }
 
@@ -86,21 +85,21 @@
     letter-spacing: 1px;
 }
 
-/* --- El Slider de Reseñas (CSS necesario para que funcione el JS) --- */
+/* --- El Slider de Reseñas --- */
 .reviews__slider {
     position: relative;
-    height: 140px; /* Altura fija para que no salte la tarjeta */
+    height: 150px;
     width: 100%;
     margin-bottom: 25px;
     overflow: hidden;
 }
 
 .review__item {
-    position: absolute; /* Las apilamos una arriba de la otra */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    opacity: 0; /* Empiezan invisibles */
+    opacity: 0;
     visibility: hidden;
     transition: opacity 0.8s ease-in-out;
     font-style: italic;
@@ -112,7 +111,7 @@
 .review__item.active {
     opacity: 1;
     visibility: visible;
-    position: relative; /* Vuelve a ocupar espacio real */
+    position: relative;
 }
 
 .review__item p {
@@ -133,8 +132,8 @@
 .button--small {
     padding: 10px 25px;
     font-size: 0.9rem;
-    border: 2px solid var(--color-primario); /* Color que encierra al texto del boton */
-    color: var(--color-primario); /* Color del texto del boton */
+    border: 2px solid var(--color-primario);
+    color: var(--color-primario);
     border-radius: 20px;
     background: transparent;
     transition: all 0.3s;
@@ -155,5 +154,6 @@
     /* La clase de Jose (la tarjeta central) pasa al primer lugar */
     .team__card--center {
         order: -1; 
+        box-shadow: 0 15px 40px var(--color-sombra-fucsia);
     }
 }

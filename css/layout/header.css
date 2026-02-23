@@ -1,20 +1,19 @@
 /* ==========================================
-   5. HEADER Y NAVEGACIÓN (Desktop)
+      HEADER Y NAVEGACIÓN (Desktop)
    ========================================== */
    .header {
     background-color: var(--color-fondo-header);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Le da una sombrita elegante abajo */
-    position: sticky; /* Hace que el menú te persiga cuando bajás por la página */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
     top: 0;
-    z-index: 100; /* Asegura que el menú siempre esté por encima de las fotos */
+    z-index: 100;
 }
 
-/* Aplicamos Flexbox para separar el logo del menú */
 .header__container {
     display: flex;
-    justify-content: space-between; /* Logo a la izq, menú a la der */
-    align-items: center; /* Los centra verticalmente */
-    height: 80px; /* Altura de la barra */
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
 }
 
 /* --- Estilos del Logo --- */
@@ -41,14 +40,14 @@
 .header__img {
     height: 65px;
     width: 65px;
-    border-radius: 50%; /* 0% es cuadrado, a medida que se aumenta el porcentaje hace las puntas curvas. Al 50% hace que la imagen cuadrada se vuelva un círculo perfecto */
+    border-radius: 50%;
     object-fit: cover;
 }
 
 /* --- Estilos del Menú --- */
 .nav__list {
     display: flex;
-    gap: 20px; /* Espacio entre los botones del menú */
+    gap: 20px;
     align-items: center;
 }
 
@@ -56,7 +55,7 @@
     font-weight: 500;
     font-size: 1rem;
     color: var(--color-texto-gris);
-    transition: color 0.3s ease; /* Hace que el cambio de color al pasar el mouse sea suave */
+    transition: color 0.3s ease;
 }
 
 /* Efecto al pasar el mouse por encima (hover) */
@@ -69,14 +68,14 @@
     background-color: var(--color-primario);
     color: var(--color-fondo-tarjeta);
     padding: 10px 24px;
-    border-radius: 30px; /* Bordes bien redondeados tipo píldora */
+    border-radius: 30px;
     font-weight: bold;
     transition: transform 0.2s ease, background-color 0.2s;
 }
 
 .nav__link--cta:hover {
-    transform: scale(1.05); /* Hace que el botón crezca un 5% al pasar el mouse */
-    background-color: var(--color-secundario); /* Cambia a oscuro */
+    transform: scale(1.05);
+    background-color: var(--color-secundario);
     color: var(--color-primario)
 }
 
@@ -86,49 +85,44 @@
 }
 
 /* ==========================================
-   6. MEDIA QUERIES (Diseño para Celulares)
+      MEDIA QUERIES (Diseño para Celulares)
    ========================================== */
    @media screen and (max-width: 768px) {
     
-    /* 1. Mostramos el menú hamburguesa */
     .header__toggle {
         display: inline-block;
         background: none;
         border: none;
-        font-size: 1.8rem; /* Lo hace grandecito para que sea fácil tocarlo con el dedo */
+        font-size: 1.8rem;
         color: var(--color-primario);
         cursor: pointer;
     }
 
-    /* 2. Transformamos el contenedor de los links en un panel lateral oculto */
     .nav {
         position: fixed;
         top: 0;
-        right: -100%; /* Esto lo empuja fuera de la pantalla hacia la derecha */
-        width: 75%; /* Va a ocupar el 75% del ancho del celular */
-        height: 100vh; /* 100% de la altura de la pantalla */
+        right: -100%;
+        width: 75%;
+        height: 100vh;
         background-color: var(--color-fondo-principal);
         box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-        padding: 80px 30px; /* Espacio interno */
-        transition: right 0.4s ease; /* Hace que deslice suavemente cuando lo abra */
+        padding: 80px 30px;
+        transition: right 0.4s ease;
     }
 
-    /* Esta clase se la agregaro luego con Javascript para que el menú entre a la pantalla */
     .nav.show-menu {
         right: 0;
     }
 
-    /* 3. Acomoda los botones en columna en vez de fila */
     .nav__list {
         flex-direction: column;
-        align-items: flex-start; /* Los alinea a la izquierda del panel */
-        gap: 30px; /* Más espacio para que no se toquen por error con el dedo */
+        align-items: flex-start;
+        gap: 30px;
     }
 
-    /* 4. Muestra y ubica la "X" de cerrar */
     .nav__close {
         display: block;
-        position: absolute; /* Lo ubica libremente adentro del panel */
+        position: absolute;
         top: 25px;
         right: 25px;
         background: none;

@@ -10,14 +10,10 @@ const serviceData = {
         items: [
             { name: "Retiro",
             price: "$10.000",
-            desc: `<strong>-Nuestro servicio incluye:</strong>
-                    <ul>
-                        <li>incluido</li>
-                        <li>incluido</li>
-                        <li>incluido</li>
-                    </ul>`,
+            desc: `<strong> Remoción total de un servicio tanto nuestro, como de otro salón. </strong>`,
             link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/101121-retirado#reservar" 
             }
+
         ]
     },
 
@@ -26,13 +22,7 @@ const serviceData = {
         items: [
             {name: "Esmaltado semipermanente pies", 
             price: "$24.000", 
-            desc: `<strong>-Nuestro servicio no incluye remoción de durezas plantares.</strong>
-                    <strong>-Incluye:</strong>
-                    <ul>
-                        <li>pies</li>
-                        <li>pies</li>
-                        <li>pies</li>
-                    </ul>`,
+            desc: `<strong>Nuestro servicio no incluye remoción de durezas plantares.</strong>`,
             link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/101363-esmaltado-semipermanente-pies#reservar" }
         ]
     },
@@ -42,12 +32,7 @@ const serviceData = {
         items: [
             { name: "Capping Liso", 
             price: "$24.500", 
-            desc: `<strong>-Nuestro servicio incluye:</strong>
-                    <ul>
-                        <li>incluido</li>
-                        <li>incluido</li>
-                        <li>incluido</li>
-                    </ul>`,
+            desc: `<strong>Incluye deco en dos uñas</strong>`,
             link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/33050-capping-liso#reservar" },
             { name: "Capping French", 
             price: "$25.000", 
@@ -58,7 +43,7 @@ const serviceData = {
                         <li>incluido</li>
                     </ul>`,
             link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/91328-capping-french#reservar" },
-            { name: "Capping cromo en todas", 
+            { name: "Capping cromo/ojo de gato", 
             price: "$26.500", 
             desc: `<strong>-Nuestro servicio incluye:</strong>
                     <ul>
@@ -85,12 +70,7 @@ const serviceData = {
         items: [
             { name: "Semipermanente Liso", 
             price: "$20.000", 
-            desc: `<strong>-Nuestro servicio incluye:</strong>
-                    <ul>
-                        <li>incluido</li>
-                        <li>incluido</li>
-                        <li>incluido</li>
-                    </ul>`,
+            desc: `<strong>Incluye deco en dos uñas</strong>`,
             link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/17084-semipermanente-liso#reservar" },
             { name: "Semipermanente French", 
             price: "$21.500", 
@@ -117,13 +97,8 @@ const serviceData = {
         title: "Soft Gel",
         items: [
             { name: "Soft gel", 
-            price: "$24.000", 
-            desc: `<strong>-Nuestro servicio incluye:</strong>
-                    <ul>
-                        <li>incluido</li>
-                        <li>incluido</li>
-                        <li>incluido</li>
-                    </ul>`,
+            price: "$26.000", 
+            desc: `<strong>Incluye</strong>`,
             link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/114377-soft-gel#reservar" }
         ]
     },
@@ -133,12 +108,7 @@ const serviceData = {
         items: [
             { name: "Esculpidas liso", 
             price: "$26.000", 
-            desc: `<strong>-Nuestro servicio incluye:</strong>
-                    <ul>
-                        <li>incluido</li>
-                        <li>incluido</li>
-                        <li>incluido</li>
-                    </ul>`,
+            desc: `<strong>Incluye deco en dos uñas</strong>`,
             link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/33569-esculpidas-liso#reservar" },
             { name: "Esculpidas French", 
             price: "$27.000", 

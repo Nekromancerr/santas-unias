@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
-    // 1. BASE DE DATOS DE FOTOS
+    //          BASE DE DATOS DE FOTOS
     // ==========================================
     const baseDeDatosFotos = [
         // --- Capping ---
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     // ==========================================
-    // 2. PANEL DE CONFIGURACIÓN
+    //          PANEL DE CONFIGURACIÓN
     // ==========================================
     
     const MAX_FOTOS_PANTALLA = 15; // Cantidad de fotos en la grilla principal
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!grid) return;
 
     // ==========================================
-    // 3. FUNCIONES DEL MAZO Y MATEMÁTICAS
+    //     FUNCIONES DEL MAZO Y MATEMÁTICAS
     // ==========================================
     
     function obtenerFotoAleatoria() {
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 4. INICIO Y ROTACIÓN
+    //             INICIO Y ROTACIÓN
     // ==========================================
     
     function iniciarGaleria() {
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function arrancarRotacion() {
-        // NUEVO: Limpiamos cualquier intervalo previo por seguridad antes de crear uno nuevo
+        // Limpiamos cualquier intervalo previo por seguridad antes de crear uno nuevo
         clearInterval(rotacionAutomatica);
 
         rotacionAutomatica = setInterval(() => {
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 5. BOTÓN ABRIR/CERRAR GALERÍA COMPLETA
+    //    BOTÓN ABRIR/CERRAR GALERÍA COMPLETA
     // ==========================================
     const galleryFrame = document.getElementById('gallery-frame');
 

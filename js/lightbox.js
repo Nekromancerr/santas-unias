@@ -35,11 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const parentGrid = e.target.closest('.gallery__grid');
             currentImageArray = Array.from(parentGrid.querySelectorAll('.gallery__img'));
             currentIndex = currentImageArray.indexOf(e.target);
-
             updateLightboxImage();
             lightbox.classList.add('active');
             
-            // NUEVO: Bloqueamos el scroll del fondo
     document.body.style.overflow = 'hidden'; 
     }
 });
@@ -63,8 +61,6 @@ function showPrev() {
 
 function closeLightbox() {
     lightbox.classList.remove('active');
-    
-    // NUEVO: Devolvemos el scroll al fondo
     document.body.style.overflow = ''; 
 }
 
@@ -74,11 +70,10 @@ function closeLightbox() {
     closeBtn.addEventListener('click', closeLightbox);
     
     lightbox.addEventListener('click', (e) => {
-        // Cierra solo si hacés click en lo negro (fuera de la foto y botones)
         if (e.target === lightbox) closeLightbox();
     });
 
-    // 6. Magia de Teclado (Flechas y ESC en PC)
+    // 6. Teclado (Flechas y ESC en PC)
     document.addEventListener('keydown', (e) => {
         if (!lightbox.classList.contains('active')) return; // Solo funciona si el visor está abierto
         if (e.key === 'ArrowRight') showNext();
@@ -86,7 +81,7 @@ function closeLightbox() {
         if (e.key === 'Escape') closeLightbox();
     });
 
-    // 7. Magia de Celular (Deslizar el dedo / Swipe)
+    // 7. Celular (Deslizar el dedo / Swipe)
     let touchStartX = 0;
     let touchEndX = 0;
 

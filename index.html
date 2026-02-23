@@ -9,6 +9,13 @@
         <meta property="og:title" content="Santas Uñas - Salón y Academia">
         <meta property="og:description" content="Especialistas en esculpidas, capping y esmaltado. ¡Reservá tu turno o sumate a nuestros cursos!">
         <meta property="og:image" content="https://nekromancerr.github.io/santas-unias/img/portada-whatsapp.jpg">
+
+        <link rel="icon" type="image/png" href="img/logo-s.webp">
+        <link rel="apple-touch-icon" href="img/logo-s.webp">
+        <meta name="theme-color" content="#2c2b29">
+        <!-- Este manifiesto lo combierte en "app" -->
+        <link rel="manifest" href="manifest.json">
+
         <meta property="og:url" content="https://santas-unias.netlify.app/">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,27 +25,29 @@
     <link rel="preload" as="image" href="img/cap/capping-hero-1.webp">
 </head>
 <body>
-    <!-- ========
-          HEADER
-         ======== -->
+    <!--==============
+        Barra de Inicio
+        ==============-->
     <header class="header">
         <div class="container header__container">
 
-            <!--Aca va el logo, el href es lo que escucha para que te lleve al inicio, la img es lo que se ve-->
             <a href="index.html" class="header__logo">
-                <img src="img/logo-s.webp" alt="Santas Uñas" class="header__img">
+                <img src="img/logo-s.webp" alt="Santas Uñas" class="header__img"> <!--Aca va el logo, el href es lo que escucha para que te lleve al inicio, la img es lo que se ve-->
                 <span class="header__title-text">antas uñas</span>
             </a>
 
-            <!-- Botón Hamburguesa (Solo visible en móvil) -->
-            <button class="header__toggle" aria-label="Abrir menú">
+            <button class="header__toggle" aria-label="Abrir menú"><!-- Botón Hamburguesa (Solo visible en móvil) -->
                 ☰
             </button>
 
-            <!-- Menu de Navegacion -->
+            <!--================== 
+                Menu de Navegacion
+                ==================-->
             <nav class="nav" id="nav-menu">
 
-                <!-- Lista de Items del Nav-->
+                <!--====================== 
+                    Lista de Items del Nav
+                    ======================-->
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#inicio" class="nav__link active">Inicio</a></li>
                     <li class="nav__item"><a href="#servicios" class="nav__link">Servicios</a></li>
@@ -50,51 +59,43 @@
 
                 </ul>
 
-                <!-- Botón cerrar (dentro del nav para móvil) -->
-                <button class="nav__close" aria-label="Cerrar menú">✕</button>
+                <button class="nav__close" aria-label="Cerrar menú">✕</button> <!-- Botón cerrar (dentro del nav para móvil) -->
             </nav>
         </div>
     </header>
 
-    <!-- ============================================
+    <!-- ===========================================
                             MAIN
-        ============================================ -->
+         =========================================== -->
 
     <main class="main">
 
-        <!-- ============================================
+        <!-- =======================================
                             HERO
-        ============================================ -->
+             ======================================= -->
         <section id="inicio" class="hero section">
 
-            <!-- Card contenedora con bordes redondeados -->
-            <div class="hero__card">
+            <div class="hero__card"> <!-- Card contenedora con bordes redondeados -->
 
-                <!-- Slider de fondo -->
-                <div class="hero__slider" id="hero-slider">
-                    
+                <div class="hero__slider" id="hero-slider"> <!-- Slider de fondo -->
                     <div class="hero__overlay"></div>
                 </div>
 
-                <!-- Logo dentro de Hero -->
-                <a href="#inicio" class="hero__logo-anchor">
-                    <img src="img/logo.webp" alt="Logo Santas Uñas" class="hero__logo-img">
+                <a href="#inicio" class="hero__logo-anchor"> 
+                    <img src="img/logo.webp" alt="Logo Santas Uñas" class="hero__logo-img"> <!-- Logo dentro de Hero -->
                 </a>
 
-                <!-- Contenido principal -->
-                <div class="container hero__container">
+                <div class="container hero__container"> <!-- Contenido principal -->
 
-                    <!-- Texto -->
                     <div class="hero__content">
-                        <h1 class="hero__title">
-                            Servicio de excelencia<br>
+                        <h1 class="hero__title"> <!-- Texto -->
+                            <br>Servicio de excelencia
                             <span class="hero__highlight">en el área de manicuria</span>
                         </h1>
                         <p class="hero__text">
                             Especialistas en esculpidas, capping y esmaltado semipermanente. Dale a tus manos el cuidado y el arte que merecen.
                         </p>
-                        <!-- Boton que lleva a Servicios -->
-                        <a href="#servicios" class="button button--primary">Reservar mi turno</a>
+                        <a href="#servicios" class="button button--primary">Reservar mi turno</a> <!-- Boton que lleva a Servicios -->
                     </div>
                 </div>
 
@@ -121,12 +122,17 @@
                         <img src="img/logo-s.webp" alt="Logo" class="category__logo">
                     </div>
                     <div class="category__content">
-                        <h3 class="category__title">Retiro</h3>
+                        <h3 class="category__title">Retiro
+                            <button class="category__info-btn" aria-label="Ver info del servicio"><i class="fa-solid fa-circle-info"></i></button>
+                        </h3>
+                        <div class="category__desc">
+                            <p>Retiramos el material de forma segura, cuidando la placa de tu uña natural para mantenerla sana y fuerte</p> <!-- Descripcion del trabajo -->
+                        </div>
                         <button class="button button--primary open-modal-btn" data-service="retiro">Ver opciones</button>
                     </div>
                 </div>
 
-                <!-- Targeta 2: Pedicura -->
+                <!-- Tarjeta 2: Pedicura -->
                 <div class="category__card">
                     <div class="category__img-placeholder js-service-slider">
                         <img src="img/pedicura-1.webp" alt="Pedicura 1" class="category__img active">
@@ -134,6 +140,7 @@
                     </div>
                     <div class="category__content">
                         <h3 class="category__title">Belleza de Pies</h3>
+                        
                         <button class="button button--primary open-modal-btn" data-service="pedicura">Ver opciones</button>
                     </div>
                 </div>
@@ -148,7 +155,12 @@
                         <img src="img/logo-s.webp" alt="Logo" class="category__logo">
                     </div>
                     <div class="category__content">
-                        <h3 class="category__title">Capping</h3>
+                        <h3 class="category__title">Capping
+                            <button class="category__info-btn" aria-label="Ver info del servicio"><i class="fa-solid fa-circle-info"></i></button>
+                        </h3>
+                        <div class="category__desc">
+                            <p>Recubrimiento de la uña sobre tu largo natural sin extenderla con productos reforzadores</p> <!-- Descripcion del trabajo -->
+                        </div>
                         <button class="button button--primary open-modal-btn" data-service="capping">Ver opciones</button>
                     </div>
                 </div>
@@ -163,7 +175,12 @@
                         <img src="img/logo-s.webp" alt="Logo" class="category__logo">
                     </div>
                     <div class="category__content">
-                        <h3 class="category__title">Manicuría</h3>
+                        <h3 class="category__title">Manicuría
+                            <button class="category__info-btn" aria-label="Ver info del servicio"><i class="fa-solid fa-circle-info"></i></button>
+                        </h3>
+                        <div class="category__desc">
+                            <p>Esmaltado semipermanente sin refuerzo de la uña</p> <!-- Descripcion del trabajo -->
+                        </div>
                         <button class="button button--primary open-modal-btn" data-service="manicuria">Ver opciones</button>
                     </div>
                 </div>
@@ -178,7 +195,12 @@
                         <img src="img/logo-s.webp" alt="Logo" class="category__logo">
                     </div>
                     <div class="category__content">
-                        <h3 class="category__title">Soft Gel</h3>
+                        <h3 class="category__title">Soft Gel
+                            <button class="category__info-btn" aria-label="Ver info del servicio"><i class="fa-solid fa-circle-info"></i></button>
+                        </h3>
+                        <div class="category__desc">
+                            <p>Extención de tu uña con tips de gel</p> <!-- Descripcion del trabajo -->
+                        </div>
                         <button class="button button--primary open-modal-btn" data-service="softgel">Ver opciones</button>
                     </div>
                 </div>
@@ -193,7 +215,12 @@
                         <img src="img/logo-s.webp" alt="Logo" class="category__logo">
                     </div>
                     <div class="category__content">
-                        <h3 class="category__title">Uñas Esculpidas</h3>
+                        <h3 class="category__title">Uñas Esculpidas
+                            <button class="category__info-btn" aria-label="Ver info del servicio"><i class="fa-solid fa-circle-info"></i></button>
+                        </h3>
+                        <div class="category__desc">
+                            <p>Extención de tu uña con polygel</p> <!-- Descripcion del trabajo -->
+                        </div>
                         <button class="button button--primary open-modal-btn" data-service="esculpidas">Ver opciones</button>
                     </div>
                 </div>
@@ -228,23 +255,23 @@
                         </div>
 
                         <div class="review__item">
-                            <p>"Alguna reseña"</p>
-                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                            <p>"Isi es un amorrr súper amable"</p>
+                            <span>⭐⭐⭐⭐⭐ - LUNA</span>
                         </div>
 
                         <div class="review__item">
-                            <p>"Alguna reseña"</p>
-                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                            <p>"Son lo más!"</p>
+                            <span>⭐⭐⭐⭐⭐ - Estela</span>
                         </div>
                         
                         <div class="review__item">
-                            <p>"Alguna reseña"</p>
-                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                            <p>"Ame mis uñas, primera vez con 40 años que me las hago y no me arrepiento de haber elegido su lugar. De la atención de Isis, una divina. Obvio que hasta mejor de la foto que mostre en la foto del modelo"</p>
+                            <span>⭐⭐⭐⭐⭐ - Romina</span>
                         </div>
                         
                         <div class="review__item">
-                            <p>"Alguna reseña"</p>
-                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                            <p>"Encantada con la atención, amabilidad y el trabajo impecable!"</p>
+                            <span>⭐⭐⭐⭐⭐ - Esther</span>
                         </div>
                     </div>
                     
@@ -265,18 +292,18 @@
 
                     <div class="reviews__slider js-review-slider">
                         <div class="review__item active">
-                            <p>"Alguna reseña"</p>
-                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                            <p>"Son las mejores!✨"</p>
+                            <span>⭐⭐⭐⭐⭐ - Myrian</span>
                         </div>
 
                         <div class="review__item">
-                            <p>"Alguna reseña"</p>
-                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                            <p>"Me encanta, cada vez que voy la paso genial y el servicio me encanta, siemore ofreciendo lo mejor a sus clientes. No las cambio por nada!"</p>
+                            <span>⭐⭐⭐⭐⭐ - Samantha</span>
                         </div>
 
                         <div class="review__item">
-                            <p>"Alguna reseña"</p>
-                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                            <p>"Puntualidad - servicio impecable - conversaciones divertidas - profesionalismo. Si vos queres que las uñas te queden hermosas y cuidadas, no dudes, Santas Uñas es "El" lugar. Gracias Jose y Lola."</p>
+                            <span>⭐⭐⭐⭐⭐ - Natalia</span>
                         </div>
 
                         <div class="review__item">
@@ -405,5 +432,4 @@
     <script src="js/modals.js"></script>
     <script src="js/sliders.js"></script>
 </body>
-
 </html>

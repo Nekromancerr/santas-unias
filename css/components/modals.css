@@ -1,5 +1,5 @@
 /* ==========================================
-   9. MODALES (Ventanas Emergentes)
+      MODALES (Ventanas Emergentes)
    ========================================== */
    .modal {
     position: fixed;
@@ -74,7 +74,7 @@
 /* --- Estilos de los ítems de la lista --- */
 .modal__list li {
     display: flex;
-    flex-direction: column; /* Cambiamos a columna para que la info extra caiga abajo */
+    flex-direction: column;
     padding: 15px 0;
     border-bottom: 1px solid var(--color-borde);
 }
@@ -144,7 +144,6 @@
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    /* Aumentamos el max-height por si la lista es larga */
     transition: max-height 0.4s ease, margin-top 0.4s ease, opacity 0.4s ease;
     width: 100%;
 }
@@ -155,7 +154,7 @@
     opacity: 1;
 }
 
-/* El cuadro rosado de fondo */
+/* El cuadro de fondo */
 .modal__item-desc-content {
     font-size: 0.9rem;
     color: var(--color-texto-principal); /* Lista de aclaraciones */
@@ -165,22 +164,19 @@
     border-left: 2px solid var(--color-primario); /* Color, tamaño y ubicacion de linea de diseño a la izquierda */
 }
 
-/* El título "Incluye:" en negrita */
 .modal__item-desc-content strong {
     color: var(--color-texto-principal);
-    display: block; /* Para que la lista baje a la siguiente línea */
+    display: block;
     margin-bottom: 5px;
 }
 
-/* Restauramos las viñetas (los puntitos) para esta lista en particular */
 .modal__item-desc-content ul {
     list-style-type: disc;
-    margin-left: 20px; /* Sangría para que los puntitos queden alineados */
+    margin-left: 20px;
 }
 
-/* Pisamos el estilo general para que las líneas de la lista no tengan el borde gris debajo */
 .modal__item-desc-content li {
     padding: 2px 0;
     border-bottom: none; 
-    display: list-item; /* Forzamos a que se comporte como ítem de lista normal */
+    display: list-item;
 }

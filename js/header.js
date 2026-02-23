@@ -23,6 +23,7 @@ if (navToggle) {
         // Al hacer clic, añadimos la clase 'show-menu' al nav
         // CSS se encarga de la animación (right: 0)
         navMenu.classList.add('show-menu');
+        document.body.style.overflow = 'hidden';
     });
 }
 
@@ -36,12 +37,12 @@ if (navClose) {
         // Al hacer clic, quitamos la clase 'show-menu'
         // El menú vuelve a esconderse (right: -100%)
         navMenu.classList.remove('show-menu');
+        document.body.style.overflow = '';
     });
 }
 
 /* =========================================
     QUITAR MENÚ AL HACER CLICK EN UN LINK
-    (UX: Experiencia de Usuario)
     ========================================= */
 // Seleccionamos TODOS los links del menú
 const navLink = document.querySelectorAll('.nav__link');
@@ -49,6 +50,7 @@ const navLink = document.querySelectorAll('.nav__link');
 const linkAction = () => {
     // Cuando hagamos clic en cualquier link, quitamos la clase show-menu
     navMenu.classList.remove('show-menu');
+    document.body.style.overflow = '';
 }
 
 // Por cada link, agregamos un "escuchador" de clic
@@ -64,6 +66,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
         // Si el clic NO fue dentro del menú (navMenu) y NO fue en el botón hamburguesa (navToggle)
         if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
             navMenu.classList.remove('show-menu');
+            document.body.style.overflow = '';
         }
     }
 });

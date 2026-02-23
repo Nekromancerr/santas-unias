@@ -69,3 +69,30 @@ document.addEventListener('DOMContentLoaded', () => {
     initReviewSliders();
     initServiceSliders();
 });
+
+/* =========================================
+   3. ACORDEÓN DE INFO EN TARJETAS DE SERVICIOS
+   ========================================= */
+   document.addEventListener('DOMContentLoaded', () => {
+    const categoryInfoBtns = document.querySelectorAll('.category__info-btn');
+
+    categoryInfoBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Buscamos la cajita de descripción que pertenece a este mismo botón
+            const descContainer = btn.closest('.category__content').querySelector('.category__desc');
+            
+            // Nos fijamos si ya estaba abierta
+            const estabaAbierta = descContainer.classList.contains('show');
+            
+            // 1. Cerramos TODAS las cajitas de todas las tarjetas para mantener el orden
+            document.querySelectorAll('.category__desc').forEach(d => d.classList.remove('show'));
+            document.querySelectorAll('.category__info-btn').forEach(b => b.classList.remove('active'));
+            
+            // 2. Si la que tocamos estaba cerrada, la abrimos
+            if (!estabaAbierta) {
+                descContainer.classList.add('show');
+                btn.classList.add('active');
+            }
+        });
+    });
+});
