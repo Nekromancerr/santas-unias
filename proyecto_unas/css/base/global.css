@@ -1,0 +1,184 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================================
+      VARIABLES (Paleta de colores)
+   ========================================== */
+   :root {
+
+    /* --- 1. COLORES PRINCIPALES --- */
+    --color-primario: #fded8e;
+    --color-secundario: #2c2b29;
+    
+    /* --- 2. FONDOS --- */
+    --color-fondo-principal: #000000ef; 
+    --color-fondo-tarjeta: #0f0f0f;
+    --color-fondo-header: #2c2b29; 
+    --color-fondo-footer: #333333;
+    --color-fondo-destacado: #ff0055;
+    --color-fondo-gris: #e0e0e0; 
+    
+    /* --- 3. TEXTOS --- */
+    --color-texto-principal: #d4d4d4ef;
+    --color-texto-oscuro: #1A1A1A; 
+    --color-texto-blanco: #ffffff; 
+    --color-texto-gris: #666666; 
+    --color-texto-footer: #cccccc;
+    --color-texto-dorado: #fded8e; 
+    --color-texto-marron: rgb(128, 83, 0); 
+
+    /* --- 4. BORDES Y SOMBRAS --- */
+    --color-borde: #eeeeee;
+    --color-marco: rgb(0, 0, 0);
+    --color-sombra-fucsia: rgb(234, 0, 255); 
+    --color-sombra-dorada: rgb(243, 233, 142); 
+
+    /* --- 5. OVERLAYS --- */
+    --overlay-suave: rgba(0, 0, 0, 0.6);
+    --overlay-medio: rgba(0, 0, 0, 0.7);
+    --overlay-fuerte: rgba(0, 0, 0, 0.9);
+    --overlay-hero: rgba(0, 0, 0, 0.15);
+
+    /* --- 6. TRANSPARENCIAS DE LA PALETA --- */
+    --color-primario-alfa-1: rgba(253, 237, 142, 0.1);
+    --color-primario-alfa-2: rgba(253, 237, 142, 0.2);
+    --color-blanco-alfa: rgba(255, 255, 255, 0.1);
+
+    /* Tipografía */
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Declaramos la fuente personalizada */
+@font-face {
+    font-family: 'FuenteSantasUnas'; 
+    src: url('../../fonts/fuente-logo-1.ttf') format('truetype'); /* La ruta a tu archivo */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuenteSantasUnas1'; 
+    src: url('../../fonts/fuente-logo-2.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ==========================================
+      RESET (El lienzo en blanco)
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+      ESTILOS GLOBALES (El cuerpo del sitio)
+   ========================================== */
+body {
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-oscuro);
+    font-family: var(--fuente-principal);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secundario);
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================================
+      CLASES DE UTILIDAD
+   ========================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#inicio, 
+#courses-promo {
+    scroll-margin-top: 100px; 
+}
+
+#book-per {
+    scroll-margin-top: 95px;
+}
+
+/* ==========================================
+   BOTÓN VOLVER ARRIBA
+   ========================================== */
+   .scroll-top {
+    position: fixed;
+    right: 20px;
+    bottom: -20%;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    z-index: 999;
+    transition: bottom 0.4s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.scroll-top:hover {
+    transform: translateY(-5px);
+}
+
+.scroll-top.show-scroll {
+    bottom: 25px;
+}
+
+/* ==========================================
+   BOTÓN WHATSAPP FLOTANTE
+   ========================================== */
+   .whatsapp-float {
+    position: fixed;
+    left: 20px;
+    bottom: 25px;
+    background-color: #25d366;
+    color: #ffffff;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+    color: #ffffff;
+}
+
+/* ==========================================
+   ANIMACIONES DE SCROLL (Scroll Reveal)
+   ========================================== */
+   .reveal {
+    opacity: 0;
+    transform: translateY(60px); /* Empieza 60px más abajo */
+    transition: all 0.8s ease-out; /* Animación súper suave de casi 1 segundo */
+}
+
+/* El JS le va a agregar esta clase cuando el usuario llegue a esa parte */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

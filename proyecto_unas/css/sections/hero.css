@@ -1,0 +1,184 @@
+/* ==========================================
+       HERO SECTION (La Portada)
+   ========================================== */
+   .hero {
+    width: 100%;
+    height: 85vh;
+    padding: 20px;
+    background-color: var(--color-fondo-principal); /* El fondo de la web para que la tarjeta resalte */
+}
+
+/* El contenedor que agrupa todo */
+.hero__card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px var(overlay-hero);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--color-primario);
+}
+
+/* --- EL SLIDER --- */
+.hero__slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* La capa oscura que va adentro del slider */
+.hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-suave);
+    z-index: 1;
+}
+
+/* --- EL TEXTO --- */
+.hero__container {
+    position: relative;
+    z-index: 2;
+    text-align: right;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.hero__title {
+    color: var(--color-texto-principal);
+    font-size: 4rem; 
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero__highlight {
+    color: var(--color-primario); 
+}
+
+.hero__text {
+    color: var(--color-texto-blanco);
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* --- Botón Principal --- */
+.button {
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.button--primary {
+    background-color: var(--color-primario);
+    color: var(--color-fondo-tarjeta);
+}
+
+.button--primary:hover {
+    transform: translateY(-5px); 
+    background-color: var(--color-fondo-header);
+    color: var(--color-primario);
+}
+
+/* ==========================================
+   LOGO FLOTANTE EN EL HERO
+   ========================================== */
+
+/* El contenedor del logo */
+.hero__logo-anchor {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 10;
+    display: block;
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* La imagen del logo en sí */
+.hero__logo-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+}
+
+.hero__logo-anchor:hover {
+    transform: scale(1.1);
+}
+
+/* --- Ajuste para celulares --- */
+@media screen and (max-width: 768px) {
+    
+    .hero__logo-anchor {
+        width: 80px;
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+/* --- Ajustes para celulares --- */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: auto;
+    }
+
+    .hero__card {
+        min-height: 60vh; 
+        justify-content: center; 
+        padding: 40px 20px 130px 20px; 
+    }
+
+    .hero__container {
+        position: static; 
+        text-align: right; 
+        padding-bottom: 0; 
+    }
+
+    .hero__title, .hero__text {
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero__title {
+        font-size: 2.2rem; 
+        margin-bottom: 15px;
+    }
+
+    .hero__text {
+        font-size: 1rem;
+        margin-bottom: 0; 
+    }
+
+    .hero__logo-anchor {
+        width: 70px; 
+        bottom: 30px;
+        left: 20px;
+        z-index: 10;
+    }
+
+    .hero__content .button {
+        position: absolute; 
+        z-index: 10;
+        bottom: 40px;
+        right: 20px;
+        margin: 0;
+        padding: 12px 25px; 
+        font-size: 1.1rem;
+    }
+}

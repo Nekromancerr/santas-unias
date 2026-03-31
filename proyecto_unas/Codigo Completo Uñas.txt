@@ -1,0 +1,3783 @@
+=== index.html ===
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nails by Santas Uñas</title>
+    <meta name="description" content="Especialistas en esculpidas, capping y esmaltado semipermanente. Dale a tus manos el cuidado y el arte que merecen en Zárate.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Santas Uñas - Salón y Academia">
+        <meta property="og:description" content="Especialistas en esculpidas, capping y esmaltado. ¡Reservá tu turno o sumate a nuestros cursos!">
+        <meta property="og:image" content="https://nekromancerr.github.io/santas-unias/img/portada-whatsapp.jpg">
+
+        <link rel="icon" type="image/png" href="img/logo-s.webp">
+        <link rel="apple-touch-icon" href="img/logo-s.webp">
+        <meta name="theme-color" content="#2c2b29">
+        <!-- Este manifiesto lo combierte en "app" -->
+        <link rel="manifest" href="manifest.json">
+
+        <meta property="og:url" content="https://santas-unias.netlify.app/">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="img/cap/capping-hero-1.webp">
+</head>
+<body>
+    <!--==============
+        Barra de Inicio
+        ==============-->
+    <header class="header">
+        <div class="container header__container">
+
+            <a href="index.html" class="header__logo">
+                <img src="img/logo-s.webp" alt="Santas Uñas" class="header__img"> <!--Aca va el logo, el href es lo que escucha para que te lleve al inicio, la img es lo que se ve-->
+                <span class="header__title-text">antas uñas</span>
+            </a>
+
+            <button class="header__toggle" aria-label="Abrir menú"><!-- Botón Hamburguesa (Solo visible en móvil) -->
+                ☰
+            </button>
+
+            <!--================== 
+                Menu de Navegacion
+                ==================-->
+            <nav class="nav" id="nav-menu">
+
+                <!--====================== 
+                    Lista de Items del Nav
+                    ======================-->
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#inicio" class="nav__link active">Inicio</a></li>
+                    <li class="nav__item"><a href="#servicios" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="#nosotras" class="nav__link">Nosotras</a></li>
+                    <li class="nav__item"><a href="#courses-promo" class="nav__link">Cursos</a></li>
+
+                    <!-- Notar que "contacto" tiene una clase distinta, en href puede ir link de whatsapp -->
+                    <li class="nav__item"><a href="https://www.wonoma.com/es-AR/salon/santas-unas" class="nav__link nav__link--cta">Reserva Turno</a></li>
+
+                </ul>
+
+                <button class="nav__close" aria-label="Cerrar menú">✕</button> <!-- Botón cerrar (dentro del nav para móvil) -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===========================================
+                            MAIN
+         =========================================== -->
+
+    <main class="main">
+
+        <!-- =======================================
+                            HERO
+             ======================================= -->
+        <section id="inicio" class="hero section">
+
+            <div class="hero__card"> <!-- Card contenedora con bordes redondeados -->
+
+                <div class="hero__slider" id="hero-slider"> <!-- Slider de fondo -->
+                    <div class="hero__overlay"></div>
+                </div>
+
+                <a href="#inicio" class="hero__logo-anchor"> 
+                    <img src="img/logo.webp" alt="Logo Santas Uñas" class="hero__logo-img"> <!-- Logo dentro de Hero -->
+                </a>
+
+                <div class="container hero__container"> <!-- Contenido principal -->
+
+                    <div class="hero__content">
+                        <h1 class="hero__title"> <!-- Texto -->
+                            <br>Servicio de excelencia
+                            <span class="hero__highlight">en el área de manicuria</span>
+                        </h1>
+                        <p class="hero__text">
+                            Especialistas en esculpidas, capping y esmaltado semipermanente. Dale a tus manos el cuidado y el arte que merecen.
+                        </p>
+                        <a href="#servicios" class="button button--primary">Reservar mi turno</a> <!-- Boton que lleva a Servicios -->
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ============================================
+                           Servicios
+        ============================================ -->
+
+        <section id="servicios" class="container" style="padding: 80px 20px; text-align: center;">
+            <h2 style="font-size: 2.5rem; color: var(--color-texto-principal); margin-bottom: 50px;">Agenda Tu Turno</h2>
+            
+            <!-- Grilla de Tarjetas -->
+            <div class="services__grid">
+                
+                <!-- Tarjeta 1: Retiro-->
+                <div class="category__card reveal">
+                    <div class="category__img-placeholder js-service-slider"><!--Notar class "js-service- slider"-->
+                        <img src="img/ret/retirado-1.webp" alt="Retiro 1" class="category__img active">
+                        <img src="img/ret/retirado-2.webp" alt="Retiro 2" class="category__img">
+                        <video src="img/ret/retirado-3.mp4" class="category__img" autoplay loop muted playsinline></video>
+                        <img src="img/logo-s.webp" alt="Logo" class="category__logo">
+                    </div>
+                    <div class="category__content">
+                        <h3 class="category__title">Retiro
+                            <button class="category__info-btn" aria-label="Ver info del servicio"><i class="fa-solid fa-circle-info"></i></button>
+                        </h3>
+                        <div class="category__desc">
+                            <p>Retiramos el material de forma segura, cuidando la placa de tu uña natural para mantenerla sana y fuerte</p> <!-- Descripcion del trabajo -->
+                        </div>
+                        <button class="button button--primary open-modal-btn" data-service="retiro">Ver opciones</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Pedicura -->
+                <div class="category__card reveal">
+                    <div class="category__img-placeholder js-service-slider">
+                        <img src="img/pedicura-1.webp" alt="Pedicura 1" class="category__img active">
+                        <img src="img/logo-s.webp" alt="Logo" class="category__logo">
+                    </div>
+                    <div class="category__content">
+                        <h3 class="category__title">Belleza de Pies</h3>
+                        
+                        <button class="button button--primary open-modal-btn" data-service="pedicura">Ver opciones</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Capping -->
+                <div class="category__card reveal">
+                    <div class="category__img-placeholder js-service-slider">
+                        <img src="img/cap/capping-hero-1.webp" alt="Capping 1" class="category__img active">
+                        <img src="img/cap/capping-hero-4.webp" alt="Capping 2" class="category__img">
+                        <img src="img/cap/capping-8.webp" alt="Capping 3" class="category__img">
+                        <img src="img/cap/capping-hero-6.webp" alt="Capping 4" class="category__img">
+                        <img src="img/logo-s.webp" alt="Logo" class="category__logo">
+                    </div>
+                    <div class="category__content">
+                        <h3 class="category__title">Capping
+                            <button class="category__info-btn" aria-label="Ver info del servicio"><i class="fa-solid fa-circle-info"></i></button>
+                        </h3>
+                        <div class="category__desc">
+                            <p>Recubrimiento de la uña sobre tu largo natural sin extenderla con productos reforzadores</p> <!-- Descripcion del trabajo -->
+                        </div>
+                        <button class="button button--primary open-modal-btn" data-service="capping">Ver opciones</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4: Manicura -->
+                <div class="category__card reveal">
+                    <div class="category__img-placeholder js-service-slider">
+                        <img src="img/man/manicura-1.webp" alt="Manicuría 1" class="category__img active">
+                        <img src="img/man/manicura-2.webp" alt="Manicuría 2" class="category__img">
+                        <img src="img/man/manicura-3.webp" alt="Manicuría 3" class="category__img">
+                        <img src="img/man/manicura-2.webp" alt="Manicuría 4" class="category__img">
+                        <img src="img/logo-s.webp" alt="Logo" class="category__logo">
+                    </div>
+                    <div class="category__content">
+                        <h3 class="category__title">Manicuría
+                            <button class="category__info-btn" aria-label="Ver info del servicio"><i class="fa-solid fa-circle-info"></i></button>
+                        </h3>
+                        <div class="category__desc">
+                            <p>Esmaltado semipermanente sin refuerzo de la uña</p> <!-- Descripcion del trabajo -->
+                        </div>
+                        <button class="button button--primary open-modal-btn" data-service="manicuria">Ver opciones</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 5: Soft Gel -->
+                <div class="category__card reveal">
+                    <div class="category__img-placeholder js-service-slider">
+                        <img src="img/sof/soft-gel.webp" alt="Soft Gel 1" class="category__img active">
+                        <img src="img/sof/soft-gel-1.webp" alt="Soft Gel 2" class="category__img">
+                        <img src="img/sof/soft-gel-2.webp" alt="Soft Gel 3" class="category__img">
+                        <img src="img/sof/soft-gel-1.webp" alt="Soft Gel 4" class="category__img">
+                        <img src="img/logo-s.webp" alt="Logo" class="category__logo">
+                    </div>
+                    <div class="category__content">
+                        <h3 class="category__title">Soft Gel
+                            <button class="category__info-btn" aria-label="Ver info del servicio"><i class="fa-solid fa-circle-info"></i></button>
+                        </h3>
+                        <div class="category__desc">
+                            <p>Extención de tu uña con tips de gel</p> <!-- Descripcion del trabajo -->
+                        </div>
+                        <button class="button button--primary open-modal-btn" data-service="softgel">Ver opciones</button>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 6: Esculpidas -->
+                <div class="category__card reveal">
+                    <div class="category__img-placeholder js-service-slider">
+                        <img src="img/esc/esculpidas-1.webp" alt="Esculpidas 1" class="category__img active">
+                        <img src="img/esc/esculpidas-2.webp" alt="Esculpidas 2" class="category__img">
+                        <img src="img/esc/esculpidas-3.webp" alt="Esculpidas 3" class="category__img">
+                        <img src="img/esc/esculpidas-4.webp" alt="Esculpidas 4" class="category__img">
+                        <img src="img/logo-s.webp" alt="Logo" class="category__logo">
+                    </div>
+                    <div class="category__content">
+                        <h3 class="category__title">Uñas Esculpidas
+                            <button class="category__info-btn" aria-label="Ver info del servicio"><i class="fa-solid fa-circle-info"></i></button>
+                        </h3>
+                        <div class="category__desc">
+                            <p>Extención de tu uña con polygel</p> <!-- Descripcion del trabajo -->
+                        </div>
+                        <button class="button button--primary open-modal-btn" data-service="esculpidas">Ver opciones</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================
+                           Nosotras
+        ============================================ -->
+
+        <section id="nosotras" class="team section container">
+            <h2 class="section__title reveal">Conocé a las artistas detrás de <span class="hero__highlight">Santas Uñas</span></h2>
+
+            <div class="team__grid">
+                
+                <!-- Tarjeta Nosotras 1: Isis <3 -->
+                <article class="team__card reveal">
+                    <div class="team__header">
+                        <div class="team__photo-placeholder">
+                            <img src="img/perfil-isis.webp" alt="Isis">
+                        </div>
+                        <h3 class="team__name">Isis</h3>
+                        <span class="team__role">Especialista en Nail Art</span>
+                    </div>
+
+                    <!-- Cada uno de estos bloques contiene las reseñas individuales de cada una -->
+                    <div class="reviews__slider js-review-slider">
+                        <div class="review__item active">
+                            <p>"Excelente atención como siempre !!! Un lujaso !!."</p>
+                            <span>⭐⭐⭐⭐⭐ - PAULA</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Isi es un amorrr súper amable"</p>
+                            <span>⭐⭐⭐⭐⭐ - LUNA</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Son lo más!"</p>
+                            <span>⭐⭐⭐⭐⭐ - Estela</span>
+                        </div>
+                        
+                        <div class="review__item">
+                            <p>"Ame mis uñas, primera vez con 40 años que me las hago y no me arrepiento de haber elegido su lugar. De la atención de Isis, una divina. Obvio que hasta mejor de la foto que mostre en la foto del modelo"</p>
+                            <span>⭐⭐⭐⭐⭐ - Romina</span>
+                        </div>
+                        
+                        <div class="review__item">
+                            <p>"Encantada con la atención, amabilidad y el trabajo impecable!"</p>
+                            <span>⭐⭐⭐⭐⭐ - Esther</span>
+                        </div>
+                    </div>
+                    
+                    <a href="book.html#book-isis" class="button button--small">Ver trabajos de Isis</a>
+                </article>
+
+                <!-- Tarjeta Nosotras 2: Jose -->
+                <article class="team__card team__card--center reveal">
+                    <div class="team__header">
+                        <div class="team__photo-placeholder">
+                            
+                            <img src="img/perfil-jose.webp" alt="Jose">
+                            
+                        </div>
+                        <h3 class="team__name">Jose</h3>
+                        <span class="team__role">Fundadora & Master en Esculpidas</span>
+                    </div>
+
+                    <div class="reviews__slider js-review-slider">
+                        <div class="review__item active">
+                            <p>"Son las mejores!✨"</p>
+                            <span>⭐⭐⭐⭐⭐ - Myrian</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Me encanta, cada vez que voy la paso genial y el servicio me encanta, siemore ofreciendo lo mejor a sus clientes. No las cambio por nada!"</p>
+                            <span>⭐⭐⭐⭐⭐ - Samantha</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Puntualidad - servicio impecable - conversaciones divertidas - profesionalismo. Si vos queres que las uñas te queden hermosas y cuidadas, no dudes, Santas Uñas es "El" lugar. Gracias Jose y Lola."</p>
+                            <span>⭐⭐⭐⭐⭐ - Natalia</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+                    </div>
+
+                    <a href="book.html#book-jose" class="button button--small">Ver trabajos de Jose</a>
+                </article>
+
+                <!-- Tarjeta Nosotras 3: Lola -->
+                <article class="team__card reveal">
+                    <div class="team__header">
+                        <div class="team__photo-placeholder">
+                            
+                            <img src="img/perfil-lola.webp" alt="Lola">
+                            
+                        </div>
+                        <h3 class="team__name">Lola</h3>
+                        <span class="team__role">Experta en Capping y Soft Gel</span>
+                    </div>
+
+                    <div class="reviews__slider js-review-slider">
+                        <div class="review__item active">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+
+                        <div class="review__item">
+                            <p>"Alguna reseña"</p>
+                            <span>⭐⭐⭐⭐⭐ - Nombre clienta</span>
+                        </div>
+
+                    </div>
+
+                    <a href="book.html#book-lola" class="button button--small">Ver trabajos de Lola</a>
+                </article>
+
+            </div>
+
+            <div class="team__general-cta">
+                <a href="book.html" class="button button--primary button--large">Ver el Book Completo de Trabajos</a>
+            </div>
+        </section>
+
+        <!-- ============================================
+                           Cursos
+        ============================================ -->
+
+        <section id="courses-promo" class="courses-promo">
+            <div class="courses-promo__overlay"></div>
+            
+            <div class="container courses-promo__container">
+                <h2 class="courses-promo__title">¿Querés convertir tu pasión en tu profesión?</h2>
+                <p class="courses-promo__text">
+                    Descubrí nuestra academia. Brindamos cursos iniciales y perfeccionamientos en manicuría, esculpidas y nail art. ¡Vení a aprender las mejores técnicas con nosotras!
+                </p>
+                <a href="cursos.html" class="button button--primary button--large">Conocé nuestros cursos</a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Ventana para Servicios -->
+    <div class="modal" id="price-modal">
+        <div class="modal__overlay" id="modal-close-bg"></div>
+        
+        <div class="modal__content">
+            <button class="modal__close" id="modal-close-btn">✕</button>
+            <h3 class="modal__title" id="modal-title">Título del Servicio</h3>
+            
+            <ul class="modal__list" id="modal-list"></ul>
+        </div>
+    </div>
+
+    <!-- ============================================
+                        FOOTER
+    ============================================ -->
+
+    <footer class="footer">
+        <div class="container footer__container">
+            
+            <div class="footer__info">
+                <h3 class="footer__title">Santas Uñas</h3>
+                <p class="footer__text">Tu lugar de confianza para dejar tus manos hermosas.</p>
+                
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/santas_unias/" target="_blank" class="footer__social-link" aria-label="Ir al Instagram de Santas Uñas"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=3487728179" target="_blank" class="footer__social-link" aria-label="Enviar mensaje por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                
+                <ul class="footer__contact">
+                    <li><i class="fa-solid fa-location-dot"></i> Almte. Brown 159, Zárate</li>
+                    <li><i class="fa-solid fa-envelope"></i> contacto@santasunas.com</li>
+                </ul>
+            </div>
+
+            <div class="footer__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.9113577321164!2d-59.025101199999995!3d-34.097411199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb0b686ad8ca35%3A0xdb1b1ae55e82a9a3!2sASC%2C%20Almte.%20Brown%20159%2C%20B2800%20Z%C3%A1rate%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1771436235479!5m2!1ses!2sar" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+        
+        <div class="footer__copy">
+            <p>&copy; 2026 Santas Uñas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <a href="https://api.whatsapp.com/send/?phone=3487728179" class="whatsapp-float" target="_blank" aria-label="Chatear por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="js/header.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/sliders.js"></script>
+</body>
+</html>
+
+=== cursos.html ===
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nails by Santas Uñas</title>
+        <meta name="description" content="Especialistas en esculpidas, capping y esmaltado semipermanente. Dale a tus manos el cuidado y el arte que merecen en Zárate.">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="Santas Uñas - Salón y Academia">
+            <meta property="og:description" content="Especialistas en esculpidas, capping y esmaltado. ¡Reservá tu turno o sumate a nuestros cursos!">
+            <meta property="og:image" content="https://nekromancerr.github.io/santas-unias/img/portada-whatsapp.jpg">
+            
+
+            <link rel="icon" type="image/png" href="img/logo-s.webp">
+            <link rel="apple-touch-icon" href="img/logo-s.webp">
+            <meta name="theme-color" content="#2c2b29">
+            <!-- Este manifiesto lo combierte en "app" -->
+            <link rel="manifest" href="manifest.json">
+        
+            <meta property="og:url" content="https://santas-unias.netlify.app/">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+        <link rel="preload" as="image" href="img/ret/retirado-2.webp">
+    </head>
+<body>
+    <!--==============
+        Barra de Inicio
+        ==============-->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo">
+                <img src="img/logo-s.webp" alt="Santas Uñas" class="header__img">
+                <span class="header__title-text">antas uñas</span>
+            </a>
+            <button class="header__toggle" aria-label="Abrir menú">☰</button>
+            <nav class="nav" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html#inicio" class="nav__link active">Inicio</a></li>
+                    <li class="nav__item"><a href="index.html#servicios" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="index.html#nosotras" class="nav__link">Nosotras</a></li>
+                    <li class="nav__item"><a href="cursos.html" class="nav__link">Cursos</a></li>
+                    <li class="nav__item"><a href="https://www.wonoma.com/es-AR/salon/santas-unas" class="nav__link nav__link--cta" target="_blank">Reserva Turno</a></li>
+                </ul>
+                <button class="nav__close" aria-label="Cerrar menú">✕</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!--================
+            Banner de Inicio
+            ================-->
+        <section class="courses-hero">
+            <div class="courses-hero__overlay"></div>
+            <div class="container courses-hero__container">
+                <h1 class="courses-hero__title">Convertí tu pasión en <span class="hero__highlight">tu profesión</span></h1>
+                <p class="courses-hero__subtitle">Aprendé las técnicas más actualizadas del mercado con nuestras másters. Cursos iniciales y perfeccionamientos.</p>
+            </div>
+        </section>
+
+        <!--===============
+            Sector de items
+            ===============-->
+        <section class="academy-benefits container section">
+            <div class="benefit reveal">
+                <i class="fa-solid fa-graduation-cap benefit__icon"></i>
+                <h3 class="benefit__title">Certificado Oficial</h3>
+                <p class="benefit__text">Al finalizar te entregamos un certificado que avala tus nuevos conocimientos.</p>
+            </div>
+            <div class="benefit reveal">
+                <i class="fa-solid fa-gem benefit__icon"></i>
+                <h3 class="benefit__title">Materiales Incluidos</h3>
+                <p class="benefit__text">Te proveemos de todo lo necesario para practicar durante las clases.</p>
+            </div>
+            <div class="benefit reveal">
+                <i class="fa-solid fa-users benefit__icon"></i>
+                <h3 class="benefit__title">Grupos Reducidos</h3>
+                <p class="benefit__text">Atención personalizada para asegurar que aprendas cada técnica al 100%.</p>
+            </div>
+        </section>
+
+        <!--==================
+            Selector de cursos
+            ==================-->
+        <section class="courses-list container section" style="padding-bottom: 100px;">
+            <h2 class="section__title reveal" style="text-align: center;">Nuestros <span class="hero__highlight">Cursos</span></h2>
+            
+            <div class="courses-grid">
+                
+                <article class="course-card reveal">
+                    <div class="course-card__img-container">
+                        <img src="img/cap/capping-curso.jpg" alt="Curso Inicial" class="course-card__img">
+                        <span class="course-card__badge">Etiqueta superior</span>
+                    </div>
+                    <div class="course-card__content">
+                        <h3 class="course-card__title">Titulo del curso</h3>
+                        <p class="course-card__desc">Detalle del curso</p>
+                        <ul class="course-card__details">
+                            <li><i class="fa-regular fa-clock"></i> Numero de clases</li>
+                            <li><i class="fa-solid fa-chalkboard-user"></i> Nombre de la cursora</li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send/?phone=3487728179&text=Hola!%20Quiero%20info%20del%20curso%20Inicial" target="_blank" class="button button--primary" style="width: 100%; text-align: center;">Consultar Fechas</a>
+                    </div>
+                </article>
+
+                <article class="course-card reveal">
+                    <div class="course-card__img-container">
+                        <img src="img/esc/esculpidas-2.webp" alt="Curso Esculpidas" class="course-card__img">
+                        <span class="course-card__badge">Etiqueta superior</span>
+                    </div>
+                    <div class="course-card__content">
+                        <h3 class="course-card__title">Titulo del curso</h3>
+                        <p class="course-card__desc">Detalle del curso</p>
+                        <ul class="course-card__details">
+                            <li><i class="fa-regular fa-clock"></i> Numero de clases</li>
+                            <li><i class="fa-solid fa-chalkboard-user"></i> Nombre de la cursora</li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send/?phone=3487728179&text=Hola!%20Quiero%20info%20del%20curso%20de%20Esculpidas" target="_blank" class="button button--primary" style="width: 100%; text-align: center;">Consultar Fechas</a>
+                    </div>
+                </article>
+
+                <article class="course-card reveal">
+                    <div class="course-card__img-container">
+                        <img src="img/tra-lol/lola-10.webp" alt="Curso Nail Art" class="course-card__img">
+                        <span class="course-card__badge">Etiqueta superior</span>
+                    </div>
+                    <div class="course-card__content">
+                        <h3 class="course-card__title">Titulo del curso</h3>
+                        <p class="course-card__desc">Detalle del curso</p>
+                        <ul class="course-card__details">
+                            <li><i class="fa-regular fa-clock"></i> Numero de clases</li>
+                            <li><i class="fa-solid fa-chalkboard-user"></i> Nombre de la cursora</li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send/?phone=3487728179&text=Hola!%20Quiero%20info%20del%20Taller%20Nail%20Art" target="_blank" class="button button--primary" style="width: 100%; text-align: center;">Consultar Fechas</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <h3 class="footer__title">Santas Uñas</h3>
+                <p class="footer__text">Tu lugar de confianza para dejar tus manos hermosas.</p>
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/santas_unias/" target="_blank" class="footer__social-link" aria-label="Ir al Instagram de Santas Uñas"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=3487728179" target="_blank" class="footer__social-link" aria-label="Enviar mensaje por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <ul class="footer__contact">
+                    <li><i class="fa-solid fa-location-dot"></i> Almte. Brown 159, Zárate</li>
+                    <li><i class="fa-solid fa-envelope"></i> contacto@santasunas.com</li>
+                </ul>
+            </div>
+            <div class="footer__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.9113577321164!2d-59.025101199999995!3d-34.097411199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb0b686ad8ca35%3A0xdb1b1ae55e82a9a3!2sASC%2C%20Almte.%20Brown%20159%2C%20B2800%20Z%C3%A1rate%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1771436235479!5m2!1ses!2sar" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <p>© 2026 Santas Uñas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send/?phone=3487728179" class="whatsapp-float" target="_blank" aria-label="Chatear por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="js/header.js"></script>
+
+</body>
+</html>
+
+=== book.html ===
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nails by Santas Uñas</title>
+        <meta name="description" content="Especialistas en esculpidas, capping y esmaltado semipermanente. Dale a tus manos el cuidado y el arte que merecen en Zárate.">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="Santas Uñas - Salón y Academia">
+            <meta property="og:description" content="Especialistas en esculpidas, capping y esmaltado. ¡Reservá tu turno o sumate a nuestros cursos!">
+            <meta property="og:image" content="https://nekromancerr.github.io/santas-unias/img/portada-whatsapp.jpg">
+
+            <link rel="icon" type="image/png" href="img/logo-s.webp">
+            <link rel="apple-touch-icon" href="img/logo-s.webp">
+            <meta name="theme-color" content="#2c2b29">
+            <!-- Este manifiesto lo combierte en "app" -->
+            <link rel="manifest" href="manifest.json">
+            
+            <meta property="og:url" content="https://santas-unias.netlify.app/">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <!--==============
+        Barra de Inicio
+        ==============-->
+    <header class="header">
+        <div class="container header__container">
+
+            <a href="index.html" class="header__logo">
+                <img src="img/logo-s.webp" alt="Santas Uñas" class="header__img"> <!--Aca va el logo, el href es lo que escucha para que te lleve al inicio, la img es lo que se ve-->
+                <span class="header__title-text">antas uñas</span>
+            </a>
+
+            <!-- Botón Hamburguesa (Solo visible en móvil) -->
+            <button class="header__toggle" aria-label="Abrir menú">
+                ☰
+            </button>
+
+            <!-- Menu de Navegacion -->
+            <nav class="nav" id="nav-menu">
+
+                <!-- Lista de Items del Nav-->
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html#inicio" class="nav__link active">Inicio</a></li>
+                    <li class="nav__item"><a href="index.html#servicios" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="#book-per" class="nav__link">Books</a></li>
+                    <li class="nav__item"><a href="cursos.html" class="nav__link">Cursos</a></li>
+
+                    <!-- Notar que "contacto" tiene una clase distinta, en href puede ir link de whatsapp -->
+                    <li class="nav__item"><a href="https://www.wonoma.com/es-AR/salon/santas-unas" class="nav__link nav__link--cta">Reserva Turno</a></li>
+
+                </ul>
+
+                <!-- Botón cerrar (dentro del nav para móvil) -->
+                <button class="nav__close" aria-label="Cerrar menú">✕</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!--================
+            Galeria de Fotos  
+            ================-->
+        <section id="book-gen" class="gallery section container">
+            <h1 class="gallery__title">Nuestro <span class="hero__highlight">Book de Trabajos</span></h1>
+            <p class="gallery__subtitle">Inspirate con los últimos diseños y técnicas de nuestro equipo.</p>
+
+            <div class="gallery-frame" id="gallery-frame">
+                <div class="gallery__grid" id="main-gallery-grid">
+                    </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <button id="btn-show-all" class="button--subtle">Ver galería completa</button>
+            </div>
+        </section>
+
+        <!--================
+            Galeria Personal
+            ================-->
+        <section id="book-per" class="personal-books section container">
+            <h2 class="gallery__title reveal" style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">Elegí a tu <span class="hero__highlight">profesional</span></h2>
+
+            <!-- Cada bloque contiene los fotones/foto de cada una -->
+
+            <div class="personal-books__tabs reveal">
+                <button class="tab-btn" data-target="book-isis">
+                    <div class="tab-img-placeholder">
+                        <img src="img/perfil-isis.webp" alt="Isis"> 
+                    </div>
+                    <span>Isis</span>
+                </button>
+                
+                <button class="tab-btn" data-target="book-jose">
+                    <div class="tab-img-placeholder">
+                        <img src="img/perfil-jose.webp" alt="Jose"> 
+                    </div>
+                    <span>Jose</span>
+                </button>
+                
+                <button class="tab-btn" data-target="book-lola">
+                    <div class="tab-img-placeholder">
+                        <img src="img/perfil-lola.webp" alt="Lola"> 
+                    </div>
+                    <span>Lola</span>
+                </button>
+            </div>
+
+            <!-- Aca se encuentran los "book-..." -->
+
+            <div id="book-isis" class="personal-gallery">
+                <div class="personal-gallery__inner box-completa">
+                    
+                    <div class="personal-gallery__avatar">
+                        <img src="img/perfil-isis.webp" alt="Isis"> 
+                    </div>
+
+                    <div class="personal-gallery__header">
+                        <h3 class="personal-gallery__title">Book de Isis</h3>
+                        <p class="gallery__subtitle">Especialista en Nail Art</p>
+                    </div>
+
+                    <div class="gallery__grid">
+                        <div class="gallery__item"><img src="img/cap/capping-2.webp" alt="Trabajo Isis" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/cap/capping-hero-1.webp" alt="Trabajo Isis" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/cap/capping-hero-6.webp" alt="Trabajo Isis" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        
+                        <!--<div class="gallery__item"><img src="img" alt="Trabajo Isis" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div> Bloque para poner mas fotos -->
+                    </div>
+
+                    <div class="personal-gallery__footer">
+                        <a href="https://www.wonoma.com/es-AR/salon/santas-unas" target="_blank" class="button button--primary">Sacar turno con Isis</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="book-jose" class="personal-gallery">
+                <div class="personal-gallery__inner box-completa">
+                    
+                    <div class="personal-gallery__avatar">
+                        <img src="img/perfil-jose.webp" alt="Jose"> 
+                    </div>
+
+                    <div class="personal-gallery__header">
+                        <h3 class="personal-gallery__title">Book de Jose</h3>
+                        <p class="gallery__subtitle">Fundadora & Master en Esculpidas</p>
+                    </div>
+
+                    <div class="gallery__grid">
+
+                        <!-- <div class="gallery__item"><img src="img" alt="Trabajo Jose" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div> Bloque para poner mas fotos -->
+                        
+                    </div>
+
+                    <div class="personal-gallery__footer">
+                        <a href="https://www.wonoma.com/es-AR/salon/santas-unas" target="_blank" class="button button--primary">Sacar turno con Jose</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="book-lola" class="personal-gallery">
+                <div class="personal-gallery__inner box-completa">
+                    
+                    <div class="personal-gallery__avatar">
+                        <img src="img/perfil-lola.webp" alt="Lola"> 
+                    </div>
+
+                    <div class="personal-gallery__header">
+                        <h3 class="personal-gallery__title">Book de Lola</h3>
+                        <p class="gallery__subtitle">Experta en Capping y Soft Gel</p>
+                    </div>
+
+                    <div class="gallery__grid">
+                        <div class="gallery__item"><img src="img/tra-lol/lola-1.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-2.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-3.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-4.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-5.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-6.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-7.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-8.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-9.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-10.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <div class="gallery__item"><img src="img/tra-lol/lola-11.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div>
+                        <!-- <div class="gallery__item"><img src="img" alt="Trabajo Lola" class="gallery__img" loading="lazy">
+                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
+                        </div> Bloque para poner mas fotos -->
+                        
+                    </div>
+
+                    <div class="personal-gallery__footer">
+                        <a href="https://www.wonoma.com/es-AR/salon/santas-unas" target="_blank" class="button button--primary">Sacar turno con Lola</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <h3 class="footer__title">Santas Uñas</h3>
+                <p class="footer__text">Tu lugar de confianza para dejar tus manos hermosas.</p>
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/santas_unias/" target="_blank" class="footer__social-link" aria-label="Ir al Instagram de Santas Uñas"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://api.whatsapp.com/send/?phone=3487728179" target="_blank" class="footer__social-link" aria-label="Enviar mensaje por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <ul class="footer__contact">
+                    <li><i class="fa-solid fa-location-dot"></i> Almte. Brown 159, Zárate</li>
+                    <li><i class="fa-solid fa-envelope"></i> contacto@santasunas.com</li>
+                </ul>
+            </div>
+            <div class="footer__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.9113577321164!2d-59.025101199999995!3d-34.097411199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb0b686ad8ca35%3A0xdb1b1ae55e82a9a3!2sASC%2C%20Almte.%20Brown%20159%2C%20B2800%20Z%C3%A1rate%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1771436235479!5m2!1ses!2sar" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <p>© 2026 Santas Uñas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <a href="https://api.whatsapp.com/send/?phone=3487728179" class="whatsapp-float" target="_blank" aria-label="Chatear por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="js/header.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+</html>
+
+=== style.css ===
+
+/* ==========================================
+   ÍNDICE DE ESTILOS - SANTAS UÑAS
+   ========================================== */
+
+/* 1. Base y Variables */
+@import url("./base/global.css");
+
+/* 2. Layout (Estructura principal) */
+@import url("./layout/header.css");
+@import url("./layout/footer.css");
+
+/* 3. Secciones */
+@import url("./sections/hero.css");
+@import url("./sections/services.css");
+@import url("./sections/about.css");
+@import url("./sections/courses-promo.css");
+@import url("./sections/book.css");
+@import url("./sections/cursos.css");
+
+/* 4. Componentes */
+@import url("./components/modals.css");
+
+/* Acá voy agregando el resto a medida que avance:
+@import url("./layout/footer.css");
+@import url("./sections/hero.css");
+@import url("./sections/book.css");
+*/
+
+=== global.css ===
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================================
+      VARIABLES (Paleta de colores)
+   ========================================== */
+   :root {
+
+    /* --- 1. COLORES PRINCIPALES --- */
+    --color-primario: #fded8e;
+    --color-secundario: #2c2b29;
+    
+    /* --- 2. FONDOS --- */
+    --color-fondo-principal: #000000ef; 
+    --color-fondo-tarjeta: #0f0f0f;
+    --color-fondo-header: #2c2b29; 
+    --color-fondo-footer: #333333;
+    --color-fondo-destacado: #ff0055;
+    --color-fondo-gris: #e0e0e0; 
+    
+    /* --- 3. TEXTOS --- */
+    --color-texto-principal: #d4d4d4ef;
+    --color-texto-oscuro: #1A1A1A; 
+    --color-texto-blanco: #ffffff; 
+    --color-texto-gris: #666666; 
+    --color-texto-footer: #cccccc;
+    --color-texto-dorado: #fded8e; 
+    --color-texto-marron: rgb(128, 83, 0); 
+
+    /* --- 4. BORDES Y SOMBRAS --- */
+    --color-borde: #eeeeee;
+    --color-marco: rgb(0, 0, 0);
+    --color-sombra-fucsia: rgb(234, 0, 255); 
+    --color-sombra-dorada: rgb(243, 233, 142); 
+
+    /* --- 5. OVERLAYS --- */
+    --overlay-suave: rgba(0, 0, 0, 0.6);
+    --overlay-medio: rgba(0, 0, 0, 0.7);
+    --overlay-fuerte: rgba(0, 0, 0, 0.9);
+    --overlay-hero: rgba(0, 0, 0, 0.15);
+
+    /* --- 6. TRANSPARENCIAS DE LA PALETA --- */
+    --color-primario-alfa-1: rgba(253, 237, 142, 0.1);
+    --color-primario-alfa-2: rgba(253, 237, 142, 0.2);
+    --color-blanco-alfa: rgba(255, 255, 255, 0.1);
+
+    /* Tipografía */
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Declaramos la fuente personalizada */
+@font-face {
+    font-family: 'FuenteSantasUnas'; 
+    src: url('../../fonts/fuente-logo-1.ttf') format('truetype'); /* La ruta a tu archivo */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuenteSantasUnas1'; 
+    src: url('../../fonts/fuente-logo-2.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ==========================================
+      RESET (El lienzo en blanco)
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+      ESTILOS GLOBALES (El cuerpo del sitio)
+   ========================================== */
+body {
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-oscuro);
+    font-family: var(--fuente-principal);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secundario);
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================================
+      CLASES DE UTILIDAD
+   ========================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#inicio, 
+#courses-promo {
+    scroll-margin-top: 100px; 
+}
+
+#book-per {
+    scroll-margin-top: 95px;
+}
+
+/* ==========================================
+   BOTÓN VOLVER ARRIBA
+   ========================================== */
+   .scroll-top {
+    position: fixed;
+    right: 20px;
+    bottom: -20%;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    z-index: 999;
+    transition: bottom 0.4s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.scroll-top:hover {
+    transform: translateY(-5px);
+}
+
+.scroll-top.show-scroll {
+    bottom: 25px;
+}
+
+/* ==========================================
+   BOTÓN WHATSAPP FLOTANTE
+   ========================================== */
+   .whatsapp-float {
+    position: fixed;
+    left: 20px;
+    bottom: 25px;
+    background-color: #25d366;
+    color: #ffffff;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+    color: #ffffff;
+}
+
+/* ==========================================
+   ANIMACIONES DE SCROLL (Scroll Reveal)
+   ========================================== */
+   .reveal {
+    opacity: 0;
+    transform: translateY(60px); /* Empieza 60px más abajo */
+    transition: all 0.8s ease-out; /* Animación súper suave de casi 1 segundo */
+}
+
+/* El JS le va a agregar esta clase cuando el usuario llegue a esa parte */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+=== modals.css ===
+
+/* ==========================================
+      MODALES (Ventanas Emergentes)
+   ========================================== */
+   .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Esta clase es la que prende y apaga el modal */
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-medio);
+}
+
+.modal__content {
+    position: relative;
+    background-color: var(--color-fondo-tarjeta); /* Color de fondo de las tarjetas emergentes */
+    width: 90%;
+    max-width: 500px;
+    padding: 40px 30px;
+    border-radius: 15px;
+    z-index: 1001;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal.active .modal__content {
+    transform: translateY(0);
+}
+
+.modal__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-secundario); /* Color de la X */
+}
+
+.modal__title {
+    color: var(--color-texto-blanco); /* Color del titulo */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal__list {
+    list-style: none;
+    padding: 0;
+}
+
+/* --- Estilos de los ítems de la lista --- */
+.modal__list li {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.modal__list li:last-child {
+    border-bottom: none;
+}
+
+/* Fila principal (Nombre, precio y botón reservar) */
+.modal__item-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Agrupa el nombre y el precio */
+.modal__item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-right: 15px; 
+}
+
+.modal__name {
+    color: var(--color-texto-principal);
+    font-size: 1rem;
+    line-height: 1.2;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* El botoncito de info (i) */
+.modal__info-btn {
+    background: none;
+    border: none;
+    color: var(--color-texto-gris);
+    cursor: pointer;
+    margin-left: 8px;
+    margin-top: 1px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    padding: 0;
+    line-height: 1.2;
+
+}
+
+.modal__info-btn:hover, .modal__info-btn.active {
+    color: var(--color-primario);
+}
+
+.modal__price {
+    font-weight: bold;
+    color: var(--color-texto-principal);
+    font-size: 1.1rem;
+}
+
+/* El mini-botón de reserva de cada ítem */
+.modal__btn-reservar {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* --- La caja escondida con la aclaración --- */
+.modal__item-desc {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, margin-top 0.4s ease, opacity 0.4s ease;
+    width: 100%;
+}
+
+.modal__item-desc.show {
+    max-height: 350px; 
+    margin-top: 15px;
+    opacity: 1;
+}
+
+/* El cuadro de fondo */
+.modal__item-desc-content {
+    font-size: 0.9rem;
+    color: var(--color-texto-principal); /* Lista de aclaraciones */
+    background-color: var(--color-secundario); /* Fondo de la tarjeta de aclaraciones */
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 2px solid var(--color-primario); /* Color, tamaño y ubicacion de linea de diseño a la izquierda */
+}
+
+.modal__item-desc-content strong {
+    color: var(--color-texto-principal);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal__item-desc-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.modal__item-desc-content li {
+    padding: 2px 0;
+    border-bottom: none; 
+    display: list-item;
+}
+
+=== footer.css ===
+
+/* ==========================================
+       FOOTER
+   ========================================== */
+   .footer {
+    background-color: var(--color-fondo-footer);
+    color: var(--color-fondo-tarjeta);
+    padding-top: 60px;
+    margin-top: 50px;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+/* --- Info y Redes --- */
+.footer__info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer__title {
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-bottom: 15px;
+}
+
+.footer__text {
+    color: var(--color-texto-footer);
+    margin-bottom: 25px;
+}
+
+/* Contenedor de los círculos de redes */
+.footer__social {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* El círculo del ícono */
+.footer__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-blanco-alfa);
+    color: var(--color-primario);
+    border-radius: 25%;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.footer__social-link:hover {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    transform: translateY(-5px);
+}
+
+/* Lista de contacto (dirección, mail) */
+.footer__contact {
+    color: var(--color-texto-principal);
+}
+
+.footer__contact li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer__contact i {
+    color: var(--color-primario); /* Pinta los iconitos de ubicación y mail */
+    font-size: 1.2rem;
+}
+
+/* --- El Mapa --- */
+.footer__map {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 3px solid var(--color-blanco-alfa);
+}
+
+/* --- Copyright --- */
+.footer__copy {
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: var(--color-texto-blanco);
+}
+
+=== header.css ===
+
+/* ==========================================
+      HEADER Y NAVEGACIÓN (Desktop)
+   ========================================== */
+   .header {
+    background-color: var(--color-fondo-header);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+/* --- Estilos del Logo --- */
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 0px; /* Espacio entre la fotito y el texto */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+.header__title-text {
+    font-family: 'FuenteSantasUnas1'; /* fuente al lado del logo */
+    font-size: 40px;
+    margin-left: -9px; /* acerca al logo */
+    letter-spacing: -1px;
+    font-weight: 300; /* Le da grosor a la fuente */
+    color: var(--color-primario);
+    
+}
+
+/* --- Aca modifico el logo --- */
+.header__img {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* --- Estilos del Menú --- */
+.nav__list {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav__link {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--color-texto-gris);
+    transition: color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima (hover) */
+.nav__link:hover, .nav__link.active {
+    color: var(--color-primario);
+}
+
+/* --- El Botón Destacado (Contacto) --- */
+.nav__link--cta {
+    background-color: var(--color-primario);
+    color: var(--color-fondo-tarjeta);
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.nav__link--cta:hover {
+    transform: scale(1.05);
+    background-color: var(--color-secundario);
+    color: var(--color-primario)
+}
+
+/* Oculto los botones de celular por ahora */
+.header__toggle, .nav__close {
+    display: none;
+}
+
+/* ==========================================
+      MEDIA QUERIES (Diseño para Celulares)
+   ========================================== */
+   @media screen and (max-width: 768px) {
+    
+    .header__toggle {
+        display: inline-block;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        color: var(--color-primario);
+        cursor: pointer;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        height: 100vh;
+        background-color: var(--color-fondo-principal);
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        padding: 80px 30px;
+        transition: right 0.4s ease;
+    }
+
+    .nav.show-menu {
+        right: 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .nav__close {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--color-primario);
+        cursor: pointer;
+    }
+}
+
+=== about.css ===
+
+/* ==========================================
+       SECCIÓN EQUIPO (Sobre Nosotras)
+   ========================================== */
+.team {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.section__title {
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    margin-bottom: 60px;
+}
+
+/* --- La Grilla de 3 columnas --- */
+.team__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+/* --- Las Tarjetas Individuales --- */
+.team__card {
+    background-color: var(--color-secundario);
+    border-radius: 20px;
+    padding: 50px 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* --- La tarjeta del centro se levanta --- */
+@media screen and (min-width: 968px) {
+    .team__card--center {
+        margin-top: -50px;
+        z-index: 10;
+        box-shadow: 0 15px 40px var(--color-sombra-fucsia);
+        transform: scale(1.05);
+    }
+}
+
+.team__card:hover {
+    transform: translateY(-10px);
+}
+
+/* --- Foto y Nombre --- */
+
+/* --- El contenedor que recorta la foto en forma de círculo --- */
+.team__photo-placeholder {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 1px solid var(--color-marco);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.767);
+    overflow: hidden;
+    background-color: var(--color-secundario);
+}
+
+/* La foto real adentro del círculo */
+.team__photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.team__name {
+    font-size: 1.8rem;
+    color: var(--color-texto-principal);
+    margin-bottom: 5px;
+}
+
+.team__role {
+    color: var(--color-primario);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- El Slider de Reseñas --- */
+.reviews__slider {
+    position: relative;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.review__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out;
+    font-style: italic;
+    color: var(--color-texto-principal);
+    padding: 0 10px;
+}
+
+/* La reseña que tenga esta clase es la que se ve */
+.review__item.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+.review__item p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.review__item span {
+    display: block;
+    font-weight: bold;
+    color: var(--color-texto-principal);
+    font-style: normal;
+    font-size: 0.85rem;
+}
+
+/* --- Botones --- */
+.button--small {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    border: 2px solid var(--color-primario);
+    color: var(--color-primario);
+    border-radius: 20px;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+.button--small:hover {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.button--large {
+    padding: 18px 50px;
+    font-size: 1.3rem;
+}
+
+/* --- Adaptación para celulares (Orden de las chicas) --- */
+@media screen and (max-width: 968px) {
+    /* La clase de Jose (la tarjeta central) pasa al primer lugar */
+    .team__card--center {
+        order: -1; 
+        box-shadow: 0 15px 40px var(--color-sombra-fucsia);
+    }
+}
+
+=== book.css ===
+
+/* ==========================================
+      BOOK DE TRABAJOS (Galería Masonry)
+   ========================================== */
+   .gallery {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.gallery__title {
+    font-size: 3rem;
+    color: var(--color-texto-blanco);
+    margin-bottom: 15px;
+}
+
+.gallery__subtitle {
+    font-size: 1.2rem;
+    color: var(--color-texto-principal);
+    margin-bottom: 50px;
+}
+
+/* --- La Grilla Masonry --- */
+.gallery__grid {
+    column-count: 5;
+    column-gap: 20px; 
+    width: 100%;
+}
+
+.gallery__item {
+    break-inside: avoid; 
+    margin-bottom: 20px; 
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery__img {
+    width: 100%;
+    height: auto; 
+    display: block;
+    border-radius: 15px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery__item:hover .gallery__img {
+    transform: scale(1.05);
+    filter: brightness(0.8); 
+}
+
+@media screen and (max-width: 992px) {
+    .gallery__grid { column-count: 3; }
+}
+
+@media screen and (max-width: 576px) {
+    .gallery__grid { column-count: 3; }
+}
+
+/* ==========================================
+       SECCIÓN BOOK (Pestañas y Galerías)
+   ========================================== */
+.book {
+    padding: 20px 0;
+    background-color: var(--color-fondo-principal);
+}
+
+.book__title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--color-texto-oscuro);
+}
+
+.personal-books {
+    padding-bottom: 100px;
+    scroll-margin-top: 100px; /* Le dice al navegador que frene 100px antes para esquivar el menú */
+}
+
+/* ===================
+   LÓGICA DE ANIMACIÓN
+   =================== */
+
+.personal-books__tabs {
+    position: relative;
+    height: 190px;
+    display: block;
+    margin: 0 auto 40px auto;
+    max-width: 600px;
+}
+
+.tab-btn {
+    position: absolute;
+    width: 150px;
+    top: 30px; 
+    left: 50%; 
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    opacity: 0.8;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.tab-btn:hover {
+    opacity: 1;
+    transform: translateY(-8px); 
+}
+
+.tab-btn span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+.tab-img-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    overflow: hidden; 
+    background-color: var(--color-secundario); 
+}
+
+.tab-btn:hover .tab-img-placeholder {
+    box-shadow: 0 8px 25px var(--color-sombra-dorada); /* Luz debajo de la foto */
+    border-color: var(--color-primario); 
+}
+
+.tab-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* ---POSICIONES INICIALES DEL PODIO--- */
+.tab-btn:nth-child(1) { margin-left: -245px; } /* Isis */
+.tab-btn:nth-child(2) { margin-left: -75px; top: 0; opacity: 1;} /* Jose (Centro elevado) */
+.tab-btn:nth-child(3) { margin-left: 95px; } /* Lola */
+
+/* ---LA BAJADA (Y LA SUBIDA)--- */
+.tab-btn.active {
+    top: 140px !important; 
+    margin-left: -75px !important; /* Cae al centro exacto */
+    transform: scale(0.3) !important; 
+    opacity: 0 !important; 
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ---EL DESPLAZAMIENTO LATERAL (Las 2 que sobran se juntan suavemente)--- */
+.personal-books__tabs:has(.tab-btn:nth-child(1).active) .tab-btn:nth-child(2) { margin-left: -300px; top: 30px; }
+.personal-books__tabs:has(.tab-btn:nth-child(1).active) .tab-btn:nth-child(3) { margin-left: 150px; top: 30px; }
+
+.personal-books__tabs:has(.tab-btn:nth-child(2).active) .tab-btn:nth-child(1) { margin-left: -300px; top: 30px; }
+.personal-books__tabs:has(.tab-btn:nth-child(2).active) .tab-btn:nth-child(3) { margin-left: 150px; top: 30px; }
+
+.personal-books__tabs:has(.tab-btn:nth-child(3).active) .tab-btn:nth-child(1) { margin-left: -300px; top: 30px; }
+.personal-books__tabs:has(.tab-btn:nth-child(3).active) .tab-btn:nth-child(2) { margin-left: 150px; top: 30px; }
+
+
+/* =========================================
+   DISEÑO DE LA CAJA Y GALERÍA INFERIOR
+   ========================================= */
+   .personal-gallery {
+    display: none;
+    scroll-margin-top: 300px;
+}
+
+.personal-gallery.active {
+    display: block;
+    animation: entradaCaja 0.6s ease-out forwards; 
+}
+
+/* ---Clase para cuando la caja se está yendo--- */
+.personal-gallery.cerrando {
+    display: block;
+    animation: salidaCaja 0.5s ease-in forwards;
+}
+
+/* ---El motor de la animación de entrada--- */
+@keyframes entradaCaja {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes salidaCaja {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-50px); }
+}
+
+.personal-gallery__inner.box-completa {
+    position: relative;
+    background-color: var(--color-secundario); 
+    border-radius: 20px;
+    border: 1px solid var(--color-primario-alfa-2); /* Borde de la targeta de book personal */
+    padding: 70px 20px 40px 20px; 
+    margin-top: 60px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.personal-gallery__avatar {
+    position: absolute;
+    top: -65px;  
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 1px solid var(--color-fondo-principal);  /* Tamaño y color del marco de la foto */
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    overflow: hidden; 
+    background-color: var(--color-primario); 
+    cursor: pointer; 
+    transition: all 0.3s ease;
+}
+
+.personal-gallery__avatar:hover {
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 8px 25px var(--color-sombra-dorada); /* Luz debajo de la foto */
+    border-color: var(--color-primario); /* Color en que se transforma el marco de la foto de la tarjeta */
+}
+
+.personal-gallery__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.personal-gallery__header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed var(--color-blanco-alfa); 
+    padding-bottom: 20px;
+}
+
+.personal-gallery__title {
+    color: var(--color-primario); /* Book de... Dentro de las tarjetas */
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.personal-gallery__footer {
+    text-align: center;
+    margin-top: 40px; 
+    padding-top: 20px;
+}
+
+.personal-gallery__footer .button {
+    font-size: 1.1rem;
+    padding: 12px 35px;
+    background-color: transparent; 
+    border: 2px solid var(--color-primario); /* color del borde del boton */
+    box-shadow: 0 4px 15px var(--color-sombra-dorada); /* Color de sombra */
+    color: var(--color-primario); /* Color de texto del boton */
+    transition: all 0.3s ease;
+}
+
+.personal-gallery__footer .button:hover {
+    background-color: var(--color-primario); /* Color del fondo del boton en animacion */
+    color: var(--color-secundario); /* Color de texto del boton en animacion */
+    box-shadow: 0 0 20px var(--color-sombra-dorada); /* Color de sombra en animacion */
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+       VISOR DE IMÁGENES (Lightbox)
+   ========================================== */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95); 
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px); 
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox__img {
+    max-width: 100%;
+    max-height: 85vh; 
+    border-radius: 12px;
+    object-fit: contain;
+    display: block;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.lightbox.active .lightbox__content-wrapper {
+    transform: scale(1);
+}
+
+.lightbox__close, .lightbox__btn {
+    position: absolute;
+    background: none;
+    border: none;
+    color: var(--color-primario); 
+    font-size: 3rem;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+    user-select: none;
+    z-index: 2010;
+    padding: 20px; 
+}
+
+.lightbox__close:hover { /* Esto se encarga de la X para cerrar las imagenes */
+    color: var(--color-primario);
+    transform: scale(1.5);
+}
+
+.lightbox__btn:hover { /* Esto se encarga de las flechas de los costados en las imagenes */
+    color: var(--color-primario);
+    transform: translateY(-50%) scale(1.1); 
+}
+
+.lightbox__close { /* Esto determina donde se encuentra la X para cerrar */
+    top: 15px;
+    right: 25px;
+    font-size: 3.5rem;
+}
+
+.lightbox__btn {
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.2); 
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox__btn--prev { left: 20px; }
+.lightbox__btn--next { right: 20px; }
+
+/* =========================================
+   AJUSTE PARA CELULARES (Línea de 3 escalada)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    .lightbox__btn { 
+        width: 50px; 
+        height: 50px; 
+        font-size: 1.8rem;
+        background-color: transparent; 
+    }
+    .lightbox__close { top: 10px; right: 15px; font-size: 3rem; }
+    .lightbox__btn--prev { left: 5px; }
+    .lightbox__btn--next { right: 5px; }
+    .personal-books__tabs { height: 160px; }
+    .tab-btn { width: 100px; }
+    .tab-img-placeholder {
+        width: 100px; 
+        height: 100px;
+    }
+    .tab-btn span { font-size: 1rem; }
+
+    .tab-btn:nth-child(1) { margin-left: -160px; } 
+    .tab-btn:nth-child(2) { margin-left: -50px; top: 0; } 
+    .tab-btn:nth-child(3) { margin-left: 60px; }
+
+    .tab-btn.active { margin-left: -50px !important; }
+
+    .personal-books__tabs:has(.tab-btn:nth-child(1).active) .tab-btn:nth-child(2) { margin-left: -120px; top: 20px;}
+    .personal-books__tabs:has(.tab-btn:nth-child(1).active) .tab-btn:nth-child(3) { margin-left: 20px; top: 20px;}
+
+    .personal-books__tabs:has(.tab-btn:nth-child(2).active) .tab-btn:nth-child(1) { margin-left: -120px; top: 20px;}
+    .personal-books__tabs:has(.tab-btn:nth-child(2).active) .tab-btn:nth-child(3) { margin-left: 20px; top: 20px;}
+
+    .personal-books__tabs:has(.tab-btn:nth-child(3).active) .tab-btn:nth-child(1) { margin-left: -120px; top: 20px;}
+    .personal-books__tabs:has(.tab-btn:nth-child(3).active) .tab-btn:nth-child(2) { margin-left: 20px; top: 20px;}
+}
+
+/* =========================================
+        LOGO EN LA ESQUINA DE LAS FOTOS
+   ========================================= */
+
+/* ---El loguito en las miniaturas de las galerías--- */
+.logo-esquina {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: auto;
+    z-index: 5;
+    pointer-events: none;
+    filter: drop-shadow(0 2px 4px var(--overlay-suave));
+}
+
+/* --El contenedor para la foto gigante-- */
+.lightbox__content-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 90%;
+    max-height: 85vh;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+/* ---El loguito convertido en MARCA DE AGUA (cuando abrís la foto)--- */
+.logo-esquina--lightbox {
+    bottom: auto; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 350px;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Ajuste para que no quede enorme en el celular */
+@media screen and (max-width: 768px) {
+    
+    /* Ajuste para los loguitos en la galería (cuadritos chicos) */
+    .logo-esquina {
+        width: 25px;
+        bottom: 3px;
+        left: 3px;
+    }
+
+    /* Ajuste para la MARCA DE AGUA en celular */
+    .logo-esquina--lightbox {
+        width: 80%; 
+        bottom: auto;
+        left: 50%;
+    }
+}
+
+/* =========================================
+     GALERÍA DINÁMICA: MARCO Y ANIMACIONES
+   ========================================= */
+
+.gallery-frame {
+    background-color: var(--color-secundario);
+    border-radius: 20px;
+    border: 2px solid var(--color-primario-alfa-1);
+    padding: 30px 20px 10px 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    margin: 0 auto;
+    max-width: 1000px;
+    transition: all 0.5s ease;
+}
+
+.button--subtle {
+    background: transparent;
+    border: 1px solid var(--color-texto-gris);
+    color: var(--color-texto-principal);
+    padding: 10px 30px;
+    font-size: 0.95rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.button--subtle:hover {
+    color: var(--color-primario);
+    border-color: var(--color-primario);
+    background-color: var(--color-primario-alfa-1); 
+}
+
+/* ANIMACIÓN */
+.gallery__item {
+    transition: opacity 1.5s ease, filter 0.8s ease; 
+}
+
+.gallery__item.fade-out {
+    opacity: 0;
+}
+
+/* =========================================
+   ANIMACIÓN DE ABRIR/CERRAR GALERÍA COMPLETA
+   ========================================= */
+
+/* Le damos a la grilla la capacidad de desvanecerse */
+#main-gallery-grid {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Le ponemos el "freno" a la sección para esquivar el menú fijo al scrollear hacia arriba */
+#book-gen {
+    scroll-margin-top: 100px;
+}
+
+=== courses-promo.css ===
+
+/* ==========================================
+            BANNER DE CURSOS (Promo)
+   ========================================== */
+   .courses-promo {
+    position: relative;
+    width: 100%;
+    padding: 120px 20px;
+    margin-top: 50px;
+    
+    background-image: url('../../img/cap/capping-curso.jpg'); /* Imagen de fondo del banner */ 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Esto deja estancada la foto del fondo */ 
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.courses-promo__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-medio);
+    z-index: 1;
+}
+
+.courses-promo__container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.courses-promo__title {
+    font-size: 3rem;
+    color: var(--color-primario);
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.courses-promo__text {
+    font-size: 1.2rem;
+    color: var(--color-texto-principal);
+    margin-bottom: 40px;
+}
+
+/* --- Adaptación para celulares --- */
+@media screen and (max-width: 768px) {
+    .courses-promo {
+        padding: 80px 20px;
+        background-attachment: scroll; /* En celulares a veces el fixed da problemas, lo dejo clavado al banner */ 
+    }
+    .courses-promo__title {
+        font-size: 2.2rem;
+    }
+}
+
+
+=== cursos.css ===
+
+/* ==========================================
+       PÁGINA DE CURSOS
+   ========================================== */
+
+/* --- Hero Específico de Cursos --- */
+.courses-hero {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Mitad de pantalla */
+    min-height: 400px;
+    background-image: url('../../img/ret/retirado-2.webp'); /* Banner de inicio */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.courses-hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-medio);
+    z-index: 1;
+}
+
+.courses-hero__container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.courses-hero__title {
+    font-size: 3.5rem;
+    color: var(--color-texto-blanco);
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.courses-hero__subtitle {
+    font-size: 1.2rem;
+    color: var(--color-texto-principal);
+}
+
+/* --- Beneficios (Iconos) --- */
+.academy-benefits {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    padding-top: 20px;
+    border-bottom: 1px dashed var(--color-secundario);
+    padding-bottom: 60px;
+}
+
+.benefit {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 20px;
+}
+
+.benefit__icon {
+    font-size: 3rem;
+    color: var(--color-primario);
+    margin-bottom: 20px;
+}
+
+.benefit__title {
+    color: var(--color-texto-blanco);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.benefit__text {
+    color: var(--color-texto-principal);
+    font-size: 1rem;
+}
+
+/* --- Grilla de Tarjetas de Cursos --- */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.course-card {
+    background-color: var(--color-fondo-tarjeta);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px var(--color-sombra-dorada);
+}
+
+.course-card__img-container {
+    position: relative;
+    width: 100%;
+    height: 220px;
+}
+
+.course-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* La etiquetita que dice "Etiqueta superior" */
+.course-card__badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--color-secundario); /* Letra de la etiqueta */
+    color: var(--color-primario); /* Fondo de la etiqueta */
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.course-card__content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.course-card__title { 
+    color: var(--color-texto-principal); /* Titulo de tarjerta de curso */
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.course-card__desc {
+    color: var(--color-texto-blanco); /* Texto de descripcion del curso */
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.course-card__details {
+    list-style: none;
+    margin-bottom: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-primario); /* Linea separadora de tarjeta */
+}
+
+.course-card__details li {
+    color: var(--color-texto-principal); /* Texto de detalle del curso */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.course-card__details i {
+    color: var(--color-primario); /* Color de items de detalle */
+    font-size: 1.1rem;
+}
+
+/* Responsive para celulares */
+@media screen and (max-width: 768px) {
+    .courses-hero__title { font-size: 2.5rem; }
+}
+
+=== hero.css ===
+
+/* ==========================================
+       HERO SECTION (La Portada)
+   ========================================== */
+   .hero {
+    width: 100%;
+    height: 85vh;
+    padding: 20px;
+    background-color: var(--color-fondo-principal); /* El fondo de la web para que la tarjeta resalte */
+}
+
+/* El contenedor que agrupa todo */
+.hero__card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px var(overlay-hero);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--color-primario);
+}
+
+/* --- EL SLIDER --- */
+.hero__slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* La capa oscura que va adentro del slider */
+.hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-suave);
+    z-index: 1;
+}
+
+/* --- EL TEXTO --- */
+.hero__container {
+    position: relative;
+    z-index: 2;
+    text-align: right;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.hero__title {
+    color: var(--color-texto-principal);
+    font-size: 4rem; 
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero__highlight {
+    color: var(--color-primario); 
+}
+
+.hero__text {
+    color: var(--color-texto-blanco);
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* --- Botón Principal --- */
+.button {
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.button--primary {
+    background-color: var(--color-primario);
+    color: var(--color-fondo-tarjeta);
+}
+
+.button--primary:hover {
+    transform: translateY(-5px); 
+    background-color: var(--color-fondo-header);
+    color: var(--color-primario);
+}
+
+/* ==========================================
+   LOGO FLOTANTE EN EL HERO
+   ========================================== */
+
+/* El contenedor del logo */
+.hero__logo-anchor {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 10;
+    display: block;
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* La imagen del logo en sí */
+.hero__logo-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+}
+
+.hero__logo-anchor:hover {
+    transform: scale(1.1);
+}
+
+/* --- Ajuste para celulares --- */
+@media screen and (max-width: 768px) {
+    
+    .hero__logo-anchor {
+        width: 80px;
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+/* --- Ajustes para celulares --- */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: auto;
+    }
+
+    .hero__card {
+        min-height: 60vh; 
+        justify-content: center; 
+        padding: 40px 20px 130px 20px; 
+    }
+
+    .hero__container {
+        position: static; 
+        text-align: right; 
+        padding-bottom: 0; 
+    }
+
+    .hero__title, .hero__text {
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero__title {
+        font-size: 2.2rem; 
+        margin-bottom: 15px;
+    }
+
+    .hero__text {
+        font-size: 1rem;
+        margin-bottom: 0; 
+    }
+
+    .hero__logo-anchor {
+        width: 70px; 
+        bottom: 30px;
+        left: 20px;
+        z-index: 10;
+    }
+
+    .hero__content .button {
+        position: absolute; 
+        z-index: 10;
+        bottom: 40px;
+        right: 20px;
+        margin: 0;
+        padding: 12px 25px; 
+        font-size: 1.1rem;
+    }
+}
+
+=== services.css ===
+
+/* ==========================================
+      SECCIÓN DE CATEGORÍAS DE SERVICIOS
+   ========================================== */
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+/* --- La Tarjeta de Categoría --- */
+.category__card {
+    background-color: var(--color-secundario);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.category__card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* --- El hueco para la foto --- */
+.category__img-placeholder {
+    width: 100%;
+    height: 200px; 
+    background-color: var(--color-fondo-gris); 
+    overflow: hidden; 
+    border-bottom: 3px solid var(--color-primario); 
+    position: relative;
+}
+
+/* Esto controla el tamaño de todas las imágenes del slider */
+.category__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    opacity: 0; 
+    z-index: 0;
+    transition: opacity 0.8s ease-in-out, transform 0.4s ease; 
+}
+
+/* Logo pequeño en las fotos */
+.category__logo{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 35px;
+    height: auto;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.6));
+    z-index: 10;
+}
+
+/* La foto que se está yendo (Se queda en el medio mientras se desvanece) */
+.category__img.previous {
+    opacity: 0;
+    z-index: 1; 
+}
+
+/* La foto nueva (Aparece por encima de todas) */
+.category__img.active {
+    opacity: 1;
+    z-index: 2; 
+}
+
+/* Cuando pasás el mouse por la tarjeta, LA FOTO ACTIVA hace un leve zoom-in */
+.category__card:hover .category__img.active {
+    transform: scale(1.1); 
+}
+
+/* Cuando pasás el mouse por la tarjeta, la foto hace un leve zoom-in */
+.category__card:hover .category__img {
+    transform: scale(1.1); 
+}
+
+/* --- El texto y botón de abajo --- */
+.category__content {
+    padding: 30px 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* --- El título de la tarjeta --- */
+.category__title {
+    font-size: 1.5rem;
+    color: var(--color-texto-principal);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+}
+
+/* --- El botoncito de info (i) de la tarjeta --- */
+.category__info-btn {
+    background: none;
+    border: none;
+    color: var(--color-texto-gris);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0;
+    margin-top: 3px;
+}
+
+.category__info-btn:hover, .category__info-btn.active {
+    color: var(--color-primario);
+}
+
+/* --- La caja escondida con la aclaración general --- */
+.category__desc {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin-bottom 0.4s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.category__desc.show {
+    max-height: 200px;
+    opacity: 1;
+    margin-bottom: 25px;
+}
+
+.category__desc p {
+    font-size: 0.95rem;
+    color: var(--color-texto-blanco);
+    line-height: 1.5;
+    background-color: var(--color-blanco-alfa);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px dashed var(--color-primario-alfa-2);
+}
+
+/* --- Ajuste fino del ícono de info en celulares --- */
+@media screen and (max-width: 768px) {
+    .category__info-btn {
+        margin-top: 7px; 
+    }
+    .category__title {
+        align-items: flex-start; /* Esto obliga al icono a quedarse en el primer renglon */
+    }
+}
+
+=== gallery.js ===
+
+/* assets/js/gallery.js */
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ==========================================
+    //          BASE DE DATOS DE FOTOS
+    // ==========================================
+    const baseDeDatosFotos = [
+        // --- Capping ---
+        "img/cap/cap-ser-1.webp", "img/cap/capping-1.webp", "img/cap/capping-2.webp",
+        "img/cap/capping-3.webp", "img/cap/capping-4.webp", "img/cap/capping-5.webp",
+        "img/cap/capping-8.webp", "img/cap/capping-9.webp", "img/cap/capping-10.webp",
+        "img/cap/capping-11.webp", "img/cap/capping-12.webp", "img/cap/capping-14.webp",
+        "img/cap/capping-15.webp", "img/cap/capping-16.webp", "img/cap/capping-18.webp",
+        "img/cap/capping-curso.jpg", "img/cap/capping-hero-1.webp", "img/cap/capping-hero-2.webp",
+        "img/cap/capping-hero-3.webp", "img/cap/capping-hero-4.webp", "img/cap/capping-hero-5.webp",
+        "img/cap/capping-hero-6.webp", "img/cap/capping-hero-7.webp", "img/cap/capping-hero-8.webp",
+        "img/cap/capping-ser-1.webp",
+
+        // --- Esculpidas ---
+        "img/esc/esculpidas-1.webp", "img/esc/esculpidas-2.webp", 
+        "img/esc/esculpidas-3.webp", "img/esc/esculpidas-4.webp",
+
+        // --- Esmaltado ---
+        "img/man/manicura-1.webp", "img/man/manicura-2.webp", "img/man/manicura-3.webp",
+
+        // --- Soft Gel ---
+        "img/sof/soft-gel-1.webp", "img/sof/soft-gel-2.webp", "img/sof/soft-gel.webp",
+
+        // --- Trabajos Lola ---
+        "img/tra-lol/lola-1.webp", "img/tra-lol/lola-2.webp", "img/tra-lol/lola-3.webp",
+        "img/tra-lol/lola-4.webp", "img/tra-lol/lola-5.webp", "img/tra-lol/lola-6.webp",
+        "img/tra-lol/lola-7.webp", "img/tra-lol/lola-8.webp", "img/tra-lol/lola-9.webp",
+        "img/tra-lol/lola-10.webp", "img/tra-lol/lola-11.webp"
+    ];
+
+    // ==========================================
+    //          PANEL DE CONFIGURACIÓN
+    // ==========================================
+    
+    const MAX_FOTOS_PANTALLA = 15; // Cantidad de fotos en la grilla principal
+    const MIN_CAMBIOS = 2;         // Mínimo de fotos que cambian a la vez
+    const MAX_CAMBIOS = 4;         // Máximo de fotos que cambian a la vez
+
+    const grid = document.getElementById('main-gallery-grid');
+    const btnShowAll = document.getElementById('btn-show-all');
+    
+    let fotosEnPantalla = [];
+    let rotacionAutomatica;
+    let estadoGaleriaCompleta = false;
+    let posicionesDisponibles = []; // El "Mazo de cartas"
+
+    if (!grid) return;
+
+    // ==========================================
+    //     FUNCIONES DEL MAZO Y MATEMÁTICAS
+    // ==========================================
+    
+    function obtenerFotoAleatoria() {
+        let disponibles = baseDeDatosFotos.map((_, index) => index);
+        disponibles = disponibles.filter(index => !fotosEnPantalla.includes(index));
+        const indiceAlAzar = Math.floor(Math.random() * disponibles.length);
+        return disponibles[indiceAlAzar];
+    }
+
+    // Mezcla las 15 posiciones para ir cambiándolas de a una sin repetir
+    function mezclarPosiciones() {
+        posicionesDisponibles = fotosEnPantalla.map((_, index) => index);
+        posicionesDisponibles.sort(() => Math.random() - 0.5); 
+    }
+
+    function crearCuadroFoto(rutaFoto) {
+        const div = document.createElement('div');
+        div.className = 'gallery__item';
+        div.innerHTML = `
+            <img src="${rutaFoto}" alt="Trabajo Santas Uñas" class="gallery__img">
+            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina">
+        `;
+        return div;
+    }
+
+    // ==========================================
+    //             INICIO Y ROTACIÓN
+    // ==========================================
+    
+    function iniciarGaleria() {
+        grid.innerHTML = ''; 
+        fotosEnPantalla = [];
+
+        const limite = Math.min(MAX_FOTOS_PANTALLA, baseDeDatosFotos.length);
+
+        for (let i = 0; i < limite; i++) {
+            const nuevoIndex = obtenerFotoAleatoria();
+            fotosEnPantalla.push(nuevoIndex);
+            grid.appendChild(crearCuadroFoto(baseDeDatosFotos[nuevoIndex]));
+        }
+
+        if (baseDeDatosFotos.length > limite) {
+            mezclarPosiciones(); 
+            arrancarRotacion();
+        } else {
+            btnShowAll.style.display = 'none';
+        }
+    }
+
+    function cambiarUnaFoto() {
+        if (estadoGaleriaCompleta) return; 
+
+        // Si ya repartimos todas las cartas, volvemos a mezclar el mazo
+        if (posicionesDisponibles.length === 0) {
+            mezclarPosiciones();
+        }
+
+        const posicionA_Cambiar = posicionesDisponibles.pop();
+        const nuevaFotoIndex = obtenerFotoAleatoria();
+        fotosEnPantalla[posicionA_Cambiar] = nuevaFotoIndex;
+
+        const cuadritosHTML = grid.querySelectorAll('.gallery__item');
+        const cuadroTarget = cuadritosHTML[posicionA_Cambiar];
+        const imgTarget = cuadroTarget.querySelector('.gallery__img');
+
+        cuadroTarget.classList.add('fade-out');
+
+        const imagenTemporal = new Image();
+        imagenTemporal.onload = () => {
+            setTimeout(() => {
+                imgTarget.src = imagenTemporal.src;
+                cuadroTarget.classList.remove('fade-out');
+            }, 400); 
+        };
+        imagenTemporal.src = baseDeDatosFotos[nuevaFotoIndex];
+    }
+
+    function arrancarRotacion() {
+        // Limpiamos cualquier intervalo previo por seguridad antes de crear uno nuevo
+        clearInterval(rotacionAutomatica);
+
+        rotacionAutomatica = setInterval(() => {
+            let cantidadACambiar = Math.floor(Math.random() * (MAX_CAMBIOS - MIN_CAMBIOS + 1)) + MIN_CAMBIOS;
+            
+            for(let i=0; i<cantidadACambiar; i++) {
+                setTimeout(() => {
+                    cambiarUnaFoto();
+                }, i * 1750); 
+            }
+        }, 6000);
+    }
+
+    // ==========================================
+    //    BOTÓN ABRIR/CERRAR GALERÍA COMPLETA
+    // ==========================================
+    const galleryFrame = document.getElementById('gallery-frame');
+
+    function toggleGaleriaCompleta() {
+        // 1. Primero, desvanecemos toda la grilla para que quede invisible
+        grid.style.opacity = '0';
+
+        // 2. Esperamos medio segundo (500ms) a que desaparezca por completo para hacer los cambios
+        setTimeout(() => {
+            
+            if (!estadoGaleriaCompleta) {
+                // --- ABRIR GALERÍA ---
+                clearInterval(rotacionAutomatica);
+                grid.innerHTML = '';
+                baseDeDatosFotos.forEach(ruta => grid.appendChild(crearCuadroFoto(ruta)));
+                btnShowAll.textContent = 'Cerrar galería completa'; 
+                estadoGaleriaCompleta = true;
+                
+            } else {
+                // --- CERRAR GALERÍA ---
+                iniciarGaleria();
+                btnShowAll.textContent = 'Ver galería completa';
+                estadoGaleriaCompleta = false;
+                
+                // Como la página se acaba de acortar de golpe, scrolleamos suavemente 
+                // de vuelta al título "Nuestro Book de Trabajos"
+                document.getElementById('book-gen').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            // 3. Una vez que las fotos ya cambiaron y la pantalla se acomodó, 
+            // volvemos a mostrar la grilla suavemente
+            grid.style.opacity = '1';
+
+        }, 500); // Este es el medio segundo de espera
+    }
+
+    btnShowAll.addEventListener('click', toggleGaleriaCompleta);
+
+    if (galleryFrame) {
+        galleryFrame.addEventListener('click', (e) => {
+            if (estadoGaleriaCompleta && (e.target === galleryFrame || e.target === grid)) {
+                toggleGaleriaCompleta();
+            }
+        });
+    }
+
+    iniciarGaleria();
+});
+
+=== header.js ===
+
+/* assets/js/header.js */
+
+/* =========================================
+    MENU SHOW Y HIDDEN
+    ========================================= */
+
+// ========================
+// Seleccionamos los elementos del DOM (Document Object Model)
+// ========================
+
+// Usamos 'const' porque estas referencias no van a cambiar.
+const navMenu = document.getElementById('nav-menu');      // El menú entero (<nav>)
+const navToggle = document.querySelector('.header__toggle'); // El botón hamburguesa
+const navClose = document.querySelector('.nav__close');      // La 'X' de cerrar
+
+// ========================
+// MOSTRAR MENÚ
+// ========================
+
+// Validamos si la constante 'navToggle' existe (para evitar errores)
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        // Al hacer clic, añadimos la clase 'show-menu' al nav
+        // CSS se encarga de la animación (right: 0)
+        navMenu.classList.add('show-menu');
+        document.body.style.overflow = 'hidden';
+    });
+}
+
+// ========================
+// OCULTAR MENÚ
+// ========================
+
+// Validamos si la constante 'navClose' existe
+if (navClose) {
+    navClose.addEventListener('click', () => {
+        // Al hacer clic, quitamos la clase 'show-menu'
+        // El menú vuelve a esconderse (right: -100%)
+        navMenu.classList.remove('show-menu');
+        document.body.style.overflow = '';
+    });
+}
+
+/* =========================================
+    QUITAR MENÚ AL HACER CLICK EN UN LINK
+    ========================================= */
+// Seleccionamos TODOS los links del menú
+const navLink = document.querySelectorAll('.nav__link');
+
+const linkAction = () => {
+    // Cuando hagamos clic en cualquier link, quitamos la clase show-menu
+    navMenu.classList.remove('show-menu');
+    document.body.style.overflow = '';
+}
+
+// Por cada link, agregamos un "escuchador" de clic
+navLink.forEach(n => n.addEventListener('click', linkAction));
+
+/* =========================================
+   CERRAR MENÚ AL TOCAR FUERA DE ÉL
+   ========================================= */
+   document.addEventListener('click', (e) => {
+    // Verificamos si el menú está abierto actualmente
+    if (navMenu.classList.contains('show-menu')) {
+        
+        // Si el clic NO fue dentro del menú (navMenu) y NO fue en el botón hamburguesa (navToggle)
+        if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+            navMenu.classList.remove('show-menu');
+            document.body.style.overflow = '';
+        }
+    }
+});
+
+/* =========================================
+   BOTÓN VOLVER ARRIBA
+   ========================================= */
+   const scrollTopBtn = document.getElementById('scroll-top');
+
+   if (scrollTopBtn) {
+       // Escucha cada vez que movemos la rueda del mouse o el dedo
+       window.addEventListener('scroll', () => {
+           // Si bajamos más de 500 píxeles, muestra el botón
+           if (window.scrollY >= 500) {
+               scrollTopBtn.classList.add('show-scroll');
+           } else {
+               scrollTopBtn.classList.remove('show-scroll');
+           }
+       });
+   
+       // Al hacer clic, sube suavemente al inicio (coordenada 0)
+       scrollTopBtn.addEventListener('click', () => {
+           window.scrollTo({
+               top: 0,
+               behavior: 'smooth'
+           });
+       });
+   }
+
+   /* =========================================
+   ANIMACIONES DE SCROLL (Scroll Reveal)
+   ========================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    // Buscamos todas las cosas que tengan la clase "reveal"
+    const reveals = document.querySelectorAll('.reveal');
+
+    // Creamos el "Observador"
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            // Si el elemento entra en la pantalla...
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active'); // Le pone la clase para que aparezca
+                
+                // Opcional: Si querés que la animación ocurra SOLO UNA VEZ (y no cada vez que subís y bajás),
+                // dejá esta línea de abajo descomentada:
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, {
+        rootMargin: "0px 0px -50px 0px", // Activa la animación justo un poquito antes de tocar el borde inferior
+        threshold: 0.1 // Se activa cuando al menos el 10% de la tarjeta ya es visible
+    });
+
+    // Le decimos al observador que vigile a cada uno de los elementos
+    reveals.forEach(reveal => {
+        revealObserver.observe(reveal);
+    });
+});
+
+=== hero.js ===
+
+/* assets/js/hero.js */
+
+const heroImages = [
+    'img/cap/capping-hero-1.webp',
+    'img/cap/capping-hero-2.webp',
+    'img/cap/capping-hero-3.webp',
+    'img/cap/capping-hero-4.webp',
+    'img/cap/capping-hero-5.webp',
+    'img/cap/capping-hero-6.webp',
+    'img/cap/capping-hero-7.webp',
+    'img/cap/capping-hero-8.webp'
+];
+
+/* Se debe completar las rutas de img/ con imagenes existentes sino muestra una imagen transparente */
+
+const sliderContainer = document.getElementById('hero-slider');
+let currentIndex = 0;
+const slides = []; // Acá guardaremos nuestras 8 fotos
+
+if (sliderContainer && heroImages.length > 0) {
+    // 1. Buscamos la capa oscura para poner las fotos detrás de ella
+    const overlay = sliderContainer.querySelector('.hero__overlay');
+
+    // 2. Pre-cargamos TODAS las imágenes de una vez
+    heroImages.forEach((imgPath, index) => {
+        const slideDiv = document.createElement('div');
+        slideDiv.style.backgroundImage = `url('${imgPath}')`;
+        slideDiv.style.position = 'absolute';
+        slideDiv.style.top = '0';
+        slideDiv.style.left = '0';
+        slideDiv.style.width = '100%';
+        slideDiv.style.height = '100%';
+        slideDiv.style.backgroundSize = 'cover';
+        slideDiv.style.backgroundPosition = 'center';
+        slideDiv.style.transition = 'opacity 1.2s ease-in-out'; // Fundido súper suave
+        
+        // La primera foto arranca prendida (opacity 1), las demás apagadas (opacity 0)
+        slideDiv.style.opacity = index === 0 ? '1' : '0'; 
+        
+        // Las inyectamos en el HTML detrás de la capa oscura
+        sliderContainer.insertBefore(slideDiv, overlay);
+        
+        // Las guardamos en nuestra lista
+        slides.push(slideDiv); 
+    });
+
+    // 3. Arrancamos el reloj: cada 5 segundos hacemos el cambio
+    if (slides.length > 1) {
+        setInterval(() => {
+            // Apagamos la foto que se está viendo ahora
+            slides[currentIndex].style.opacity = '0';
+
+            // Calculamos cuál es la foto que sigue
+            currentIndex = (currentIndex + 1) % slides.length;
+
+            // Prendemos la foto nueva
+            slides[currentIndex].style.opacity = '1';
+        }, 5000);
+    }
+}
+
+=== lightbox.js === 
+
+/* assets/js/lightbox.js */
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Inyectamos el HTML del visor automáticamente al final de la página
+    const lightboxHTML = `
+        <div id="lightbox" class="lightbox">
+            <button class="lightbox__close" aria-label="Cerrar">&times;</button>
+            <button class="lightbox__btn lightbox__btn--prev" aria-label="Anterior">&#10094;</button>
+            
+            <div class="lightbox__content-wrapper">
+                <img src="" class="lightbox__img" id="lightbox-img" alt="Imagen ampliada">
+                <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina logo-esquina--lightbox">
+            </div>
+
+            <button class="lightbox__btn lightbox__btn--next" aria-label="Siguiente">&#10095;</button>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+
+    // 2. Seleccionamos los elementos que acabamos de crear
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox__close');
+    const prevBtn = document.querySelector('.lightbox__btn--prev');
+    const nextBtn = document.querySelector('.lightbox__btn--next');
+
+    // Variables para saber dónde estamos parados
+    let currentImageArray = [];
+    let currentIndex = 0;
+
+    // 3. Le damos la función de "click" usando DELEGACIÓN DE EVENTOS 
+    // (Esto permite que las fotos que se inyectan dinámicamente también abran el visor)
+    document.body.addEventListener('click', (e) => {
+        if (e.target.classList.contains('gallery__img')) {
+            const parentGrid = e.target.closest('.gallery__grid');
+            currentImageArray = Array.from(parentGrid.querySelectorAll('.gallery__img'));
+            currentIndex = currentImageArray.indexOf(e.target);
+            updateLightboxImage();
+            lightbox.classList.add('active');
+            
+    document.body.style.overflow = 'hidden'; 
+    }
+});
+
+// 4. Funciones de control
+function updateLightboxImage() {
+    lightboxImg.src = currentImageArray[currentIndex].src;
+}
+
+function showNext() {
+    // Si llega al final, vuelve a la primera (ciclo infinito)
+    currentIndex = (currentIndex + 1) % currentImageArray.length;
+    updateLightboxImage();
+}
+
+function showPrev() {
+    // Si está en la primera, va a la última
+    currentIndex = (currentIndex - 1 + currentImageArray.length) % currentImageArray.length;
+    updateLightboxImage();
+}
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = ''; 
+}
+
+// 5. Conectamos los clicks en los botones y en el fondo oscuro
+    nextBtn.addEventListener('click', showNext);
+    prevBtn.addEventListener('click', showPrev);
+    closeBtn.addEventListener('click', closeLightbox);
+    
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    // 6. Teclado (Flechas y ESC en PC)
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return; // Solo funciona si el visor está abierto
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'Escape') closeLightbox();
+    });
+
+    // 7. Celular (Deslizar el dedo / Swipe)
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    lightbox.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX; // Dónde apoyó el dedo
+    });
+
+    lightbox.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX; // Dónde lo levantó
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 50; // Distancia mínima para que lo cuente como swipe
+        if (touchEndX < touchStartX - swipeThreshold) showNext(); // Deslizó a la izquierda
+        if (touchEndX > touchStartX + swipeThreshold) showPrev(); // Deslizó a la derecha
+    }
+});
+
+=== modals.js ===
+
+/* assets/js/modals.js */
+
+// 1. Nuestra "Base de Datos" local
+const serviceData = {
+
+    // Cada uno de estos bloques son ventanas emergentes.
+
+    "retiro": {
+        title: "Retiro",
+        items: [
+            { name: "Retiro",
+            price: "$10.000",
+            desc: `<strong> Remoción total de un servicio tanto nuestro, como de otro salón. </strong>`,
+            link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/101121-retirado#reservar" 
+            }
+
+        ]
+    },
+
+    "pedicura": {
+        title: "Pedicura",
+        items: [
+            {name: "Esmaltado semipermanente pies", 
+            price: "$24.000", 
+            desc: `<strong>Nuestro servicio no incluye remoción de durezas plantares.</strong>`,
+            link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/101363-esmaltado-semipermanente-pies#reservar" }
+        ]
+    },
+
+    "capping": {
+        title: "Capping",
+        items: [
+            { name: "Capping Liso", 
+            price: "$24.500", 
+            desc: `<strong>Incluye deco en dos uñas</strong>`,
+            link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/33050-capping-liso#reservar" },
+            { name: "Capping French", 
+            price: "$25.000", 
+            desc: `<strong>-Nuestro servicio incluye:</strong>
+                    <ul>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                    </ul>`,
+            link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/91328-capping-french#reservar" },
+            { name: "Capping cromo/ojo de gato", 
+            price: "$26.500", 
+            desc: `<strong>-Nuestro servicio incluye:</strong>
+                    <ul>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                    </ul>`,
+            link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/96674-capping-cromo-en-todasojo-de-gato#reservar" },
+            { name: "Capping Full mix/baby bommer", 
+            price: "$27.000", 
+            desc: `<strong>-Nuestro servicio incluye:</strong>
+                    <ul>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                    </ul>`,
+            link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/91332-capping-full-mix-o-baby-bommer#reservar" }
+        ]
+
+    },
+
+    "manicuria": {
+        title: "Manicuria",
+        items: [
+            { name: "Semipermanente Liso", 
+            price: "$20.000", 
+            desc: `<strong>Incluye deco en dos uñas</strong>`,
+            link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/17084-semipermanente-liso#reservar" },
+            { name: "Semipermanente French", 
+            price: "$21.500", 
+            desc: `<strong>-Nuestro servicio incluye:</strong>
+                    <ul>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                    </ul>`,
+            link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/17085-semipermanente-french#reservar" },
+            { name: "Semipermanente Semi Full",  
+            price: "$23.000", 
+            desc: `<strong>-Nuestro servicio incluye:</strong>
+                    <ul>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                    </ul>`,
+            link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/17086-semipermanente-semi-full#reservar" }
+        ]
+    },
+
+    "softgel": {
+        title: "Soft Gel",
+        items: [
+            { name: "Soft gel", 
+            price: "$26.000", 
+            desc: `<strong>Incluye</strong>`,
+            link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/114377-soft-gel#reservar" }
+        ]
+    },
+
+    "esculpidas": {
+        title: "Uñas Esculpidas",
+        items: [
+            { name: "Esculpidas liso", 
+            price: "$26.000", 
+            desc: `<strong>Incluye deco en dos uñas</strong>`,
+            link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/33569-esculpidas-liso#reservar" },
+            { name: "Esculpidas French", 
+            price: "$27.000", 
+            desc: `<strong>-Nuestro servicio incluye:</strong>
+                    <ul>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                    </ul>`,
+            link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/91336-esculpidas-french#reservar" },
+            { name: "Esculpidas Ojo de gato / Cromo en todas", 
+            price: "$28.000", 
+            desc: `<strong>-Nuestro servicio incluye:</strong>
+                    <ul>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                    </ul>`,
+            link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/91337-esculpidas-ojo-de-gato-cromo-en-todas#reservar" },
+            { name: "Esculpidas Full Mix / Baby Boomer", 
+            price: "$30.000", 
+            desc: `<strong>-Nuestro servicio incluye:</strong>
+                    <ul>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                    </ul>`,
+            link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/91338-esculpidas-full-mix-baby-boomer#reservar" },
+            { name: "Esculpidas Lisas con Isis", 
+            price: "$26.000", 
+            desc: `<strong>-Nuestro servicio incluye:</strong>
+                    <ul>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                        <li>incluido</li>
+                    </ul>`,
+            link: "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/121895-esculpidas-liso-con-isis/profesional/22964-isis-quimey#reservar"}
+        ]
+    },
+
+};
+
+// 2. Elementos del DOM
+const modal = document.getElementById('price-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalList = document.getElementById('modal-list');
+const closeBtn = document.getElementById('modal-close-btn');
+const overlay = document.getElementById('modal-close-bg');
+const openButtons = document.querySelectorAll('.open-modal-btn');
+
+// 3. Abrir el modal y cargar datos
+openButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Buscamos el nombre del servicio en el botón (ej: "esculpidas")
+        const serviceKey = button.getAttribute('data-service');
+        const data = serviceData[serviceKey]; // Buscamos los precios en nuestra "Base de datos"
+
+        if (data) {
+            // Actualizamos el título
+            modalTitle.textContent = data.title;
+            
+            // Limpiamos la lista vieja y cargamos la nueva
+            // Limpiamos la lista vieja y cargamos la nueva
+            modalList.innerHTML = '';
+            data.items.forEach(item => {
+                const li = document.createElement('li');
+                
+                // Chequeamos si este servicio tiene una descripción en la base de datos
+                const tieneDesc = item.desc ? true : false;
+
+                // Armamos la nueva estructura
+                li.innerHTML = `
+                    <div class="modal__item-main">
+                        <div class="modal__item-info">
+                            <span class="modal__name">
+                                ${item.name} 
+                                ${tieneDesc ? `<button class="modal__info-btn" aria-label="Ver detalles"><i class="fa-solid fa-circle-info"></i></button>` : ''}
+                            </span>
+                            <span class="modal__price">${item.price}</span>
+                        </div>
+                        <a href="${item.link}" target="_blank" class="button button--primary modal__btn-reservar">Reservar</a>
+                    </div>
+                    ${tieneDesc ? `
+                        <div class="modal__item-desc">
+                            <div class="modal__item-desc-content">
+                                ${item.desc}
+                            </div>
+                        </div>` : ''}
+                `;
+                
+                // Si tiene descripción, le damos vida al botoncito de (i)
+                if (tieneDesc) {
+                    const infoBtn = li.querySelector('.modal__info-btn');
+                    const descDiv = li.querySelector('.modal__item-desc');
+                    
+                    infoBtn.addEventListener('click', () => {
+                        // 1. Nos fijamos si la pestaña que tocamos ya estaba abierta
+                        const estabaAbierta = descDiv.classList.contains('show');
+
+                        // 2. Buscamos TODAS las descripciones y botones de esta lista y los cerramos
+                        const todasLasDesc = modalList.querySelectorAll('.modal__item-desc');
+                        const todosLosBotones = modalList.querySelectorAll('.modal__info-btn');
+                        
+                        todasLasDesc.forEach(div => div.classList.remove('show'));
+                        todosLosBotones.forEach(btn => btn.classList.remove('active'));
+
+                        // 3. Si la pestaña que tocamos NO estaba abierta originalmente, la abrimos
+                        // (Si ya estaba abierta, el paso 2 la cerró y se queda así)
+                        if (!estabaAbierta) {
+                            descDiv.classList.add('show');
+                            infoBtn.classList.add('active');
+                        }
+                    });
+                }
+
+                modalList.appendChild(li);
+            });
+
+            // Mostramos la ventana
+            modal.classList.add('active');
+            
+            // NUEVO: Bloqueamos el scroll
+            document.body.style.overflow = 'hidden'; 
+        }
+    });
+});
+
+// 4. Cerrar el modal
+function closeModal() {
+    modal.classList.remove('active');
+    
+    // NUEVO: Devolvemos el scroll
+    document.body.style.overflow = ''; 
+}
+
+closeBtn.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal); // Cierra si tocás la zona oscura
+
+// 5. Cerrar modal con la tecla ESC
+document.addEventListener('keydown', (e) => {
+    // Si la tecla presionada es Escape y el modal está abierto (tiene la clase active)
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+    }
+});
+
+=== sliders.js ===
+
+/* assets/js/sliders.js */
+
+/* =========================================
+   SLIDER AUTOMÁTICO DE RESEÑAS
+   ========================================= */
+
+   function initReviewSliders() {
+    // 1. Buscamos todos los contenedores de sliders en la página
+    const sliders = document.querySelectorAll('.js-review-slider');
+
+    // 2. Por cada slider que encontremos, iniciamos su propio ciclo
+    sliders.forEach(sliderContainer => {
+        const reviews = sliderContainer.querySelectorAll('.review__item');
+        let currentIndex = 0;
+
+        // Si hay menos de 2 reseñas, no tiene sentido rotar
+        if (reviews.length < 2) return;
+
+        // Función que cambia a la siguiente reseña
+        const cycleReviews = () => {
+            // Le sacamos la clase 'active' a la actual
+            reviews[currentIndex].classList.remove('active');
+
+            // Calculamos el índice de la siguiente (si llega al final, vuelve a 0)
+            currentIndex = (currentIndex + 1) % reviews.length;
+
+            // Le ponemos la clase 'active' a la nueva
+            reviews[currentIndex].classList.add('active');
+        };
+
+        // Iniciamos el intervalo de cambio cada 5 segundos (5000ms)
+        setInterval(cycleReviews, 5000);
+    });
+}
+
+/* =========================================
+   2. SLIDER DE FOTOS EN SERVICIOS (Con fundido encadenado)
+   ========================================= */
+   function initServiceSliders() {
+    const serviceSliders = document.querySelectorAll('.js-service-slider');
+
+    serviceSliders.forEach(sliderContainer => {
+        const images = sliderContainer.querySelectorAll('.category__img');
+        let currentIndex = 0;
+
+        if (images.length < 2) return;
+
+        setInterval(() => {
+            // 1. A la foto vieja le sacamos el active y le ponemos previous
+            const oldImage = images[currentIndex];
+            oldImage.classList.remove('active');
+            oldImage.classList.add('previous');
+            
+            // 2. Calculamos y mostramos la foto nueva
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+
+            // 3. Después de 800 milisegundos (lo que dura el fundido en CSS), le sacamos el previous
+            setTimeout(() => {
+                oldImage.classList.remove('previous');
+            }, 800);
+
+        }, 3500); 
+    });
+}
+
+// Arrancamos ambos motores cuando carga la página
+document.addEventListener('DOMContentLoaded', () => {
+    initReviewSliders();
+    initServiceSliders();
+});
+
+/* =========================================
+   3. ACORDEÓN DE INFO EN TARJETAS DE SERVICIOS
+   ========================================= */
+   document.addEventListener('DOMContentLoaded', () => {
+    const categoryInfoBtns = document.querySelectorAll('.category__info-btn');
+
+    categoryInfoBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Buscamos la cajita de descripción que pertenece a este mismo botón
+            const descContainer = btn.closest('.category__content').querySelector('.category__desc');
+            
+            // Nos fijamos si ya estaba abierta
+            const estabaAbierta = descContainer.classList.contains('show');
+            
+            // 1. Cerramos TODAS las cajitas de todas las tarjetas para mantener el orden
+            document.querySelectorAll('.category__desc').forEach(d => d.classList.remove('show'));
+            document.querySelectorAll('.category__info-btn').forEach(b => b.classList.remove('active'));
+            
+            // 2. Si la que tocamos estaba cerrada, la abrimos
+            if (!estabaAbierta) {
+                descContainer.classList.add('show');
+                btn.classList.add('active');
+            }
+        });
+    });
+});
+
+=== tabs.js ===
+
+/* assets/js/tabs.js */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const galleries = document.querySelectorAll('.personal-gallery');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const isActive = btn.classList.contains('active');
+
+            // 1. Apagamos todos los botones
+            tabBtns.forEach(b => b.classList.remove('active'));
+
+            // 2. Cerramos las galerías de forma segura
+            galleries.forEach(g => {
+                if (g.classList.contains('active')) {
+                    g.classList.remove('active');
+                    
+                    // Solo animamos la salida si el usuario clickea el mismo botón para cerrar
+                    if (isActive) {
+                        g.classList.add('cerrando');
+                        setTimeout(() => {
+                            // Verificamos que la clase siga ahí antes de removerla (evita bugs por clics rápidos)
+                            if (g.classList.contains('cerrando')) {
+                                g.classList.remove('cerrando');
+                            }
+                        }, 500);
+                    }
+                } else {
+                    // Fallback de seguridad: limpiamos clases fantasma si el usuario hace clics muy rápidos
+                    g.classList.remove('cerrando');
+                }
+            });
+
+            // 3. Si estábamos tocando un botón apagado, lo prendemos y abrimos su caja
+            if (!isActive) {
+                btn.classList.add('active');
+                const targetId = btn.getAttribute('data-target');
+                const targetBox = document.getElementById(targetId);
+                
+                targetBox.classList.remove('cerrando'); // Por si estaba a medio cerrar
+                targetBox.classList.add('active');
+            }
+        });
+    });
+
+    // ==========================================
+    // CERRAR GALERÍA TOCANDO EL AVATAR
+    // ==========================================
+    const avataresCaja = document.querySelectorAll('.personal-gallery__avatar');
+    
+    avataresCaja.forEach(avatar => {
+        avatar.addEventListener('click', () => {
+            // Hacemos que la chica vuelva al podio
+            tabBtns.forEach(b => b.classList.remove('active'));
+
+            // Le ponemos la animación de salida a la caja activa
+            galleries.forEach(g => {
+                if (g.classList.contains('active')) {
+                    g.classList.remove('active');
+                    g.classList.add('cerrando');
+                    setTimeout(() => g.classList.remove('cerrando'), 500);
+                }
+            });
+        });
+    });
+});
+
+// ==========================================
+// ABRIR BOOK AUTOMÁTICAMENTE DESDE EL INICIO
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Leemos si la URL tiene un "#" al final (ej: "#book-isis")
+    const hash = window.location.hash; 
+
+    if (hash) {
+        // 2. Le sacamos el "#" para que quede solo "book-isis"
+        const targetId = hash.substring(1); 
+        
+        // 3. Buscamos el botón que corresponde a esa chica
+        const targetButton = document.querySelector(`.tab-btn[data-target="${targetId}"]`);
+        
+        if (targetButton) {
+            // 4. Esperamos medio segundo a que cargue la página y simulamos el "Click"
+            setTimeout(() => {
+                targetButton.click();
+                
+                // 5. Scrolleamos la pantalla suavemente hasta la sección completa de las chicas
+                document.querySelector('.personal-books').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 300);
+        }
+    }
+});
+
+=== manifest.json ===
+
+{
+    "name": "Nails by Santas Uñas",
+    "short_name": "Santas Uñas",
+    "description": "Salón y Academia de manicuría en Zárate.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#2c2b29",
+    "icons": [
+      {
+        "src": "img/logo-s.webp",
+        "sizes": "192x192",
+        "type": "image/webp"
+      },
+      {
+        "src": "img/logo-s.webp",
+        "sizes": "512x512",
+        "type": "image/webp"
+      }
+    ]
+  }
