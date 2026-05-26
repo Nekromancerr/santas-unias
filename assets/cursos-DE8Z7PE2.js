@@ -1,0 +1,1 @@
+import{t as e}from"./header-D0YJiW_Z.js";e();
