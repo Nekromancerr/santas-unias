@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacar Turno | Santas Uñas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Especialistas en esculpidas, capping y esmaltado semipermanente. Dale a tus manos el cuidado y el arte que merecen en Zárate.">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="Santas Uñas - Salón y Academia">
+            <meta property="og:description" content="Especialistas en esculpidas, capping y esmaltado. ¡Reservá tu turno o sumate a nuestros cursos!">
+            <meta property="og:image" content="https://nekromancerr.github.io/santas-unias/img/portada-whatsapp.jpg">
+            <meta property="og:url" content="https://nekromancerr.github.io/santas-unias/turnos.html">
+
+            <link rel="icon" type="image/png" href="/santas-unias/assets/logo-s-BWuMVPNI.webp">
+            <link rel="apple-touch-icon" href="/santas-unias/assets/logo-s-BWuMVPNI.webp">
+            <meta name="theme-color" content="#2c2b29">
+            <!-- Este manifiesto lo combierte en "app" -->
+            <link rel="manifest" href="/santas-unias/assets/manifest-BKxBTfZn.json">
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script type="module" crossorigin src="/santas-unias/assets/turnos-DjBjwrhH.js"></script>
+  <link rel="modulepreload" crossorigin href="/santas-unias/assets/header-HQA0LW_F.js">
+  <link rel="stylesheet" crossorigin href="/santas-unias/assets/header-DAUg7uDd.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+
+            <a href="index.html" class="header__logo">
+                <img src="/santas-unias/assets/logo-s-BWuMVPNI.webp" alt="Santas Uñas" class="header__img"> <!--Aca va el logo, el href es lo que escucha para que te lleve al inicio, la img es lo que se ve-->
+                <span class="header__title-text">antas uñas</span>
+            </a>
+
+            <button class="header__toggle" aria-label="Abrir menú"><!-- Botón Hamburguesa (Solo visible en móvil) -->
+                ☰
+            </button>
+
+            <!--================== 
+                Menu de Navegacion
+                ==================-->
+            <nav class="nav" id="nav-menu">
+
+                <!--====================== 
+                    Lista de Items del Nav
+                    ======================-->
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html#inicio" class="nav__link active">Inicio</a></li>
+                    <li class="nav__item"><a href="index.html#servicios" class="nav__link">Servicios</a></li>
+                    <li class="nav__item"><a href="index.html#nosotras" class="nav__link">Nosotras</a></li>
+                    <li class="nav__item"><a href="cursos.html" class="nav__link">Cursos</a></li>
+
+                    <!-- Notar que "contacto" tiene una clase distinta, en href puede ir link de whatsapp -->
+                    <li class="nav__item"><a href="https://www.wonoma.com/es-AR/salon/santas-unas" class="nav__link nav__link--cta">Reserva Turno</a></li>
+
+                </ul>
+
+                <button class="nav__close" aria-label="Cerrar menú">✕</button> <!-- Botón cerrar (dentro del nav para móvil) -->
+            </nav>
+        </div>
+    </header>
+
+    <main class="turnos__main container">
+        <h1 class="section__title">Reserva tu Turno</h1>
+
+        <div class="turnos__progress">
+            <div class="progress__step active" data-step="1">1. Profesional</div>
+            <div class="progress__step" data-step="2">2. Fecha</div>
+            <div class="progress__step" data-step="3">3. Hora</div>
+            <div class="progress__step" data-step="4">4. Confirmar</div>
+        </div>
+
+        <div class="turnos__container">
+            
+            <div class="turno__step active" id="step-1">
+                <h3 class="step__title">¿Con quién te querés atender?</h3>
+                <div class="profesional__grid">
+                    <button class="profesional__card" data-profesional="Jose">
+                        <img src="/santas-unias/assets/perfil-jose-Be6qihRj.webp" alt="Jose">
+                        <span>Jose</span>
+                    </button>
+                    <button class="profesional__card" data-profesional="Lola">
+                        <img src="/santas-unias/assets/perfil-lola-wBzJevHj.webp" alt="Lola">
+                        <span>Lola</span>
+                    </button>
+                    <button class="profesional__card" data-profesional="Isis">
+                        <img src="/santas-unias/assets/perfil-isis-vlKKBrPH.webp" alt="Isis">
+                        <span>Isis</span>
+                    </button>
+                    <button class="profesional__card" data-profesional="Cualquiera">
+                        <div class="icono-cualquiera"><i aria-hidden="true" class="fa-solid fa-clock"></i></div>
+                        <span>Primer turno libre</span>
+                    </button>
+                </div>
+                <div class="step__buttons" style="justify-content: flex-end;">
+                    <button class="button button--primary btn-next">Siguiente</button>
+                </div>
+            </div>
+
+            <div class="turno__step" id="step-2">
+                <h3 class="step__title">Elegí el día</h3>
+                
+                <div class="calendario">
+                    <div class="calendario__header">
+                        <button id="prev-month"><i aria-hidden="true" class="fa-solid fa-chevron-left"></i></button>
+                        <h4 id="month-year">Mes Año</h4>
+                        <button id="next-month"><i aria-hidden="true" class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendario__weekdays">
+                        <span>Dom</span><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span>
+                    </div>
+                    <div class="calendario__days" id="calendario-days"></div>
+                </div>
+
+                <div class="step__buttons">
+                    <button class="button button--outline btn-back">Volver</button>
+                    <button class="button button--primary btn-next">Siguiente</button>
+                </div>
+            </div>
+
+            <div class="turno__step" id="step-3">
+                <h3 class="step__title">Elegí el horario</h3>
+                <p class="step__subtitle" id="fecha-elegida-display">Para el día...</p>
+                
+                <div class="horarios__grid">
+                    <button class="horario__btn" data-hora="08:00">08:00</button>
+                    <button class="horario__btn" data-hora="10:00">10:00</button>
+                    <button class="horario__btn" data-hora="12:00">12:00</button>
+                    <button class="horario__btn" data-hora="14:00">14:00</button>
+                    <button class="horario__btn" data-hora="16:00">16:00</button>
+                </div>
+
+                <div class="step__buttons">
+                    <button class="button button--outline btn-back">Volver</button>
+                    <button class="button button--primary btn-next">Siguiente</button>
+                </div>
+            </div>
+
+            <div class="turno__step" id="step-4">
+                <h3 class="step__title">Resumen de tu Turno</h3>
+                <div class="resumen__card">
+                    <p><strong>Profesional:</strong> <span id="resumen-profesional">...</span></p>
+                    <p><strong>Día:</strong> <span id="resumen-dia">...</span></p>
+                    <p><strong>Hora:</strong> <span id="resumen-hora">...</span></p>
+                </div>
+                <div class="step__buttons">
+                    <button class="button button--outline btn-back">Volver</button>
+                    <button class="button button--primary" id="btn-confirmar-turno">Confirmar Turno</button>
+                </div>
+                
+                <div id="post-confirmacion" style="text-align: center; margin-top: 25px; display: none;">
+                    <p style="color: #25d366; font-weight: bold; margin-bottom: 20px; font-size: 1.2rem;">
+                        <i aria-hidden="true" class="fa-solid fa-circle-check"></i> ¡Turno confirmado!
+                    </p>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
+                        <button class="button button--outline" id="btn-descargar-ticket" style="border-color: var(--color-primario); color: var(--color-primario); width: 100%; max-width: 300px;">
+                            <i aria-hidden="true" class="fa-solid fa-download"></i> Descargar Ticket (Opcional)
+                        </button>
+                        
+                        <a href="#" id="btn-gcalendar" target="_blank" class="button button--outline" style="border-color: #4285F4; color: #4285F4; width: 100%; max-width: 300px;">
+                            <i aria-hidden="true" class="fa-regular fa-calendar-plus"></i> Agendar en Google Calendar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            
+            <div class="footer__info">
+                <h3 class="footer__title">Santas Uñas</h3>
+                <p class="footer__text">Tu lugar de confianza para dejar tus manos hermosas.</p>
+                
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/santas_unias/" target="_blank" class="footer__social-link" aria-label="Ir al Instagram de Santas Uñas"><i aria-hidden="true" class="fa-brands fa-instagram"></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=3487728179" target="_blank" class="footer__social-link" aria-label="Enviar mensaje por WhatsApp"><i aria-hidden="true" class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                
+                <ul class="footer__contact">
+                    <li><i aria-hidden="true" class="fa-solid fa-location-dot"></i> Almte. Brown 159, Zárate</li>
+                    <li><i aria-hidden="true" class="fa-solid fa-envelope"></i> contacto@santasunas.com</li>
+                </ul>
+            </div>
+
+            <div class="footer__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.9113577321164!2d-59.025101199999995!3d-34.097411199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb0b686ad8ca35%3A0xdb1b1ae55e82a9a3!2sASC%2C%20Almte.%20Brown%20159%2C%20B2800%20Z%C3%A1rate%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1771436235479!5m2!1ses!2sar" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+        
+        <div class="footer__copy">
+            <p>&copy; 2026 Santas Uñas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send/?phone=3487728179" class="whatsapp-float" target="_blank" aria-label="Chatear por WhatsApp">
+        <i aria-hidden="true" class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
+        <i aria-hidden="true" class="fa-solid fa-arrow-up"></i>
+    </button>
+ </body>
+</html>
