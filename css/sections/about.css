@@ -13,17 +13,28 @@
     margin-bottom: 60px;
 }
 
-/* --- La Grilla de 3 columnas --- */
+/* --- Carrusel Nativo Mobile First --- */
 .team__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-    align-items: center;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 20px; /* Margen interno para que no se corte el box-shadow al scrollear */
     margin-bottom: 60px;
+    
+    /* Ocultamiento de la barra de scroll para UI limpia */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.team__grid::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
 }
 
 /* --- Las Tarjetas Individuales --- */
 .team__card {
+    flex: 0 0 85%; /* Ocupa el 85% del viewport, dejando asomar la siguiente tarjeta */
+    scroll-snap-align: center;
     background-color: var(--color-secundario);
     border-radius: 20px;
     padding: 50px 25px;
@@ -32,27 +43,28 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* --- La tarjeta del centro se levanta --- */
-@media screen and (min-width: 968px) {
-    .team__card--center {
-        margin-top: -50px;
-        z-index: 10;
-        box-shadow: 0 15px 40px var(--color-sombra-fucsia);
-        transform: scale(1.05);
+.team__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* --- Adaptación a Desktop (Grilla 2x2) --- */
+@media screen and (min-width: 768px) {
+    .team__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        overflow-x: visible; /* Apagamos el scroll horizontal */
+        gap: 40px;
+        padding-bottom: 0;
     }
     
-    /* ACÁ ESTÁ LA MAGIA: Le especificamos qué hacer SOLO a la tarjeta del centro cuando tiene hover en PC */
-    .team__card--center:hover {
-        transform: scale(1.05) translateY(-10px);
+    .team__card {
+        flex: auto; /* Anulamos el width del 85% */
+        scroll-snap-align: none;
     }
-}
-
-/* El comportamiento general para el resto de las tarjetas */
-.team__card:hover {
-    transform: translateY(-10px);
 }
 
 /* --- Foto y Nombre --- */
