@@ -32,169 +32,61 @@
             ================-->
         <section id="book-gen" class="gallery section container">
             <h1 class="gallery__title">Nuestro <span class="hero__highlight">Book de Trabajos</span></h1>
-            <p class="gallery__subtitle">Inspirate con los últimos diseños y técnicas de nuestro equipo.</p>
-
-            <div class="gallery-frame" id="gallery-frame">
-                <div class="gallery__grid" id="main-gallery-grid">
+            <p class="gallery__subtitle">Elegí a tu profesional o inspirate con nuestra galería completa.</p>
+        
+            <!-- PODIO DE AVATARES (Filtros) -->
+            <div class="personal-books__tabs reveal" id="gallery-filters">
+                <!-- Botón para ver todo -->
+                <button class="tab-btn active" data-filter="all">
+                    <div class="tab-img-placeholder" style="background-color: var(--color-primario);">
+                        <i class="fa-solid fa-border-all" style="font-size: 2.5rem; color: var(--color-fondo-principal);"></i>
                     </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 40px;">
-                <button id="btn-show-all" class="button--subtle">Ver galería completa</button>
-            </div>
-        </section>
-
-        <!--================
-            Galeria Personal
-            ================-->
-        <section id="book-per" class="personal-books section container">
-            <h2 class="gallery__title reveal" style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">Elegí a tu <span class="hero__highlight">profesional</span></h2>
-
-            <!-- Cada bloque contiene los fotones/foto de cada una -->
-
-            <div class="personal-books__tabs reveal">
-                <button class="tab-btn" data-target="book-isis">
+                    <span>Todos</span>
+                </button>
+        
+                <!-- Isis -->
+                <button class="tab-btn" data-filter="isis">
                     <div class="tab-img-placeholder">
-                        <img src="img/perfil-isis.webp" alt="Isis"> 
+                        <img src="img/perfil-isis.webp" alt="Isis" loading="lazy"> 
                     </div>
                     <span>Isis</span>
                 </button>
-                
-                <button class="tab-btn" data-target="book-jose">
+                    
+                <!-- Jose -->
+                <button class="tab-btn" data-filter="jose">
                     <div class="tab-img-placeholder">
-                        <img src="img/perfil-jose.webp" alt="Jose"> 
+                        <img src="img/perfil-jose.webp" alt="Jose" loading="lazy"> 
                     </div>
                     <span>Jose</span>
                 </button>
-                
-                <button class="tab-btn" data-target="book-lola">
+                    
+                <!-- Lola -->
+                <button class="tab-btn" data-filter="lola">
                     <div class="tab-img-placeholder">
-                        <img src="img/perfil-lola.webp" alt="Lola"> 
+                        <img src="img/perfil-lola.webp" alt="Lola" loading="lazy"> 
                     </div>
                     <span>Lola</span>
                 </button>
+        
+                <!-- Agus -->
+                <button class="tab-btn" data-filter="agus">
+                    <div class="tab-img-placeholder">
+                        <img src="img/perfil-agus.webp" alt="Agus" loading="lazy"> 
+                    </div>
+                    <span>Agus</span>
+                </button>
             </div>
-
-            <!-- Aca se encuentran los "book-..." -->
-
-            <div id="book-isis" class="personal-gallery">
-                <div class="personal-gallery__inner box-completa">
-                    
-                    <div class="personal-gallery__avatar">
-                        <img src="img/perfil-isis.webp" alt="Isis"> 
-                    </div>
-
-                    <div class="personal-gallery__header">
-                        <h3 class="personal-gallery__title">Book de Isis</h3>
-                        <p class="gallery__subtitle">Especialista en Nail Art</p>
-                    </div>
-
-                    <div class="gallery__grid">
-                        <div class="gallery__item"><img src="img/cap/capping-2.webp" alt="Trabajo Isis" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div>
-                        <div class="gallery__item"><img src="img/cap/capping-hero-1.webp" alt="Trabajo Isis" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div>
-                        <div class="gallery__item"><img src="img/cap/capping-hero-6.webp" alt="Trabajo Isis" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div>
-                        
-                        <!--<div class="gallery__item"><img src="img" alt="Trabajo Isis" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div> Bloque para poner mas fotos -->
-                    </div>
-
-                    <div class="personal-gallery__footer">
-                        <a href="https://www.wonoma.com/es-AR/salon/santas-unas" target="_blank" class="button button--primary">Sacar turno con Isis</a>
-                    </div>
+        
+            <!-- GRILLA MASONRY -->
+            <div class="gallery-frame" id="gallery-frame">
+                <div class="gallery__grid" id="main-gallery-grid">
+                    <!-- Las fotos se inyectan acá desde JavaScript -->
                 </div>
             </div>
-
-            <div id="book-jose" class="personal-gallery">
-                <div class="personal-gallery__inner box-completa">
-                    
-                    <div class="personal-gallery__avatar">
-                        <img src="img/perfil-jose.webp" alt="Jose"> 
-                    </div>
-
-                    <div class="personal-gallery__header">
-                        <h3 class="personal-gallery__title">Book de Jose</h3>
-                        <p class="gallery__subtitle">Fundadora & Master en Esculpidas</p>
-                    </div>
-
-                    <div class="gallery__grid">
-
-                        <!-- <div class="gallery__item"><img src="img" alt="Trabajo Jose" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div> Bloque para poner mas fotos -->
-                        
-                    </div>
-
-                    <div class="personal-gallery__footer">
-                        <a href="https://www.wonoma.com/es-AR/salon/santas-unas" target="_blank" class="button button--primary">Sacar turno con Jose</a>
-                    </div>
-                </div>
+        
+            <div style="text-align: center; margin-top: 40px;">
+                <button id="btn-show-all" class="button--subtle">Ver galería completa</button>
             </div>
-
-            <div id="book-lola" class="personal-gallery">
-                <div class="personal-gallery__inner box-completa">
-                    
-                    <div class="personal-gallery__avatar">
-                        <img src="img/perfil-lola.webp" alt="Lola"> 
-                    </div>
-
-                    <div class="personal-gallery__header">
-                        <h3 class="personal-gallery__title">Book de Lola</h3>
-                        <p class="gallery__subtitle">Experta en Capping y Soft Gel</p>
-                    </div>
-
-                    <div class="gallery__grid">
-                        <div class="gallery__item"><img src="img/tra-lol/lola-1.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div>
-                        <div class="gallery__item"><img src="img/tra-lol/lola-2.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div>
-                        <div class="gallery__item"><img src="img/tra-lol/lola-3.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div>
-                        <div class="gallery__item"><img src="img/tra-lol/lola-4.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div>
-                        <div class="gallery__item"><img src="img/tra-lol/lola-5.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div>
-                        <div class="gallery__item"><img src="img/tra-lol/lola-6.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div>
-                        <div class="gallery__item"><img src="img/tra-lol/lola-7.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div>
-                        <div class="gallery__item"><img src="img/tra-lol/lola-8.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div>
-                        <div class="gallery__item"><img src="img/tra-lol/lola-9.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div>
-                        <div class="gallery__item"><img src="img/tra-lol/lola-10.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div>
-                        <div class="gallery__item"><img src="img/tra-lol/lola-11.webp" alt="Trabajo Lola" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div>
-                        <!-- <div class="gallery__item"><img src="img" alt="Trabajo Lola" class="gallery__img" loading="lazy">
-                            <img src="img/logo-s.webp" alt="Logo Santas Uñas" class="logo-esquina" loading="lazy">
-                        </div> Bloque para poner mas fotos -->
-                        
-                    </div>
-
-                    <div class="personal-gallery__footer">
-                        <a href="https://www.wonoma.com/es-AR/salon/santas-unas" target="_blank" class="button button--primary">Sacar turno con Lola</a>
-                    </div>
-                </div>
-            </div>
-
         </section>
     </main>
     
@@ -206,7 +98,6 @@
     </button>
     <script type="module" src="js/header.js"></script>
     <script type="module" src="js/gallery.js"></script>
-    <script type="module" src="js/tabs.js"></script>
     <script type="module" src="js/lightbox.js"></script>
 </body>
 </html>

@@ -13,18 +13,19 @@
     margin-bottom: 60px;
 }
 
-/* --- Carrusel Nativo Mobile First --- */
+/* --- 1. Carrusel Nativo Mobile First (Celulares) --- */
 .team__grid {
     display: flex;
     overflow-x: auto;
+    overflow-y: hidden; /* NUEVO: Bloquea el scroll vertical fantasma */
+    touch-action: pan-x pan-y; /* NUEVO: Optimiza la lectura táctil nativa */
     scroll-snap-type: x mandatory;
     gap: 20px;
-    padding-bottom: 20px; /* Margen interno para que no se corte el box-shadow al scrollear */
+    padding-bottom: 20px; 
     margin-bottom: 60px;
     
-    /* Ocultamiento de la barra de scroll para UI limpia */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
 
 .team__grid::-webkit-scrollbar {
@@ -33,11 +34,11 @@
 
 /* --- Las Tarjetas Individuales --- */
 .team__card {
-    flex: 0 0 85%; /* Ocupa el 85% del viewport, dejando asomar la siguiente tarjeta */
+    flex: 0 0 85%; /* Ocupa el 85% de la pantalla, asoma la siguiente */
     scroll-snap-align: center;
     background-color: var(--color-secundario);
     border-radius: 20px;
-    padding: 50px 25px;
+    padding: 50px 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
@@ -46,24 +47,38 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.team__card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+@media (hover: hover) and (pointer: fine) {
+    .team__card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
 }
 
-/* --- Adaptación a Desktop (Grilla 2x2) --- */
+/* --- 2. Adaptación a Tablet (Grilla 2x2) --- */
 @media screen and (min-width: 768px) {
     .team__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        overflow-x: visible; /* Apagamos el scroll horizontal */
-        gap: 40px;
+        overflow-x: visible; /* Apagamos el carrusel */
+        gap: 30px;
         padding-bottom: 0;
     }
     
     .team__card {
-        flex: auto; /* Anulamos el width del 85% */
+        flex: auto; /* Anulamos el 85% fijo */
         scroll-snap-align: none;
+    }
+}
+
+/* --- 3. Adaptación a PC Desktop (Grilla 4x1) --- */
+@media screen and (min-width: 1024px) {
+    .team__grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    
+    .team__card {
+        padding: 40px 15px; /* Ajustamos levemente el padding para que respiren las 4 juntas */
     }
 }
 
@@ -106,7 +121,7 @@
 /* --- El Slider de Reseñas --- */
 .reviews__slider {
     position: relative;
-    height: 150px;
+    height: 200px;
     width: 100%;
     margin-bottom: 25px;
     overflow: hidden;
@@ -165,13 +180,4 @@
 .button--large {
     padding: 18px 50px;
     font-size: 1.3rem;
-}
-
-/* --- Adaptación para celulares (Orden de las chicas) --- */
-@media screen and (max-width: 968px) {
-    /* La clase de Jose (la tarjeta central) pasa al primer lugar */
-    .team__card--center {
-        order: -1; 
-        box-shadow: 0 15px 40px var(--color-sombra-fucsia);
-    }
 }
