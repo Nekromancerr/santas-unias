@@ -1,0 +1,206 @@
+/* ==========================================
+      MODALES (Ventanas Emergentes)
+   ========================================== */
+   .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 20px 0; /* Margen de seguridad arriba/abajo para que el modal nunca toque el borde de la pantalla */
+    box-sizing: border-box;
+}
+
+/* Esta clase es la que prende y apaga el modal */
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-medio);
+}
+
+.modal__content {
+    /* Quitamos el padding superior (antes 40px) para que el sticky toque el techo */
+    padding: 0 30px 40px 30px; 
+    /* Las demás propiedades se mantienen intactas */
+    position: relative;
+    background-color: var(--color-fondo-tarjeta);
+    width: 90%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 15px;
+    z-index: 1001;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal.active .modal__content {
+    transform: translateY(0);
+}
+
+.modal__close {
+    /* Cambiamos absolute por sticky para que acompañe al título */
+    position: sticky; 
+    top: 15px; 
+    float: right; /* Mantiene el botón a la derecha sin alterar el flujo del texto */
+    margin-bottom: -30px; /* Evita que el botón empuje el título hacia abajo */
+    z-index: 1003; /* Por encima del título */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-secundario);
+}
+
+.modal__title {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-fondo-tarjeta); /* Oculta los ítems que suben */
+    z-index: 1002;
+    padding: 40px 0 20px 0; /* Absorbe el padding superior que le sacamos al contenedor */
+    margin-bottom: 0; /* Se elimina para no generar un salto visual al aplicar el box-shadow */
+    transition: all 0.3s ease; /* Transición para la reducción */
+    
+    color: var(--color-texto-blanco);
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.modal__title--compact {
+    font-size: 1.3rem;
+    padding: 20px 0 15px 0;
+    box-shadow: 0 10px 15px -10px rgba(0, 0, 0, 0.3); /* Sombra para separar el header del contenido */
+}
+
+.modal__list {
+    list-style: none;
+    padding: 0;
+    padding-top: 10px; /* Evita que el primer ítem quede pegado al título en el estado inicial */
+}
+
+/* --- Estilos de los ítems de la lista --- */
+.modal__list li {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.modal__list li:last-child {
+    border-bottom: none;
+}
+
+/* Fila principal (Nombre, precio y botón reservar) */
+.modal__item-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Agrupa el nombre y el precio */
+.modal__item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-right: 15px; 
+}
+
+.modal__name {
+    color: var(--color-texto-principal);
+    font-size: 1rem;
+    line-height: 1.2;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* El botoncito de info (i) */
+.modal__info-btn {
+    background: none;
+    border: none;
+    color: var(--color-texto-gris);
+    cursor: pointer;
+    margin-left: 8px;
+    margin-top: 1px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    padding: 0;
+    line-height: 1.2;
+
+}
+
+.modal__info-btn:hover, .modal__info-btn.active {
+    color: var(--color-primario);
+}
+
+.modal__price {
+    font-weight: bold;
+    color: var(--color-texto-principal);
+    font-size: 1.1rem;
+}
+
+/* El mini-botón de reserva de cada ítem */
+.modal__btn-reservar {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* --- La caja escondida con la aclaración --- */
+.modal__item-desc {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, margin-top 0.4s ease, opacity 0.4s ease;
+    width: 100%;
+}
+
+.modal__item-desc.show {
+    max-height: 350px; 
+    margin-top: 15px;
+    opacity: 1;
+}
+
+/* El cuadro de fondo */
+.modal__item-desc-content {
+    font-size: 0.9rem;
+    color: var(--color-texto-principal); /* Lista de aclaraciones */
+    background-color: var(--color-secundario); /* Fondo de la tarjeta de aclaraciones */
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 2px solid var(--color-primario); /* Color, tamaño y ubicacion de linea de diseño a la izquierda */
+}
+
+.modal__item-desc-content strong {
+    color: var(--color-texto-principal);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal__item-desc-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.modal__item-desc-content li {
+    padding: 2px 0;
+    border-bottom: none; 
+    display: list-item;
+}

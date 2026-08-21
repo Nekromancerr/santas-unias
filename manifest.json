@@ -1,0 +1,21 @@
+{
+    "name": "Nails by Santas Uñas",
+    "short_name": "Santas Uñas",
+    "description": "Salón y Academia de manicuría en Zárate.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#2c2b29",
+    "icons": [
+      {
+        "src": "img/logo-s.webp",
+        "sizes": "192x192",
+        "type": "image/webp"
+      },
+      {
+        "src": "img/logo-s.webp",
+        "sizes": "512x512",
+        "type": "image/webp"
+      }
+    ]
+  }

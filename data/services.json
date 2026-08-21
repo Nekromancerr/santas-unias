@@ -1,0 +1,269 @@
+{
+  "retiro": {
+    "title": "Retiro",
+    "items": [
+      {
+        "name": "Retiro definitivo",
+        "price": "$18.000",
+        "desc": "<strong> Remoción total de un servicio tanto nuestro, como de otro salón. </strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/101121-retirado#reservar"
+      }
+    ]
+  },
+
+  "pedicura": {
+    "title": "Pedicura",
+    "items": [
+      {
+        "name": "Esmaltado semipermanente pies",
+        "price": "$25.000",
+        "desc": "<strong>Nuestro servicio no incluye remoción de durezas plantares.</strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/101363-esmaltado-semipermanente-pies#reservar"
+      }
+    ]
+  },
+
+  "capping": {
+    "title": "Capping",
+    "items": [
+      {
+        "name": "Capping Liso",
+        "price": "$27.500",
+        "desc": "<strong>Incluye 4 deco básico El capping consta de una capa rigida de producto sobre la uña natural ( sin alargamiento) para uñas mas blandas, eso ayuda a que no se quiebren.</strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/33050-capping-liso#reservar"
+      },
+      {
+        "name": "Capping French",
+        "price": "$28.000",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/91328-capping-french#reservar"
+      },
+      {
+        "name": "Capping cromo/ojo de gato",
+        "price": "$29.500",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/96674-capping-cromo-en-todasojo-de-gato#reservar"
+      },
+      {
+        "name": "Capping Baby bommer",
+        "price": "$28.500",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/91332-capping-baby-bommer#reservar"
+      },
+      {
+        "name": "Capping Full",
+        "price": "$30.500",
+        "desc": "<strong>Incluye dos decos mas deco mas complejas en las uñas</strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/130060-capping-full#reservar"
+      },
+      {
+        "name": "Capping Deluxe",
+        "price": "$31.000",
+        "desc": "<strong>Incluye deco en todas las uñas con todas las tecnicas deseadas</strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/130061-capping-delux#reservar"
+      }
+    ]
+  },
+
+  "manicuria": {
+    "title": "Manicuria",
+    "items": [
+      {
+        "name": "Semipermanente Liso",
+        "price": "$22.000",
+        "desc": "<strong>Esamltado semipermanente liso con deco en dos uñas, consta de esmaltar sobre la uña natural , el producto no deja de ser un acabado semi regido (blando)</strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/17084-semipermanente-liso#reservar"
+      },
+      {
+        "name": "Semipermanente French",
+        "price": "$23.500",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/17085-semipermanente-french#reservar"
+      },
+      {
+        "name": "Semipermanente Cromo/Ojo de gato",
+        "price": "Desde $25.000",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/17086-semipermanente-cromo-o-ojo-de-gato#reservar"
+      },
+      {
+        "name": "Semipermanente Full",
+        "price": "$30.000",
+        "desc": "<strong>Incluye relieves , pedreria, cromo , ojo de gato , nail art</strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/130057-semipermanente-full#reservar"
+      }
+    ]
+  },
+
+  "softgel": {
+    "title": "Soft Gel",
+    "items": [
+      {
+        "name": "Soft gel",
+        "price": "Desde $29.000",
+        "desc": "<strong>incluye deco en 4 uñas con distintas tecnicas</strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/114377-soft-gel#reservar"
+      }
+    ]
+  },
+
+  "esculpidas": {
+    "title": "Uñas Esculpidas",
+    "items": [
+      {
+        "name": "Esculpidas liso",
+        "price": "$28.500",
+        "desc": "<strong>Consta de alargar la uña natural al largo deseado , inlcuye deco en 4 uñas basico</strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/33569-esculpidas-liso#reservar"
+      },
+      {
+        "name": "Esculpidas French",
+        "price": "$29.500",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/91336-esculpidas-french#reservar"
+      },
+      {
+        "name": "Esculpidas Ojo de gato / Cromo en todas",
+        "price": "$30.500",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/91337-esculpidas-ojo-de-gato-cromo-en-todas#reservar"
+      },
+      {
+        "name": "Esculpidas Full Mix / Baby Boomer",
+        "price": "$31.500",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/91338-esculpidas-full-mix-baby-boomer#reservar"
+      },
+      {
+        "name": "Esculpidas Deluxe",
+        "price": "$37.000",
+        "desc": "<strong>Consta de todas las tecnicas que se puedan implementar dependiendo el diseño hasta largo num 2 de esculpidas</strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/121895-esculpidas-liso-con-isis/profesional/22964-isis-quimey#reservar"
+      },
+      {
+        "name": "Esculpidas Full",
+        "price": "$33.000",
+        "desc": "<strong>-Nuestro servicio incluye:<ul> <li>2 tecnicas distintas de deco</li> </ul></strong> ",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/91338-esculpidas-full-mix-baby-boomer#reservar"
+      }
+    ]
+  },
+
+  "cejas": {
+    "title": "Cejas",
+    "items": [
+      {
+        "name": "Henna y perfilado de cejas",
+        "price": "$22.000",
+        "desc": "<strong>La henna en cejas es un tinte para dar color y definir la forma de las cejas, creando un efecto de ceja más rellena y marcada, ideal para quienes tienen espacios o buscan una apariencia más definida. incluye perfilado de cejas para que el resultado sea mucho más prolijo.</strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/139894-henna-y-perfilado-de-cejas/profesional/28035-agus#reservar"
+      },
+      {
+        "name": "Laminado de cejas",
+        "price": "$23.000",
+        "desc": "<strong> Es un tratamiento semipermanente, peina y aliza las cejas hacia arriba, ayuda a controlar los pelitos rebeldes y darle forma a tus cejas<br><br> Incluye: <ul> <li>Previamente una limpieza con una espuma suave para cejas</li> <li>Se acompaña con perfilado con cera y pincita</li> <li>Se coloca una cremita hidratante y descongestiva en la zona, al finalizar el servicio</li> </ul> Duración del servicio, 40min /1 hora APROX </strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/139893-laminado-de-cejas/profesional/28035-agus#reservar"
+      },
+      {
+        "name": "Perfilado",
+        "price": "$12.000",
+        "desc": "<strong> Incluye: <ul> <li>Depilación y diseño de cejas, se realiza con cera y pincita</li> <li>Retira el vello desde la raíz</li> <li>Limpieza previa con una espumita suave para rostro</li> <li>Crema hidratante y descongestiva al finalizar el servicio</li> </ul> Duración del servicio 30/40min APROX </strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/139899-perfilado/profesional/28035-agus#reservar"
+      },
+      {
+        "name": "Retoque de laminado",
+        "price": "$19.000",
+        "desc": "<strong>Incluye coctel de nutrición, diseño y perfilado de cejas Se recomienda realizarse este servicio entre los 20 y 30 dias posterior al laminado. Ya que hidrata y prepara el vello para el proximo servicio de laminado.</strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/140005-retoque-de-laminado/profesional/28035-agus#reservar"
+      }
+    ]
+  },
+
+  "pestañas": {
+    "title": "Lash Lifting",
+    "items":[
+      {
+        "name":"Lifting de pestañas",
+        "price": "$25.000",
+        "desc": "<strong>Incluye: <ul> <li>Tinte de pestañas</li> <li>Nutrición con botox y keratina</li> <li>Limpieza previa de pestañas con una espumita suave para pestañas y desmaquillante si es necesario</li> </ul> Duración del servicio 1:00 hs /1:30 hs APROX <br> Es un tratamiento nutritivo que eleva y curva tus pestañas desde la raíz</strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/139892-lifting-de-pestanas/profesional/28035-agus#reservar"
+      }
+    ]
+  },
+
+  "cera": {
+    "title": "Depilación con Cera",
+    "items": [
+      {
+        "name": "Depilación bozo",
+        "price": "$8.000",
+        "desc": "<strong> Incluye: <ul> <li>Limpieza previa con una espuma suave para rostro</li> <li>Crema hidratante y descongestiva al finalizar el servicio</li> <li>Se realiza con cera y pincita</li> <li>Retira el vello desde la raíz</li> </ul> Duración del servicio, 10 min APROX </strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/139896-depilacion-bozo/profesional/28035-agus#reservar"
+      },
+      {
+        "name": "Depilación de rostro",
+        "price": "$18.000",
+        "desc": "<strong> Incluye: <ul> <li>Diseño y perfilado de cejas y otras zonas del rostro como bozo, menton, mejillas, frente etc</li> <li>Limpieza previa con locion antibacterial que ablanda el vello. -Se realiza con cera y pincita</li> <li>Retira el vello desde la raíz</li> <li>Finalizamos con gel refrescante y descongestivo al finalizar el servicio.</li> </ul> Duracion del servicio, 40/50 min APROX </strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/139895-depilacion-de-rostro/profesional/28035-agus#reservar"
+      },
+      {
+        "name": "Zona Axilas",
+        "price": "De $16.000 a $18.000",
+        "desc": "<strong> Depilación Sistema Español<br> Método tradicional con cera elástica tibia de raíz (sin bandas)<br> Ideal para zonas sensibles, ya que el calor abre el poro y reduce el dolor<br> Máxima Higiene: Preparamos tu piel con loción emoliente, usamos guantes y la cera es de uso único (se desecha, no se reutiliza)<br> Final Confort: Cierre con gel refrescante de menta y manzanilla para aliviar y desinflamar la zona. </strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/140611-zona-axilas/profesional/28035-agus#reservar"
+      },
+      {
+        "name": "Zona Brazo Entero",
+        "price": "De $20.000 a $25.000",
+        "desc": "<strong> Depilación Sistema Español<br> Método tradicional con cera elástica tibia de raíz (sin bandas)<br> Ideal para zonas sensibles, ya que el calor abre el poro y reduce el dolor<br> Máxima Higiene: Preparamos tu piel con loción emoliente, usamos guantes y la cera es de uso único (se desecha, no se reutiliza)<br> Final Confort: Cierre con gel refrescante de menta y manzanilla para aliviar y desinflamar la zona. </strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/140614-zona-brazo-entero/profesional/28035-agus#reservar"
+      },
+      {
+        "name": "Zona Cavado",
+        "price": "De $20.000 a $25.000",
+        "desc": "<strong> Depilación Sistema Español<br> Método tradicional con cera elástica tibia de raíz (sin bandas)<br> Ideal para zonas sensibles, ya que el calor abre el poro y reduce el dolor<br> Máxima Higiene: Preparamos tu piel con loción emoliente, usamos guantes y la cera es de uso único (se desecha, no se reutiliza)<br> Final Confort: Cierre con gel refrescante de menta y manzanilla para aliviar y desinflamar la zona. </strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/140607-zona-cavado/profesional/28035-agus#reservar"
+      },
+      {
+        "name": "Zona Media pierna",
+        "price": "De $20.000 a $25.000",
+        "desc": "<strong> Depilación Sistema Español<br> Método tradicional con cera elástica tibia de raíz (sin bandas)<br> Ideal para zonas sensibles, ya que el calor abre el poro y reduce el dolor<br> Máxima Higiene: Preparamos tu piel con loción emoliente, usamos guantes y la cera es de uso único (se desecha, no se reutiliza)<br> Final Confort: Cierre con gel refrescante de menta y manzanilla para aliviar y desinflamar la zona. </strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/140608-zona-media-pierna/profesional/28035-agus#reservar"
+      },
+      {
+        "name": "Zona Medio Brazo",
+        "price": "De $16.000 a $20.000",
+        "desc": "<strong> Depilación Sistema Español<br> Método tradicional con cera elástica tibia de raíz (sin bandas)<br> Ideal para zonas sensibles, ya que el calor abre el poro y reduce el dolor<br> Máxima Higiene: Preparamos tu piel con loción emoliente, usamos guantes y la cera es de uso único (se desecha, no se reutiliza)<br> Final Confort: Cierre con gel refrescante de menta y manzanilla para aliviar y desinflamar la zona. </strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/140613-zona-medio-brazo/profesional/28035-agus#reservar"
+      },
+      {
+        "name": "Zona Pierna completa",
+        "price": "De $25.000 a $30.000",
+        "desc": "<strong> Depilación Sistema Español<br> Método tradicional con cera elástica tibia de raíz (sin bandas)<br> Ideal para zonas sensibles, ya que el calor abre el poro y reduce el dolor<br> Máxima Higiene: Preparamos tu piel con loción emoliente, usamos guantes y la cera es de uso único (se desecha, no se reutiliza)<br> Final Confort: Cierre con gel refrescante de menta y manzanilla para aliviar y desinflamar la zona. </strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/140612-zona-pierna-completa/profesional/28035-agus#reservar"
+      },
+      {
+        "name": "Zona Tiro de cola",
+        "price": "De $20.000 a $25.000",
+        "desc": "<strong> Depilación Sistema Español<br> Método tradicional con cera elástica tibia de raíz (sin bandas)<br> Ideal para zonas sensibles, ya que el calor abre el poro y reduce el dolor<br> Máxima Higiene: Preparamos tu piel con loción emoliente, usamos guantes y la cera es de uso único (se desecha, no se reutiliza)<br> Final Confort: Cierre con gel refrescante de menta y manzanilla para aliviar y desinflamar la zona. </strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/140610-zona-tiro-de-cola/profesional/28035-agus#reservar"
+      }
+    ]
+  },
+
+  "combos": {
+    "title": "Combos Exclusivos",
+    "items": [
+      {
+        "name": "Clean look",
+        "price": "$16.000",
+        "desc" :"<strong>Perfilado + Diseño de cejas+ Depilación de bozo</strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/139898-combo-clean-look-perfilado-diseno-de-cejas-depilacion-de-bozo/profesional/28035-agus#reservar"
+      },
+      {
+        "name": "Ideal look",
+        "price": "$35.000",
+        "desc" :"<strong>Lifting de pestañas + Diseño y perfilado de cejas</strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/139897-combo-ideal-look-lifting-de-pestanas-diseno-y-perfilado-de-cejas/profesional/28035-agus#reservar"
+      },
+      {
+        "name": "Powerfull",
+        "price": "$45.000",
+        "desc" :"<strong>Laminado de cejas + diseño y perfilado de cejas+ lifting de pestañas</strong>",
+        "link": "https://www.wonoma.com/es-AR/salon/santas-unas/servicio/140006-combo-powerfull-laminado-de-cejas-diseno-y-perfilado-de-cejas-lifting-de-pestanas/profesional/28035-agus#reservar"
+      }
+    ]  
+  }
+}
